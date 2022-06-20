@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-54:\\layout\\content_side_menu.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-57:\\layout\\content_side_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-54:\\layout\\fragment_profile.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-57:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-54:\\layout\\activity_side_menu.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-57:\\layout\\activity_side_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-54:\\layout\\nav_header_side_menu.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-57:\\layout\\nav_header_side_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-54:\\layout\\fragment_dashboard.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-57:\\layout\\fragment_dashboard.xml"
+    },
+    {
+        "merged": "com.example.poc.app-mergeDebugResources-54:/layout/fragment_dashboard.xml",
+        "source": "com.example.poc.app-main-57:/layout/fragment_dashboard.xml"
+    },
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-54:\\layout\\fragment_edit_profile.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-57:\\layout\\fragment_edit_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-54:\\layout\\activity_edit_profile.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-57:\\layout\\activity_edit_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-54:\\layout\\fragment_reset_password.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-57:\\layout\\fragment_reset_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-54:\\layout\\activity_authentication.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-57:\\layout\\activity_authentication.xml"
+    },
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-54:\\layout\\fragment_registration.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-57:\\layout\\fragment_registration.xml"
+    },
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-54:\\layout\\app_bar_side_menu.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-57:\\layout\\app_bar_side_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-54:\\layout\\fragment_login.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-57:\\layout\\fragment_login.xml"
+    }
+]
