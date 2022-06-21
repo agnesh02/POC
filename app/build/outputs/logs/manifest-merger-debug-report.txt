@@ -38,6 +38,7 @@ MERGED from [com.github.bumptech.glide:glide:4.13.0] C:\Users\Agnesh S Kumar\.gr
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\8908a9af3a84835f0c9803d7b4e443f0\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\82762e4ec2369683818593f71a49c5a1\transformed\firebase-firestore-24.1.2\AndroidManifest.xml:2:1-26:12
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\4387a6687dae207daaa6da4b8f0043a0\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\c98327632fa83255dba8b3a14311db1f\transformed\firebase-storage-20.0.1\AndroidManifest.xml:15:1-39:12
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\687c8bfdca41a691e5c501f5555b602a\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\ec638513fd520c416474d26ccb50bb6a\transformed\firebase-appcheck-interop-16.0.0\AndroidManifest.xml:15:1-26:12
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\3a1a0b1ce1cbe1befa3411acce773f35\transformed\firebase-common-ktx-20.1.1\AndroidManifest.xml:2:1-21:12
@@ -138,6 +139,8 @@ MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\Agnesh S Ku
 MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\82762e4ec2369683818593f71a49c5a1\transformed\firebase-firestore-24.1.2\AndroidManifest.xml:16:5-24:19
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\4387a6687dae207daaa6da4b8f0043a0\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\4387a6687dae207daaa6da4b8f0043a0\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\c98327632fa83255dba8b3a14311db1f\transformed\firebase-storage-20.0.1\AndroidManifest.xml:29:5-37:19
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\c98327632fa83255dba8b3a14311db1f\transformed\firebase-storage-20.0.1\AndroidManifest.xml:29:5-37:19
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\687c8bfdca41a691e5c501f5555b602a\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\687c8bfdca41a691e5c501f5555b602a\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\ec638513fd520c416474d26ccb50bb6a\transformed\firebase-appcheck-interop-16.0.0\AndroidManifest.xml:24:5-20
@@ -284,6 +287,8 @@ MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\Agnesh S Ku
 MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\82762e4ec2369683818593f71a49c5a1\transformed\firebase-firestore-24.1.2\AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\4387a6687dae207daaa6da4b8f0043a0\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\4387a6687dae207daaa6da4b8f0043a0\transformed\play-services-safetynet-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\c98327632fa83255dba8b3a14311db1f\transformed\firebase-storage-20.0.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\c98327632fa83255dba8b3a14311db1f\transformed\firebase-storage-20.0.1\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\687c8bfdca41a691e5c501f5555b602a\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\687c8bfdca41a691e5c501f5555b602a\transformed\firebase-auth-interop-20.0.0\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-appcheck-interop:16.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\ec638513fd520c416474d26ccb50bb6a\transformed\firebase-appcheck-interop-16.0.0\AndroidManifest.xml:19:5-21:41
@@ -418,6 +423,8 @@ MERGED from [com.google.firebase:firebase-auth:21.0.5] C:\Users\Agnesh S Kumar\.
 MERGED from [com.google.firebase:firebase-auth:21.0.5] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\f3df91555a296215e71d708f558a3dd0\transformed\firebase-auth-21.0.5\AndroidManifest.xml:24:5-79
 MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\82762e4ec2369683818593f71a49c5a1\transformed\firebase-firestore-24.1.2\AndroidManifest.xml:13:5-79
 MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\82762e4ec2369683818593f71a49c5a1\transformed\firebase-firestore-24.1.2\AndroidManifest.xml:13:5-79
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\c98327632fa83255dba8b3a14311db1f\transformed\firebase-storage-20.0.1\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\c98327632fa83255dba8b3a14311db1f\transformed\firebase-storage-20.0.1\AndroidManifest.xml:26:5-79
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\8aea57479cd27b3caf0c395cb759d527\transformed\grpc-android-1.44.1\AndroidManifest.xml:9:5-79
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\8aea57479cd27b3caf0c395cb759d527\transformed\grpc-android-1.44.1\AndroidManifest.xml:9:5-79
 	android:name
@@ -428,6 +435,8 @@ MERGED from [com.google.firebase:firebase-auth:21.0.5] C:\Users\Agnesh S Kumar\.
 MERGED from [com.google.firebase:firebase-auth:21.0.5] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\f3df91555a296215e71d708f558a3dd0\transformed\firebase-auth-21.0.5\AndroidManifest.xml:23:5-67
 MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\82762e4ec2369683818593f71a49c5a1\transformed\firebase-firestore-24.1.2\AndroidManifest.xml:14:5-67
 MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\82762e4ec2369683818593f71a49c5a1\transformed\firebase-firestore-24.1.2\AndroidManifest.xml:14:5-67
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\c98327632fa83255dba8b3a14311db1f\transformed\firebase-storage-20.0.1\AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\c98327632fa83255dba8b3a14311db1f\transformed\firebase-storage-20.0.1\AndroidManifest.xml:27:5-67
 	android:name
 		ADDED from [com.firebaseui:firebase-ui-auth:7.2.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\22b5bc8109979b51e4970b5957e85061\transformed\firebase-ui-auth-7.2.0\AndroidManifest.xml:13:22-64
 meta-data#com.google.android.gms.version
@@ -628,6 +637,8 @@ MERGED from [com.google.firebase:firebase-auth:21.0.5] C:\Users\Agnesh S Kumar\.
 MERGED from [com.google.firebase:firebase-auth:21.0.5] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\f3df91555a296215e71d708f558a3dd0\transformed\firebase-auth-21.0.5\AndroidManifest.xml:64:9-70:19
 MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\82762e4ec2369683818593f71a49c5a1\transformed\firebase-firestore-24.1.2\AndroidManifest.xml:17:9-23:19
 MERGED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\82762e4ec2369683818593f71a49c5a1\transformed\firebase-firestore-24.1.2\AndroidManifest.xml:17:9-23:19
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\c98327632fa83255dba8b3a14311db1f\transformed\firebase-storage-20.0.1\AndroidManifest.xml:30:9-36:19
+MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\c98327632fa83255dba8b3a14311db1f\transformed\firebase-storage-20.0.1\AndroidManifest.xml:30:9-36:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\3a1a0b1ce1cbe1befa3411acce773f35\transformed\firebase-common-ktx-20.1.1\AndroidManifest.xml:12:9-18:19
 MERGED from [com.google.firebase:firebase-common-ktx:20.1.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\3a1a0b1ce1cbe1befa3411acce773f35\transformed\firebase-common-ktx-20.1.1\AndroidManifest.xml:12:9-18:19
 MERGED from [com.google.firebase:firebase-common:20.1.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\5a8df6bb5c3d3298c593e17f3fc7f160\transformed\firebase-common-20.1.1\AndroidManifest.xml:33:9-37:35
@@ -706,6 +717,12 @@ ADDED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\Agnesh S Kum
 		ADDED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\82762e4ec2369683818593f71a49c5a1\transformed\firebase-firestore-24.1.2\AndroidManifest.xml:22:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-firestore:24.1.2] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\82762e4ec2369683818593f71a49c5a1\transformed\firebase-firestore-24.1.2\AndroidManifest.xml:21:17-111
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\c98327632fa83255dba8b3a14311db1f\transformed\firebase-storage-20.0.1\AndroidManifest.xml:33:13-35:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\c98327632fa83255dba8b3a14311db1f\transformed\firebase-storage-20.0.1\AndroidManifest.xml:35:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\c98327632fa83255dba8b3a14311db1f\transformed\firebase-storage-20.0.1\AndroidManifest.xml:34:17-107
 meta-data#com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar
 ADDED from [com.google.firebase:firebase-common-ktx:20.1.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\3a1a0b1ce1cbe1befa3411acce773f35\transformed\firebase-common-ktx-20.1.1\AndroidManifest.xml:15:13-17:85
 	android:value

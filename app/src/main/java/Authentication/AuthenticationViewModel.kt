@@ -23,9 +23,8 @@ class AuthenticationViewModel(application: Application) : AndroidViewModel(appli
     var emailRegex:String = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
     var errorCode:MutableLiveData<Int> = MutableLiveData()
 
-    var authenticationRepository:AuthenticationRepository = AuthenticationRepository()
+    private var authenticationRepository:AuthenticationRepository = AuthenticationRepository()
     var msg:String = ""
-
 
     private fun startObservation()
     {
@@ -68,6 +67,7 @@ class AuthenticationViewModel(application: Application) : AndroidViewModel(appli
 
     fun onLogin()
     {
+
         if(!validateEmail(etEmail))
         {
             errorCode.value = 2

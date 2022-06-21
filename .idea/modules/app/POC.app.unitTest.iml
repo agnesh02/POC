@@ -49,6 +49,7 @@
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/3df1d9569f65b13aafe7852e79bd0567/transformed/firebase-firestore-24.1.2-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/f6748531ca70618acbfcb7db672643f8/transformed/play-services-auth-api-phone-18.0.1-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/6f7b2c0a184feb7a03cc28ee717dbd1d/transformed/play-services-safetynet-17.0.0-api.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/79b82fe7a88e8c0cb593582545c93b4c/transformed/firebase-storage-20.0.1-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/ff7046f54672dade1267a2593c6fedc5/transformed/firebase-auth-interop-20.0.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/468b1174cde38b7ece2c0b5ac96a5772/transformed/firebase-appcheck-interop-16.0.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/22e3de7c0a33daf8f0c4212515199a36/transformed/firebase-common-ktx-20.1.1-api.jar</arg>
@@ -281,6 +282,7 @@
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.lifecycle:lifecycle-livedata-ktx:2.4.1@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.lifecycle:lifecycle-livedata-core-ktx:2.4.1@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1@aar" level="project" />
+    <orderEntry type="library" scope="TEST" name="Gradle: com.google.firebase:firebase-storage:20.0.1@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.firebaseui:firebase-ui-auth:7.2.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.gms:play-services-auth:20.2.0@aar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: com.google.android.gms:play-services-auth-base:18.0.1@aar" level="project" />

@@ -2,6 +2,7 @@ package Repository
 
 import Profile.ProfileViewModel
 import Utilities.UserData
+import android.net.Uri
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
@@ -15,6 +16,8 @@ import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 import java.util.*
 import kotlin.collections.HashMap
 
@@ -30,6 +33,7 @@ class ProfileRepository {
     var liveDob:MutableLiveData<String> = MutableLiveData()
     var liveEmail:MutableLiveData<String> = MutableLiveData()
     var livePhone:MutableLiveData<String> = MutableLiveData()
+    var liveUri:MutableLiveData<String> = MutableLiveData()
 
     var liveRepoMessage:MutableLiveData<String> = MutableLiveData()
 
@@ -50,6 +54,7 @@ class ProfileRepository {
                     liveDob.postValue(obj.dob)
                     liveEmail.postValue(firebaseUser.email)
                     livePhone.postValue(obj.phone)
+                    liveUri.postValue(obj.image_uri)
 
                     liveRepoMessage.postValue("ok")
                 }
@@ -88,6 +93,33 @@ class ProfileRepository {
 
     }
 
+    fun updateProfilePicture(uri: Uri)
+    {
+        var firebaseStorage:FirebaseStorage = FirebaseStorage.getInstance()
+        var storageReference:StorageReference = firebaseStorage.getReference().child("IMAGES/"+firebaseUser.email)
+
+        storageReference.putFile(uri)
+            .addOnCompleteListener(OnCompleteListener {
+                if(it.isSuccessful)
+                {
+                    storageReference.downloadUrl
+                        .addOnSuccessListener {
+                            documentReference.update("image_uri",it.toString())
+                                .addOnCompleteListener(OnCompleteListener {
+                                    liveRepoMessage.postValue("Image has been uploaded successfully")
+                                })
+                                .addOnFailureListener(OnFailureListener {
+                                    liveRepoMessage.postValue(it.message)
+                                })
+                        }
+                }
+                else
+                    liveRepoMessage.postValue(it.exception?.message)
+            })
+            .addOnFailureListener(OnFailureListener {
+                liveRepoMessage.postValue(it.message)
+            })
+    }
 
 
 }

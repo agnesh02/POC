@@ -10,6 +10,7 @@ import com.example.poc.databinding.FragmentDashboardBindingImpl;
 import com.example.poc.databinding.FragmentEditProfileBindingImpl;
 import com.example.poc.databinding.FragmentLoginBindingImpl;
 import com.example.poc.databinding.FragmentProfileBindingImpl;
+import com.example.poc.databinding.FragmentProfilePictureBindingImpl;
 import com.example.poc.databinding.FragmentRegistrationBindingImpl;
 import com.example.poc.databinding.FragmentResetPasswordBindingImpl;
 import java.lang.IllegalArgumentException;
@@ -31,17 +32,20 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_FRAGMENTPROFILE = 4;
 
-  private static final int LAYOUT_FRAGMENTREGISTRATION = 5;
+  private static final int LAYOUT_FRAGMENTPROFILEPICTURE = 5;
 
-  private static final int LAYOUT_FRAGMENTRESETPASSWORD = 6;
+  private static final int LAYOUT_FRAGMENTREGISTRATION = 6;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(6);
+  private static final int LAYOUT_FRAGMENTRESETPASSWORD = 7;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(7);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.poc.R.layout.fragment_dashboard, LAYOUT_FRAGMENTDASHBOARD);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.poc.R.layout.fragment_edit_profile, LAYOUT_FRAGMENTEDITPROFILE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.poc.R.layout.fragment_login, LAYOUT_FRAGMENTLOGIN);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.poc.R.layout.fragment_profile, LAYOUT_FRAGMENTPROFILE);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.poc.R.layout.fragment_profile_picture, LAYOUT_FRAGMENTPROFILEPICTURE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.poc.R.layout.fragment_registration, LAYOUT_FRAGMENTREGISTRATION);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.poc.R.layout.fragment_reset_password, LAYOUT_FRAGMENTRESETPASSWORD);
   }
@@ -78,6 +82,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new FragmentProfileBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for fragment_profile is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTPROFILEPICTURE: {
+          if ("layout/fragment_profile_picture_0".equals(tag)) {
+            return new FragmentProfilePictureBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_profile_picture is invalid. Received: " + tag);
         }
         case  LAYOUT_FRAGMENTREGISTRATION: {
           if ("layout/fragment_registration_0".equals(tag)) {
@@ -145,13 +155,14 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(6);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(7);
 
     static {
       sKeys.put("layout/fragment_dashboard_0", com.example.poc.R.layout.fragment_dashboard);
       sKeys.put("layout/fragment_edit_profile_0", com.example.poc.R.layout.fragment_edit_profile);
       sKeys.put("layout/fragment_login_0", com.example.poc.R.layout.fragment_login);
       sKeys.put("layout/fragment_profile_0", com.example.poc.R.layout.fragment_profile);
+      sKeys.put("layout/fragment_profile_picture_0", com.example.poc.R.layout.fragment_profile_picture);
       sKeys.put("layout/fragment_registration_0", com.example.poc.R.layout.fragment_registration);
       sKeys.put("layout/fragment_reset_password_0", com.example.poc.R.layout.fragment_reset_password);
     }

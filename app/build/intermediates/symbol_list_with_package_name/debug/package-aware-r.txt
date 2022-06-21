@@ -2844,11 +2844,13 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btn_choose_image
 id btn_holder
 id btn_login_login
 id btn_registration_register
 id btn_reset_password
 id btn_save_edit_profile
+id btn_upload_image
 id buttonPanel
 id button_continue
 id button_create
@@ -3175,10 +3177,12 @@ id percent
 id phone_button
 id phone_layout
 id phone_number
+id picture
 id pin
 id position
 id postLayout
 id profile_profile_pic
+id progressBarProfilePic
 id progressBar_login
 id progressBar_profile
 id progress_circular
@@ -3297,7 +3301,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView
 id textWatcher
 id text_input_end_icon
 id text_input_error_icon
@@ -3331,6 +3334,8 @@ id triangle
 id trouble_signing_in
 id trouble_signing_in_possible_fixes
 id tv_go_to_edit_profile
+id tv_header_email
+id tv_header_uname
 id tv_login_go_to_register
 id tv_login_reset_password
 id tv_profile_dob
@@ -3488,6 +3493,7 @@ layout fragment_dashboard
 layout fragment_edit_profile
 layout fragment_login
 layout fragment_profile
+layout fragment_profile_picture
 layout fragment_registration
 layout fragment_reset_password
 layout fui_activity_invisible

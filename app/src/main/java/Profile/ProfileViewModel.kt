@@ -3,8 +3,10 @@ package Profile
 import Repository.AuthenticationRepository
 import Repository.ProfileRepository
 import android.app.Application
-import android.util.Log
+import android.app.ProgressDialog
+import android.net.Uri
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
@@ -17,8 +19,9 @@ class ProfileViewModel(application: Application) : AndroidViewModel(application)
     var email:MutableLiveData<String> = MutableLiveData()
     var phone:MutableLiveData<String> = MutableLiveData()
     var username:MutableLiveData<String> = MutableLiveData()
-
+    var uri:MutableLiveData<String> = MutableLiveData()
     var msg:MutableLiveData<String> = MutableLiveData()
+
 
     private fun startObservation()
     {
@@ -50,6 +53,10 @@ class ProfileViewModel(application: Application) : AndroidViewModel(application)
         profileRepository.livePhone.observeForever(Observer {
             this.phone.postValue(it)
         })
+        profileRepository.liveUri.observeForever(Observer {
+            this.uri.postValue(it)
+        })
+
 
         startObservation()
 
@@ -67,6 +74,11 @@ class ProfileViewModel(application: Application) : AndroidViewModel(application)
     }
 
 
-
+    fun uploadProfilePicture(uri:Uri)
+    {
+        msg.postValue("in progress")
+        profileRepository.updateProfilePicture(uri)
+        startObservation()
+    }
 
 }

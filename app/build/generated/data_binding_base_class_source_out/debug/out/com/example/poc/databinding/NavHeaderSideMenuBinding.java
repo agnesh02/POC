@@ -24,13 +24,17 @@ public final class NavHeaderSideMenuBinding implements ViewBinding {
   public final ImageView imageView;
 
   @NonNull
-  public final TextView textView;
+  public final TextView tvHeaderEmail;
+
+  @NonNull
+  public final TextView tvHeaderUname;
 
   private NavHeaderSideMenuBinding(@NonNull LinearLayout rootView, @NonNull ImageView imageView,
-      @NonNull TextView textView) {
+      @NonNull TextView tvHeaderEmail, @NonNull TextView tvHeaderUname) {
     this.rootView = rootView;
     this.imageView = imageView;
-    this.textView = textView;
+    this.tvHeaderEmail = tvHeaderEmail;
+    this.tvHeaderUname = tvHeaderUname;
   }
 
   @Override
@@ -66,13 +70,20 @@ public final class NavHeaderSideMenuBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView;
-      TextView textView = ViewBindings.findChildViewById(rootView, id);
-      if (textView == null) {
+      id = R.id.tv_header_email;
+      TextView tvHeaderEmail = ViewBindings.findChildViewById(rootView, id);
+      if (tvHeaderEmail == null) {
         break missingId;
       }
 
-      return new NavHeaderSideMenuBinding((LinearLayout) rootView, imageView, textView);
+      id = R.id.tv_header_uname;
+      TextView tvHeaderUname = ViewBindings.findChildViewById(rootView, id);
+      if (tvHeaderUname == null) {
+        break missingId;
+      }
+
+      return new NavHeaderSideMenuBinding((LinearLayout) rootView, imageView, tvHeaderEmail,
+          tvHeaderUname);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

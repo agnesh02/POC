@@ -57,10 +57,12 @@ font poppins_light
 id action_logout
 id app_bar_side_menu
 id attendence
+id btn_choose_image
 id btn_login_login
 id btn_registration_register
 id btn_reset_password
 id btn_save_edit_profile
+id btn_upload_image
 id buttonn_edit_edit_profile
 id cardView3
 id card_bluetooth
@@ -95,7 +97,9 @@ id nav_profile
 id nav_version
 id nav_view
 id nav_weather
+id picture
 id profile_profile_pic
+id progressBarProfilePic
 id progressBar_login
 id progressBar_profile
 id scrollView3
@@ -105,9 +109,10 @@ id textInputLayout37
 id textInputLayout5
 id textInputLayout6
 id textInputLayout7
-id textView
 id toolbar
 id tv_go_to_edit_profile
+id tv_header_email
+id tv_header_uname
 id tv_login_go_to_register
 id tv_login_reset_password
 id tv_profile_dob
@@ -123,6 +128,7 @@ layout fragment_dashboard
 layout fragment_edit_profile
 layout fragment_login
 layout fragment_profile
+layout fragment_profile_picture
 layout fragment_registration
 layout fragment_reset_password
 layout nav_header_side_menu

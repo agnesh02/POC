@@ -1,5 +1,6 @@
 package Repository
 
+import Authentication.LoginFragment
 import Main.SideMenuActivity
 import Utilities.UserData
 import android.app.Application
@@ -16,13 +17,21 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class AuthenticationRepository {
 
-    private var auth: FirebaseAuth = FirebaseAuth.getInstance()
-    private var firebaseUser:FirebaseUser = auth.currentUser!!
+    val auth: FirebaseAuth= FirebaseAuth.getInstance()
+    val firebaseUser: FirebaseUser? = FirebaseAuth.getInstance().currentUser
+    var user:MutableLiveData<String> = MutableLiveData()
+    var email:MutableLiveData<String> = MutableLiveData()
     private var firestore:FirebaseFirestore = FirebaseFirestore.getInstance()
 
     var loginStatus:MutableLiveData<Boolean> = MutableLiveData()
     var liveRepoMessage:MutableLiveData<String> = MutableLiveData()
 
+
+    fun getUser()
+    {
+        user.postValue(firebaseUser?.displayName!!)
+        email.postValue(firebaseUser?.email!!)
+    }
 
     fun registerUser(username: String, email:String, password:String)
     {
@@ -48,8 +57,8 @@ class AuthenticationRepository {
             .setDisplayName(username)
             .build()
 
-        firebaseUser.updateProfile(profileChangeRequest)
-            .addOnCompleteListener {
+        firebaseUser?.updateProfile(profileChangeRequest)
+            ?.addOnCompleteListener {
                 if (it.isSuccessful) {
                     liveRepoMessage.value = "User registered successfully"
                 } else {
@@ -57,7 +66,7 @@ class AuthenticationRepository {
                     return@addOnCompleteListener
                 }
             }
-            .addOnFailureListener {
+            ?.addOnFailureListener {
                 liveRepoMessage.value = it.message
                 return@addOnFailureListener
             }
@@ -89,7 +98,7 @@ class AuthenticationRepository {
             .addOnCompleteListener {
                 if (it.isSuccessful)
                 {
-                    liveRepoMessage.postValue("Hi, "+firebaseUser.displayName)
+                    liveRepoMessage.postValue("Hi, "+firebaseUser?.displayName)
                     var i = Intent(application.applicationContext,SideMenuActivity::class.java)
                     i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
                     startActivity(application.applicationContext,i, Bundle())
@@ -124,6 +133,15 @@ class AuthenticationRepository {
                 liveRepoMessage.value =  it.message
                 return@addOnFailureListener
             }
+    }
+
+    fun logoutUser(application: Application)
+    {
+        auth.signOut()
+        var i = Intent(application.applicationContext,LoginFragment::class.java)
+        i.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+        startActivity(application.applicationContext,i, Bundle())
+
     }
 
 }
