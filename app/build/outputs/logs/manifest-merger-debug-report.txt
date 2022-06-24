@@ -189,7 +189,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Ag
 		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:14:9-41
 	android:dataExtractionRules
 		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:8:9-65
-activity#Main.SideMenuActivity
+activity#main.SideMenuActivity
 ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:17:9-21:60
 	android:label
 		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:20:13-61
@@ -199,7 +199,7 @@ ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\Androi
 		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:21:13-57
 	android:name
 		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:18:13-49
-activity#Authentication.AuthenticationActivity
+activity#authentication.AuthenticationActivity
 ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:22:9-30:20
 	android:exported
 		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:24:13-36

@@ -1,14 +1,9 @@
-package Authentication
+package authentication
 
 import android.os.Bundle
-import android.system.Os.remove
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentTransaction
-import androidx.fragment.app.replace
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
 import com.example.poc.R
 
 class AuthenticationActivity : AppCompatActivity() {
@@ -31,10 +26,9 @@ class AuthenticationActivity : AppCompatActivity() {
         return false
     }
 
-    private fun fragmentChange()
-    {
-        var transaction:FragmentTransaction = supportFragmentManager.beginTransaction()
-        transaction.replace(R.id.frame_authentication,LoginFragment()).commit()
+    private fun fragmentChange() {
+        val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.frame_authentication, LoginFragment()).commit()
 
     }
 

@@ -7,17 +7,15 @@
 
     <fragment
         android:id="@+id/nav_dashboard"
-        android:name="Main.DashboardFragment"
+        android:name="main.DashboardFragment"
         android:label="Dashboard"
-        tools:layout="@layout/fragment_dashboard" >
-    </fragment>
+        tools:layout="@layout/fragment_dashboard" />
 
     <fragment
         android:id="@+id/nav_profile"
-        android:name="Profile.ProfileFragment"
+        android:name="profile.ProfileFragment"
         android:label="Profile"
-        tools:layout="@layout/fragment_profile" >
-    </fragment>
+        tools:layout="@layout/fragment_profile" />
 
 
 </navigation>

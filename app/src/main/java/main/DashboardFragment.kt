@@ -1,4 +1,4 @@
-package Main
+package main
 
 import android.os.Bundle
 import android.view.*
@@ -11,18 +11,21 @@ import com.example.poc.databinding.FragmentDashboardBinding
 
 class DashboardFragment : Fragment() {
 
-    lateinit var binding:FragmentDashboardBinding
+    lateinit var binding: FragmentDashboardBinding
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
         binding = FragmentDashboardBinding.inflate(layoutInflater)
 
-        var appCompatActivity:AppCompatActivity = activity as AppCompatActivity
+        val appCompatActivity: AppCompatActivity = activity as AppCompatActivity
         appCompatActivity.supportActionBar?.title = "Dashboard"
 
-        binding.cardProfile.setOnClickListener(View.OnClickListener {
+        binding.cardProfile.setOnClickListener {
             view?.findNavController()?.navigate(R.id.nav_profile)
-        })
-
+        }
 
         return binding.root
     }

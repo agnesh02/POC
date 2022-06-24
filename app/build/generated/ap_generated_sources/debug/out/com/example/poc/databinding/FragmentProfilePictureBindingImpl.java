@@ -66,7 +66,7 @@ public class FragmentProfilePictureBindingImpl extends FragmentProfilePictureBin
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.viewModel == variableId) {
-            setViewModel((Profile.ProfileViewModel) variable);
+            setViewModel((profile.ProfileViewModel) variable);
         }
         else {
             variableSet = false;
@@ -74,7 +74,7 @@ public class FragmentProfilePictureBindingImpl extends FragmentProfilePictureBin
             return variableSet;
     }
 
-    public void setViewModel(@Nullable Profile.ProfileViewModel ViewModel) {
+    public void setViewModel(@Nullable profile.ProfileViewModel ViewModel) {
         this.mViewModel = ViewModel;
     }
 

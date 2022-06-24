@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import authentication.AuthenticationViewModel;
 import com.example.poc.R;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -48,7 +49,7 @@ public abstract class FragmentLoginBinding extends ViewDataBinding {
   public final TextView tvLoginResetPassword;
 
   @Bindable
-  protected Authentication.AuthenticationViewModel mViewModel;
+  protected AuthenticationViewModel mViewModel;
 
   protected FragmentLoginBinding(Object _bindingComponent, View _root, int _localFieldCount,
       Button btnLoginLogin, CheckBox checkBox, TextInputEditText etLoginEmailId,
@@ -67,10 +68,10 @@ public abstract class FragmentLoginBinding extends ViewDataBinding {
     this.tvLoginResetPassword = tvLoginResetPassword;
   }
 
-  public abstract void setViewModel(@Nullable Authentication.AuthenticationViewModel viewModel);
+  public abstract void setViewModel(@Nullable AuthenticationViewModel viewModel);
 
   @Nullable
-  public Authentication.AuthenticationViewModel getViewModel() {
+  public AuthenticationViewModel getViewModel() {
     return mViewModel;
   }
 

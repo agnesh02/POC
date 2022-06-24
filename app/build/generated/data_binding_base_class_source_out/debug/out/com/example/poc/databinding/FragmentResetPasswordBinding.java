@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import authentication.AuthenticationViewModel;
 import com.example.poc.R;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -27,7 +28,7 @@ public abstract class FragmentResetPasswordBinding extends ViewDataBinding {
   public final TextInputLayout textInputLayout37;
 
   @Bindable
-  protected Authentication.AuthenticationViewModel mViewModel;
+  protected AuthenticationViewModel mViewModel;
 
   protected FragmentResetPasswordBinding(Object _bindingComponent, View _root, int _localFieldCount,
       Button btnResetPassword, TextInputEditText etResetPasswordEmailId,
@@ -38,10 +39,10 @@ public abstract class FragmentResetPasswordBinding extends ViewDataBinding {
     this.textInputLayout37 = textInputLayout37;
   }
 
-  public abstract void setViewModel(@Nullable Authentication.AuthenticationViewModel viewModel);
+  public abstract void setViewModel(@Nullable AuthenticationViewModel viewModel);
 
   @Nullable
-  public Authentication.AuthenticationViewModel getViewModel() {
+  public AuthenticationViewModel getViewModel() {
     return mViewModel;
   }
 

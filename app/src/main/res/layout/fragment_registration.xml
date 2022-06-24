@@ -1,19 +1,18 @@
-
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
-            type="Authentication.AuthenticationViewModel" />
+            type="authentication.AuthenticationViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="Authentication.RegistrationFragment">
+        tools:context="authentication.RegistrationFragment">
 
 
         <com.google.android.material.textfield.TextInputLayout
@@ -25,19 +24,19 @@
             android:layout_marginTop="100dp"
             android:layout_marginEnd="40dp"
             android:gravity="center_vertical"
-            android:hint="Username"
+            android:hint="@string/username"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_username"
-                android:text="@={viewModel.etUsername}"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:drawableStart="@drawable/custom_person_outline"
                 android:drawablePadding="13dp"
                 android:gravity="center_vertical"
+                android:text="@={viewModel.etUsername}"
                 android:textSize="19sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -50,19 +49,19 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="40dp"
             android:gravity="center_vertical"
-            android:hint="E-mail id"
+            android:hint="@string/e_mail_id"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_email_id"
-                android:text="@={viewModel.etEmail}"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:drawableStart="@drawable/custom_email_icon"
                 android:drawablePadding="13dp"
                 android:gravity="center_vertical"
+                android:text="@={viewModel.etEmail}"
                 android:textSize="19sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -75,20 +74,20 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="40dp"
             android:gravity="center_vertical"
-            android:hint="Password"
+            android:hint="@string/password"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout7">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_password"
-                android:text="@={viewModel.etPass}"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:drawableStart="@drawable/custom_lock_outline"
                 android:drawablePadding="13dp"
                 android:gravity="center_vertical"
                 android:inputType="textPassword"
+                android:text="@={viewModel.etPass}"
                 android:textSize="19sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -101,20 +100,20 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="40dp"
             android:gravity="center_vertical"
-            android:hint="Confirm password"
+            android:hint="@string/confirm_password"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_confirm_password"
-                android:text="@={viewModel.etConfirmPass}"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:drawableStart="@drawable/custom_lock_outline"
                 android:drawablePadding="13dp"
                 android:gravity="center_vertical"
                 android:inputType="textPassword"
+                android:text="@={viewModel.etConfirmPass}"
                 android:textSize="19sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -123,8 +122,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="35dp"
-            android:text="Register"
             android:onClick="@{()->viewModel.onRegister()}"
+            android:text="@string/register"
             app:cornerRadius="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/textInputLayout6"

@@ -41,7 +41,7 @@
 25-->C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:14:9-41
 26        <activity
 26-->C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:17:9-21:60
-27            android:name="Main.SideMenuActivity"
+27            android:name="main.SideMenuActivity"
 27-->C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:18:13-49
 28            android:exported="false"
 28-->C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:19:13-37
@@ -51,7 +51,7 @@
 30-->C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:21:13-57
 31        <activity
 31-->C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:22:9-30:20
-32            android:name="Authentication.AuthenticationActivity"
+32            android:name="authentication.AuthenticationActivity"
 32-->C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:23:13-65
 33            android:exported="true" >
 33-->C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:24:13-36

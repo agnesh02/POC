@@ -1,7 +1,6 @@
-package Profile
+package profile
 
 import android.os.Bundle
-import android.os.PerformanceHintManager
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -15,39 +14,42 @@ import com.example.poc.databinding.FragmentEditProfileBinding
 class EditProfileFragment : Fragment() {
 
     lateinit var binding: FragmentEditProfileBinding
-    lateinit var viewModel:ProfileViewModel
+    lateinit var viewModel: ProfileViewModel
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
         binding = FragmentEditProfileBinding.inflate(layoutInflater)
 
-        viewModel = ViewModelProvider(this).get(ProfileViewModel::class.java)
+        viewModel = ViewModelProvider(this)[ProfileViewModel::class.java]
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
 
-        var appCompatActivity: AppCompatActivity = (activity as AppCompatActivity)
+        val appCompatActivity: AppCompatActivity = (activity as AppCompatActivity)
         appCompatActivity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
         appCompatActivity.supportActionBar?.title = "Edit Profile"
 
         disableViews()
         viewModel.getProfileData()
 
-        binding.buttonnEditEditProfile.setOnClickListener(View.OnClickListener {
+        binding.buttonnEditEditProfile.setOnClickListener {
             enableViews()
-        })
+        }
 
-        binding.btnSaveEditProfile.setOnClickListener(View.OnClickListener {
+        binding.btnSaveEditProfile.setOnClickListener {
             viewModel.updateProfileData()
             disableViews()
-            var transaction: FragmentTransaction = parentFragmentManager.beginTransaction()
-            transaction.replace(R.id.nav_host_fragment_content_side_menu,ProfileFragment()).commit()
-        })
-
+            val transaction: FragmentTransaction = parentFragmentManager.beginTransaction()
+            transaction.replace(R.id.nav_host_fragment_content_side_menu, ProfileFragment())
+                .commit()
+        }
 
         return binding.root
     }
 
-    private fun disableViews()
-    {
+    private fun disableViews() {
         binding.etEditProfileUserName.isEnabled = false
         binding.etEditProfileFullName.isEnabled = false
         binding.etEditProfileDob.isEnabled = false
@@ -56,8 +58,7 @@ class EditProfileFragment : Fragment() {
         binding.buttonnEditEditProfile.visibility = View.VISIBLE
     }
 
-    private fun enableViews()
-    {
+    private fun enableViews() {
         binding.etEditProfileUserName.isEnabled = true
         binding.etEditProfileFullName.isEnabled = true
         binding.etEditProfileDob.isEnabled = true
@@ -65,7 +66,6 @@ class EditProfileFragment : Fragment() {
         binding.btnSaveEditProfile.visibility = View.VISIBLE
         binding.buttonnEditEditProfile.visibility = View.INVISIBLE
     }
-
 
 
 }

@@ -42,7 +42,7 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding  
             // viewModel.dob != null
             boolean viewModelDobJavaLangObjectNull = false;
             // viewModel
-            Profile.ProfileViewModel viewModel = mViewModel;
+            profile.ProfileViewModel viewModel = mViewModel;
             // viewModel != null
             boolean viewModelJavaLangObjectNull = false;
 
@@ -77,7 +77,7 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding  
             // viewModel.email
             androidx.lifecycle.MutableLiveData<java.lang.String> viewModelEmail = null;
             // viewModel
-            Profile.ProfileViewModel viewModel = mViewModel;
+            profile.ProfileViewModel viewModel = mViewModel;
             // viewModel != null
             boolean viewModelJavaLangObjectNull = false;
             // viewModel.email != null
@@ -105,20 +105,20 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding  
     private androidx.databinding.InverseBindingListener etEditProfileFullNameandroidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
         @Override
         public void onChange() {
-            // Inverse of viewModel.full_name.getValue()
-            //         is viewModel.full_name.setValue((java.lang.String) callbackArg_0)
+            // Inverse of viewModel.fullName.getValue()
+            //         is viewModel.fullName.setValue((java.lang.String) callbackArg_0)
             java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(etEditProfileFullName);
             // localize variables for thread safety
-            // viewModel.full_name != null
+            // viewModel.fullName != null
             boolean viewModelFullNameJavaLangObjectNull = false;
-            // viewModel.full_name.getValue()
+            // viewModel.fullName
+            androidx.lifecycle.MutableLiveData<java.lang.String> viewModelFullName = null;
+            // viewModel.fullName.getValue()
             java.lang.String viewModelFullNameGetValue = null;
             // viewModel
-            Profile.ProfileViewModel viewModel = mViewModel;
+            profile.ProfileViewModel viewModel = mViewModel;
             // viewModel != null
             boolean viewModelJavaLangObjectNull = false;
-            // viewModel.full_name
-            androidx.lifecycle.MutableLiveData<java.lang.String> viewModelFullName = null;
 
 
 
@@ -126,7 +126,7 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding  
             if (viewModelJavaLangObjectNull) {
 
 
-                viewModelFullName = viewModel.getFull_name();
+                viewModelFullName = viewModel.getFullName();
 
                 viewModelFullNameJavaLangObjectNull = (viewModelFullName) != (null);
                 if (viewModelFullNameJavaLangObjectNull) {
@@ -149,7 +149,7 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding  
             // viewModel.phone != null
             boolean viewModelPhoneJavaLangObjectNull = false;
             // viewModel
-            Profile.ProfileViewModel viewModel = mViewModel;
+            profile.ProfileViewModel viewModel = mViewModel;
             // viewModel != null
             boolean viewModelJavaLangObjectNull = false;
             // viewModel.phone
@@ -188,7 +188,7 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding  
             // viewModel.username.getValue()
             java.lang.String viewModelUsernameGetValue = null;
             // viewModel
-            Profile.ProfileViewModel viewModel = mViewModel;
+            profile.ProfileViewModel viewModel = mViewModel;
             // viewModel.username
             androidx.lifecycle.MutableLiveData<java.lang.String> viewModelUsername = null;
             // viewModel != null
@@ -265,7 +265,7 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding  
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.viewModel == variableId) {
-            setViewModel((Profile.ProfileViewModel) variable);
+            setViewModel((profile.ProfileViewModel) variable);
         }
         else {
             variableSet = false;
@@ -273,7 +273,7 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding  
             return variableSet;
     }
 
-    public void setViewModel(@Nullable Profile.ProfileViewModel ViewModel) {
+    public void setViewModel(@Nullable profile.ProfileViewModel ViewModel) {
         this.mViewModel = ViewModel;
         synchronized(this) {
             mDirtyFlags |= 0x20L;
@@ -353,7 +353,6 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding  
         }
         androidx.lifecycle.MutableLiveData<java.lang.String> viewModelDob = null;
         java.lang.String viewModelEmailGetValue = null;
-        java.lang.String viewModelFullNameGetValue = null;
         java.lang.String viewModelUsernameGetValue = null;
         androidx.lifecycle.MutableLiveData<java.lang.String> viewModelFullName = null;
         androidx.lifecycle.MutableLiveData<java.lang.String> viewModelUsername = null;
@@ -361,7 +360,8 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding  
         java.lang.String viewModelDobGetValue = null;
         androidx.lifecycle.MutableLiveData<java.lang.String> viewModelPhone = null;
         java.lang.String viewModelPhoneGetValue = null;
-        Profile.ProfileViewModel viewModel = mViewModel;
+        java.lang.String viewModelFullNameGetValue = null;
+        profile.ProfileViewModel viewModel = mViewModel;
 
         if ((dirtyFlags & 0x7fL) != 0) {
 
@@ -383,14 +383,14 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding  
             if ((dirtyFlags & 0x62L) != 0) {
 
                     if (viewModel != null) {
-                        // read viewModel.full_name
-                        viewModelFullName = viewModel.getFull_name();
+                        // read viewModel.fullName
+                        viewModelFullName = viewModel.getFullName();
                     }
                     updateLiveDataRegistration(1, viewModelFullName);
 
 
                     if (viewModelFullName != null) {
-                        // read viewModel.full_name.getValue()
+                        // read viewModel.fullName.getValue()
                         viewModelFullNameGetValue = viewModelFullName.getValue();
                     }
             }
@@ -479,7 +479,7 @@ public class FragmentEditProfileBindingImpl extends FragmentEditProfileBinding  
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewModel.dob
-        flag 1 (0x2L): viewModel.full_name
+        flag 1 (0x2L): viewModel.fullName
         flag 2 (0x3L): viewModel.username
         flag 3 (0x4L): viewModel.email
         flag 4 (0x5L): viewModel.phone

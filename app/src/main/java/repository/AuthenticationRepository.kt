@@ -1,15 +1,13 @@
-package Repository
+package repository
 
-import Authentication.LoginFragment
-import Main.SideMenuActivity
-import Utilities.UserData
+import authentication.LoginFragment
+import main.SideMenuActivity
+import models.UserData
 import android.app.Application
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.MutableLiveData
-import com.google.android.gms.tasks.OnFailureListener
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.UserProfileChangeRequest
@@ -17,25 +15,23 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class AuthenticationRepository {
 
-    val auth: FirebaseAuth= FirebaseAuth.getInstance()
-    val firebaseUser: FirebaseUser? = FirebaseAuth.getInstance().currentUser
-    var user:MutableLiveData<String> = MutableLiveData()
-    var email:MutableLiveData<String> = MutableLiveData()
-    private var firestore:FirebaseFirestore = FirebaseFirestore.getInstance()
+    private val auth: FirebaseAuth = FirebaseAuth.getInstance()
+    private val firebaseUser: FirebaseUser? = FirebaseAuth.getInstance().currentUser
+    var user: MutableLiveData<String> = MutableLiveData()
+    var email: MutableLiveData<String> = MutableLiveData()
+    private var firestore: FirebaseFirestore = FirebaseFirestore.getInstance()
 
-    var loginStatus:MutableLiveData<Boolean> = MutableLiveData()
-    var liveRepoMessage:MutableLiveData<String> = MutableLiveData()
+    private var loginStatus: MutableLiveData<Boolean> = MutableLiveData()
+    var liveRepoMessage: MutableLiveData<String> = MutableLiveData()
 
 
-    fun getUser()
-    {
-        user.postValue(firebaseUser?.displayName!!)
-        email.postValue(firebaseUser?.email!!)
+    fun getUser() {
+        user.postValue(firebaseUser!!.displayName!!)
+        email.postValue(firebaseUser.email!!)
     }
 
-    fun registerUser(username: String, email:String, password:String)
-    {
-        auth.createUserWithEmailAndPassword(email,password)
+    fun registerUser(username: String, email: String, password: String) {
+        auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener {
                 if (it.isSuccessful) {
                     updateProfile(email)
@@ -51,9 +47,8 @@ class AuthenticationRepository {
             }
     }
 
-    fun updateUsername(username: String)
-    {
-        var profileChangeRequest: UserProfileChangeRequest = UserProfileChangeRequest.Builder()
+    fun updateUsername(username: String) {
+        val profileChangeRequest: UserProfileChangeRequest = UserProfileChangeRequest.Builder()
             .setDisplayName(username)
             .build()
 
@@ -72,15 +67,14 @@ class AuthenticationRepository {
             }
     }
 
-    private fun updateProfile(email: String)
-    {
-        val userData = UserData("","","","")
+    private fun updateProfile(email: String) {
+        val userData = UserData("", "", "", "")
 
         firestore.collection("USERS").document(email)
             .set(userData)
             .addOnCompleteListener {
                 if (it.isSuccessful) {
-
+                    //
                 } else {
                     liveRepoMessage.value = it.exception?.message
                     return@addOnCompleteListener
@@ -92,20 +86,16 @@ class AuthenticationRepository {
             }
     }
 
-    fun loginUser(application: Application,email:String, password:String)
-    {
-        auth.signInWithEmailAndPassword(email,password)
+    fun loginUser(application: Application, email: String, password: String) {
+        auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener {
-                if (it.isSuccessful)
-                {
-                    liveRepoMessage.postValue("Hi, "+firebaseUser?.displayName)
-                    var i = Intent(application.applicationContext,SideMenuActivity::class.java)
+                if (it.isSuccessful) {
+                    liveRepoMessage.postValue("Hi, " + firebaseUser?.displayName)
+                    val i = Intent(application.applicationContext, SideMenuActivity::class.java)
                     i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-                    startActivity(application.applicationContext,i, Bundle())
+                    startActivity(application.applicationContext, i, Bundle())
                     loginStatus.value = true
-                }
-                else
-                {
+                } else {
                     liveRepoMessage.value = it.exception?.message
                     loginStatus.value = false
                     return@addOnCompleteListener
@@ -118,29 +108,28 @@ class AuthenticationRepository {
             }
     }
 
-    fun resetPassword(email: String)
-    {
+    fun resetPassword(email: String) {
         auth.sendPasswordResetEmail(email)
             .addOnCompleteListener {
                 if (it.isSuccessful) {
-                    liveRepoMessage.value =  "Password reset link has been sent to the provided email address"
+                    liveRepoMessage.value =
+                        "Password reset link has been sent to the provided email address"
                 } else {
-                    liveRepoMessage.value =  it.exception?.message
+                    liveRepoMessage.value = it.exception?.message
                     return@addOnCompleteListener
                 }
             }
             .addOnFailureListener {
-                liveRepoMessage.value =  it.message
+                liveRepoMessage.value = it.message
                 return@addOnFailureListener
             }
     }
 
-    fun logoutUser(application: Application)
-    {
+    fun logoutUser(application: Application) {
         auth.signOut()
-        var i = Intent(application.applicationContext,LoginFragment::class.java)
+        val i = Intent(application.applicationContext, LoginFragment::class.java)
         i.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
-        startActivity(application.applicationContext,i, Bundle())
+        startActivity(application.applicationContext, i, Bundle())
 
     }
 

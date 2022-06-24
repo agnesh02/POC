@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
+import authentication.AuthenticationViewModel;
 import com.example.poc.R;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -45,7 +46,7 @@ public abstract class FragmentRegistrationBinding extends ViewDataBinding {
   public final TextInputLayout textInputLayout7;
 
   @Bindable
-  protected Authentication.AuthenticationViewModel mViewModel;
+  protected AuthenticationViewModel mViewModel;
 
   protected FragmentRegistrationBinding(Object _bindingComponent, View _root, int _localFieldCount,
       Button btnRegistrationRegister, TextInputEditText etConfirmPassword,
@@ -64,10 +65,10 @@ public abstract class FragmentRegistrationBinding extends ViewDataBinding {
     this.textInputLayout7 = textInputLayout7;
   }
 
-  public abstract void setViewModel(@Nullable Authentication.AuthenticationViewModel viewModel);
+  public abstract void setViewModel(@Nullable AuthenticationViewModel viewModel);
 
   @Nullable
-  public Authentication.AuthenticationViewModel getViewModel() {
+  public AuthenticationViewModel getViewModel() {
     return mViewModel;
   }
 

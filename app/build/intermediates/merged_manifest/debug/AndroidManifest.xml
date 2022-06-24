@@ -24,12 +24,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.POC" >
         <activity
-            android:name="Main.SideMenuActivity"
+            android:name="main.SideMenuActivity"
             android:exported="false"
             android:label="@string/title_activity_side_menu"
             android:theme="@style/Theme.POC.NoActionBar" />
         <activity
-            android:name="Authentication.AuthenticationActivity"
+            android:name="authentication.AuthenticationActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

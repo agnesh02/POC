@@ -35,7 +35,7 @@ public class FragmentResetPasswordBindingImpl extends FragmentResetPasswordBindi
             // viewModel.etEmail
             java.lang.String viewModelEtEmail = null;
             // viewModel
-            Authentication.AuthenticationViewModel viewModel = mViewModel;
+            authentication.AuthenticationViewModel viewModel = mViewModel;
             // viewModel != null
             boolean viewModelJavaLangObjectNull = false;
 
@@ -93,7 +93,7 @@ public class FragmentResetPasswordBindingImpl extends FragmentResetPasswordBindi
     public boolean setVariable(int variableId, @Nullable Object variable)  {
         boolean variableSet = true;
         if (BR.viewModel == variableId) {
-            setViewModel((Authentication.AuthenticationViewModel) variable);
+            setViewModel((authentication.AuthenticationViewModel) variable);
         }
         else {
             variableSet = false;
@@ -101,7 +101,7 @@ public class FragmentResetPasswordBindingImpl extends FragmentResetPasswordBindi
             return variableSet;
     }
 
-    public void setViewModel(@Nullable Authentication.AuthenticationViewModel ViewModel) {
+    public void setViewModel(@Nullable authentication.AuthenticationViewModel ViewModel) {
         this.mViewModel = ViewModel;
         synchronized(this) {
             mDirtyFlags |= 0x1L;
@@ -125,7 +125,7 @@ public class FragmentResetPasswordBindingImpl extends FragmentResetPasswordBindi
             mDirtyFlags = 0;
         }
         java.lang.String viewModelEtEmail = null;
-        Authentication.AuthenticationViewModel viewModel = mViewModel;
+        authentication.AuthenticationViewModel viewModel = mViewModel;
 
         if ((dirtyFlags & 0x3L) != 0) {
 
@@ -154,7 +154,7 @@ public class FragmentResetPasswordBindingImpl extends FragmentResetPasswordBindi
     public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
         // localize variables for thread safety
         // viewModel
-        Authentication.AuthenticationViewModel viewModel = mViewModel;
+        authentication.AuthenticationViewModel viewModel = mViewModel;
         // viewModel != null
         boolean viewModelJavaLangObjectNull = false;
 
