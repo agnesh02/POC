@@ -1,11 +1,9 @@
 
-
-
-                                                              
                                                        
                                                    
 
     
+
                  
                             
                                               
@@ -15,7 +13,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="Profile.ProfilePictureFragment" android:tag="layout/fragment_profile_picture_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+        tools:context="profile.ProfilePictureFragment" android:tag="layout/fragment_profile_picture_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
 
         <Button
             android:id="@+id/btn_choose_image"
@@ -23,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
             android:backgroundTint="#4BC309"
-            android:text="choose image"
+            android:text="@string/choose_image"
             app:cornerRadius="20dp"
             app:layout_constraintBottom_toTopOf="@+id/btn_upload_image"
             app:layout_constraintEnd_toEndOf="@+id/picture"
@@ -36,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
             android:backgroundTint="#283DC3"
-            android:text="upload"
+            android:text="@string/upload"
             android:visibility="invisible"
             app:cornerRadius="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -58,7 +56,8 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_person_pin_24" />
+            app:srcCompat="@drawable/ic_baseline_person_pin_24"
+            android:contentDescription="@string/todo" />
 
         <ProgressBar
             android:id="@+id/progressBarProfilePic"

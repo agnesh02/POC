@@ -24,6 +24,10 @@
         "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-57:\\layout\\fragment_dashboard.xml"
     },
     {
+        "merged": "com.example.poc.app-mergeDebugResources-54:/layout/fragment_weather.xml",
+        "source": "com.example.poc.app-main-57:/layout/fragment_weather.xml"
+    },
+    {
         "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-54:\\layout\\fragment_edit_profile.xml",
         "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-57:\\layout\\fragment_edit_profile.xml"
     },
@@ -34,10 +38,6 @@
     {
         "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-54:\\layout\\fragment_reset_password.xml",
         "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-57:\\layout\\fragment_reset_password.xml"
-    },
-    {
-        "merged": "com.example.poc.app-mergeDebugResources-54:/layout/content_side_menu.xml",
-        "source": "com.example.poc.app-main-57:/layout/content_side_menu.xml"
     },
     {
         "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-54:\\layout\\activity_authentication.xml",

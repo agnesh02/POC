@@ -1,13 +1,11 @@
 
-                                                              
-                                                  
-                                                        
-
+                                                       
+                                                   
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="Main.DashboardFragment" android:tag="layout/fragment_dashboard_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto">
+        tools:context="main.DashboardFragment" android:tag="layout/fragment_dashboard_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -46,19 +44,21 @@
                         android:layout_gravity="center_horizontal|center_vertical"
                         android:gravity="center"
                         android:orientation="vertical"
-                        android:padding="2dp">
+                        android:padding="2dp"
+                        tools:ignore="UseCompoundDrawables">
 
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:padding="2dp"
-                            app:srcCompat="@drawable/cloudyday" />
+                            app:srcCompat="@drawable/cloudyday"
+                            android:contentDescription="@string/todo" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="2dp"
-                            android:text="Weather"
+                            android:text="@string/weather"
                             android:textColor="#000000"
                             android:textSize="14sp" />
                     </LinearLayout>
@@ -80,20 +80,22 @@
                         android:layout_gravity="center_horizontal|center_vertical"
                         android:gravity="center"
                         android:orientation="vertical"
-                        android:padding="2dp">
+                        android:padding="2dp"
+                        tools:ignore="UseCompoundDrawables">
 
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:padding="2dp"
-                            app:srcCompat="@drawable/bluetooth" />
+                            app:srcCompat="@drawable/bluetooth"
+                            android:contentDescription="@string/todo" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:gravity="center"
                             android:padding="2dp"
-                            android:text="Find &amp; Connect"
+                            android:text="@string/find_amp_connect"
                             android:textColor="#000000"
                             android:textSize="14sp" />
                     </LinearLayout>
@@ -116,19 +118,21 @@
                         android:layout_gravity="center_horizontal|center_vertical"
                         android:gravity="center"
                         android:orientation="vertical"
-                        android:padding="2dp">
+                        android:padding="2dp"
+                        tools:ignore="UseCompoundDrawables">
 
                         <ImageView
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:padding="2dp"
-                            app:srcCompat="@drawable/user" />
+                            app:srcCompat="@drawable/user"
+                            android:contentDescription="@string/todo" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="2dp"
-                            android:text="Profile"
+                            android:text="@string/profile"
                             android:textColor="#000000"
                             android:textSize="14sp" />
                     </LinearLayout>
@@ -151,20 +155,22 @@
                         android:layout_gravity="center_horizontal|center_vertical"
                         android:gravity="center"
                         android:orientation="vertical"
-                        android:padding="2dp">
+                        android:padding="2dp"
+                        tools:ignore="UseCompoundDrawables">
 
                         <ImageView
                             android:id="@+id/attendence"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
                             android:padding="2dp"
-                            app:srcCompat="@drawable/live" />
+                            app:srcCompat="@drawable/live"
+                            android:contentDescription="@string/todo" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="2dp"
-                            android:text="Stream video"
+                            android:text="@string/stream_video"
                             android:textColor="#000000"
                             android:textSize="14sp" />
                     </LinearLayout>

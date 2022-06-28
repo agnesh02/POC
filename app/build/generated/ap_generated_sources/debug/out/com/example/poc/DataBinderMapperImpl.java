@@ -13,6 +13,7 @@ import com.example.poc.databinding.FragmentProfileBindingImpl;
 import com.example.poc.databinding.FragmentProfilePictureBindingImpl;
 import com.example.poc.databinding.FragmentRegistrationBindingImpl;
 import com.example.poc.databinding.FragmentResetPasswordBindingImpl;
+import com.example.poc.databinding.FragmentWeatherBindingImpl;
 import java.lang.IllegalArgumentException;
 import java.lang.Integer;
 import java.lang.Object;
@@ -38,7 +39,9 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_FRAGMENTRESETPASSWORD = 7;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(7);
+  private static final int LAYOUT_FRAGMENTWEATHER = 8;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(8);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.poc.R.layout.fragment_dashboard, LAYOUT_FRAGMENTDASHBOARD);
@@ -48,6 +51,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.poc.R.layout.fragment_profile_picture, LAYOUT_FRAGMENTPROFILEPICTURE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.poc.R.layout.fragment_registration, LAYOUT_FRAGMENTREGISTRATION);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.poc.R.layout.fragment_reset_password, LAYOUT_FRAGMENTRESETPASSWORD);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.poc.R.layout.fragment_weather, LAYOUT_FRAGMENTWEATHER);
   }
 
   @Override
@@ -100,6 +104,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new FragmentResetPasswordBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for fragment_reset_password is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTWEATHER: {
+          if ("layout/fragment_weather_0".equals(tag)) {
+            return new FragmentWeatherBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_weather is invalid. Received: " + tag);
         }
       }
     }
@@ -155,7 +165,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(7);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(8);
 
     static {
       sKeys.put("layout/fragment_dashboard_0", com.example.poc.R.layout.fragment_dashboard);
@@ -165,6 +175,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/fragment_profile_picture_0", com.example.poc.R.layout.fragment_profile_picture);
       sKeys.put("layout/fragment_registration_0", com.example.poc.R.layout.fragment_registration);
       sKeys.put("layout/fragment_reset_password_0", com.example.poc.R.layout.fragment_reset_password);
+      sKeys.put("layout/fragment_weather_0", com.example.poc.R.layout.fragment_weather);
     }
   }
 }

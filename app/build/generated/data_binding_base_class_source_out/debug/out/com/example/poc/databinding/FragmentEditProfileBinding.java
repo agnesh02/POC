@@ -16,6 +16,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
+import profile.ProfileViewModel;
 
 public abstract class FragmentEditProfileBinding extends ViewDataBinding {
   @NonNull
@@ -52,7 +53,7 @@ public abstract class FragmentEditProfileBinding extends ViewDataBinding {
   public final TextInputLayout textInputLayout6;
 
   @Bindable
-  protected Profile.ProfileViewModel mViewModel;
+  protected ProfileViewModel mViewModel;
 
   protected FragmentEditProfileBinding(Object _bindingComponent, View _root, int _localFieldCount,
       Button btnSaveEditProfile, Button buttonnEditEditProfile, TextInputEditText etEditProfileDob,
@@ -74,10 +75,10 @@ public abstract class FragmentEditProfileBinding extends ViewDataBinding {
     this.textInputLayout6 = textInputLayout6;
   }
 
-  public abstract void setViewModel(@Nullable Profile.ProfileViewModel viewModel);
+  public abstract void setViewModel(@Nullable ProfileViewModel viewModel);
 
   @Nullable
-  public Profile.ProfileViewModel getViewModel() {
+  public ProfileViewModel getViewModel() {
     return mViewModel;
   }
 

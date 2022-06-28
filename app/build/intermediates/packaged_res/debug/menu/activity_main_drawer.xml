@@ -8,36 +8,36 @@
         <item
             android:id="@+id/nav_dashboard"
             android:icon="@drawable/ic_baseline_home_24"
-            android:title="Dashboard"/>
+            android:title="@string/dashboard"/>
         <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_baseline_person_pin_24"
-            android:title="Profile"/>
+            android:title="@string/profile"/>
         <item
             android:id="@+id/nav_weather"
             android:icon="@drawable/ic_baseline_wb_sunny_24"
-            android:title="Weather" />
+            android:title="@string/weather" />
         <item
             android:id="@+id/nav_ble"
             android:icon="@drawable/ic_baseline_bluetooth_searching_24"
-            android:title="Find &amp; Connect"/>
+            android:title="@string/find_amp_connect"/>
         <item
             android:id="@+id/nav_live_stream"
             android:icon="@drawable/ic_baseline_ondemand_video_24"
-            android:title="Live Stream"/>
+            android:title="@string/stream_video"/>
 
     </group>
 
-    <item android:title="More">
+    <item android:title="@string/more">
         <menu>
             <item
                 android:id="@+id/nav_version"
                 android:icon="@drawable/ic_baseline_perm_device_information_24"
-                android:title="Version" />
+                android:title="@string/version" />
             <item
                 android:id="@+id/nav_logout"
                 android:icon="@drawable/ic_baseline_power_settings_new_24"
-                android:title="Logout" />
+                android:title="@string/logout" />
         </menu>
     </item>
 </menu>

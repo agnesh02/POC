@@ -16,6 +16,7 @@ import androidx.databinding.ViewDataBinding;
 import com.example.poc.R;
 import java.lang.Deprecated;
 import java.lang.Object;
+import profile.ProfileViewModel;
 
 public abstract class FragmentProfileBinding extends ViewDataBinding {
   @NonNull
@@ -49,7 +50,7 @@ public abstract class FragmentProfileBinding extends ViewDataBinding {
   public final TextView tvProfileWelcomeText;
 
   @Bindable
-  protected Profile.ProfileViewModel mViewModel;
+  protected ProfileViewModel mViewModel;
 
   protected FragmentProfileBinding(Object _bindingComponent, View _root, int _localFieldCount,
       CardView cardView3, ImageView imageView4, ImageView profileProfilePic,
@@ -69,10 +70,10 @@ public abstract class FragmentProfileBinding extends ViewDataBinding {
     this.tvProfileWelcomeText = tvProfileWelcomeText;
   }
 
-  public abstract void setViewModel(@Nullable Profile.ProfileViewModel viewModel);
+  public abstract void setViewModel(@Nullable ProfileViewModel viewModel);
 
   @Nullable
-  public Profile.ProfileViewModel getViewModel() {
+  public ProfileViewModel getViewModel() {
     return mViewModel;
   }
 

@@ -15,6 +15,7 @@ import androidx.databinding.ViewDataBinding;
 import com.example.poc.R;
 import java.lang.Deprecated;
 import java.lang.Object;
+import profile.ProfileViewModel;
 
 public abstract class FragmentProfilePictureBinding extends ViewDataBinding {
   @NonNull
@@ -30,7 +31,7 @@ public abstract class FragmentProfilePictureBinding extends ViewDataBinding {
   public final ProgressBar progressBarProfilePic;
 
   @Bindable
-  protected Profile.ProfileViewModel mViewModel;
+  protected ProfileViewModel mViewModel;
 
   protected FragmentProfilePictureBinding(Object _bindingComponent, View _root,
       int _localFieldCount, Button btnChooseImage, Button btnUploadImage, ImageView picture,
@@ -42,10 +43,10 @@ public abstract class FragmentProfilePictureBinding extends ViewDataBinding {
     this.progressBarProfilePic = progressBarProfilePic;
   }
 
-  public abstract void setViewModel(@Nullable Profile.ProfileViewModel viewModel);
+  public abstract void setViewModel(@Nullable ProfileViewModel viewModel);
 
   @Nullable
-  public Profile.ProfileViewModel getViewModel() {
+  public ProfileViewModel getViewModel() {
     return mViewModel;
   }
 

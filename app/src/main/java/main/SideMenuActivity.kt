@@ -36,7 +36,7 @@ class SideMenuActivity : AppCompatActivity() {
             NavHeaderSideMenuBinding.bind(viewHeader)
 
         appBarConfiguration =
-            AppBarConfiguration(setOf(R.id.nav_dashboard, R.id.nav_profile), drawerLayout)
+            AppBarConfiguration(setOf(R.id.nav_dashboard, R.id.nav_profile, R.id.nav_weather), drawerLayout)
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
         NavigationUI.setupWithNavController(navView, navController)
 
@@ -59,6 +59,9 @@ class SideMenuActivity : AppCompatActivity() {
                 }
                 R.id.nav_profile -> {
                     navController.navigate(R.id.nav_profile); drawerLayout.closeDrawer(GravityCompat.START); true
+                }
+                R.id.nav_weather -> {
+                    navController.navigate(R.id.nav_weather); drawerLayout.closeDrawer(GravityCompat.START); true
                 }
                 R.id.nav_logout -> {
                     performLogout(); true

@@ -17,5 +17,12 @@
         android:label="Profile"
         tools:layout="@layout/fragment_profile" />
 
+    <fragment
+        android:id="@+id/nav_weather"
+        android:name="weather.WeatherFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_weather" />
+
+
 
 </navigation>
