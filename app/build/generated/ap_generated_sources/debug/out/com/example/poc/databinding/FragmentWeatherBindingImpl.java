@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.View;
 @SuppressWarnings("unchecked")
-public class FragmentWeatherBindingImpl extends FragmentWeatherBinding  {
+public class FragmentWeatherBindingImpl extends FragmentWeatherBinding implements com.example.poc.generated.callback.OnClickListener.Listener {
 
     @Nullable
     private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
@@ -14,8 +14,6 @@ public class FragmentWeatherBindingImpl extends FragmentWeatherBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.searchView, 1);
-        sViewsWithIds.put(R.id.btn_weather_go, 2);
         sViewsWithIds.put(R.id.weather_condition_image, 3);
         sViewsWithIds.put(R.id.tv_weather_condition, 4);
         sViewsWithIds.put(R.id.tv_weather_description, 5);
@@ -37,9 +35,37 @@ public class FragmentWeatherBindingImpl extends FragmentWeatherBinding  {
     @NonNull
     private final android.widget.FrameLayout mboundView0;
     // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback1;
     // values
     // listeners
     // Inverse Binding Event Handlers
+    private androidx.databinding.InverseBindingListener searchViewandroidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+        @Override
+        public void onChange() {
+            // Inverse of viewModel.cityName
+            //         is viewModel.setCityName((java.lang.String) callbackArg_0)
+            java.lang.String callbackArg_0 = androidx.databinding.adapters.TextViewBindingAdapter.getTextString(searchView);
+            // localize variables for thread safety
+            // viewModel
+            weather.WeatherViewModel viewModel = mViewModel;
+            // viewModel != null
+            boolean viewModelJavaLangObjectNull = false;
+            // viewModel.cityName
+            java.lang.String viewModelCityName = null;
+
+
+
+            viewModelJavaLangObjectNull = (viewModel) != (null);
+            if (viewModelJavaLangObjectNull) {
+
+
+
+
+                viewModel.setCityName(((java.lang.String) (callbackArg_0)));
+            }
+        }
+    };
 
     public FragmentWeatherBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
         this(bindingComponent, root, mapBindings(bindingComponent, root, 19, sIncludes, sViewsWithIds));
@@ -65,10 +91,13 @@ public class FragmentWeatherBindingImpl extends FragmentWeatherBinding  {
             , (android.widget.TextView) bindings[11]
             , (android.widget.ImageView) bindings[3]
             );
+        this.btnWeatherGo.setTag(null);
         this.mboundView0 = (android.widget.FrameLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.searchView.setTag(null);
         setRootTag(root);
         // listeners
+        mCallback1 = new com.example.poc.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -104,6 +133,11 @@ public class FragmentWeatherBindingImpl extends FragmentWeatherBinding  {
 
     public void setViewModel(@Nullable weather.WeatherViewModel ViewModel) {
         this.mViewModel = ViewModel;
+        synchronized(this) {
+            mDirtyFlags |= 0x1L;
+        }
+        notifyPropertyChanged(BR.viewModel);
+        super.requestRebind();
     }
 
     @Override
@@ -120,10 +154,49 @@ public class FragmentWeatherBindingImpl extends FragmentWeatherBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        java.lang.String viewModelCityName = null;
+        weather.WeatherViewModel viewModel = mViewModel;
+
+        if ((dirtyFlags & 0x3L) != 0) {
+
+
+
+                if (viewModel != null) {
+                    // read viewModel.cityName
+                    viewModelCityName = viewModel.getCityName();
+                }
+        }
         // batch finished
+        if ((dirtyFlags & 0x2L) != 0) {
+            // api target 1
+
+            this.btnWeatherGo.setOnClickListener(mCallback1);
+            androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.searchView, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, searchViewandroidTextAttrChanged);
+        }
+        if ((dirtyFlags & 0x3L) != 0) {
+            // api target 1
+
+            androidx.databinding.adapters.TextViewBindingAdapter.setText(this.searchView, viewModelCityName);
+        }
     }
     // Listener Stub Implementations
     // callback impls
+    public final void _internalCallbackOnClick(int sourceId , android.view.View callbackArg_0) {
+        // localize variables for thread safety
+        // viewModel
+        weather.WeatherViewModel viewModel = mViewModel;
+        // viewModel != null
+        boolean viewModelJavaLangObjectNull = false;
+
+
+
+        viewModelJavaLangObjectNull = (viewModel) != (null);
+        if (viewModelJavaLangObjectNull) {
+
+
+            viewModel.fetchWeatherData();
+        }
+    }
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping

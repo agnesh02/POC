@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -30,27 +31,19 @@ class WeatherFragment : Fragment() {
 
         binding.searchView.setAdapter(viewModel.cityAdapter)
 
-        binding.btnWeatherGo.setOnClickListener {
-            viewModel.fetchWeatherData(binding.searchView.text.toString())
-        }
 
         viewModel.liveWeatherData.observe(viewLifecycleOwner, Observer {
-            binding.tvWeatherDescription.text = it.description
-            binding.tvWeatherCondition.text = it.main
-        })
 
-        viewModel.liveWeatherDetails.observe(viewLifecycleOwner, Observer {
-
-            binding.tvMaxTemp.text = "Max : ${(it.temp_max-273.15).roundToInt()} °C"
-            binding.tvMinTemp.text = "Min : ${(it.temp_min-273.15).roundToInt()} °C"
-            binding.tvTemp.text = "${(it.temp-273.15).roundToInt()} °C"
-            binding.tvFeelsLike.text = "Feels like : ${(it.feels_like-273.15).roundToInt()} °C"
+            binding.tvWeatherDescription.text = it.weatherDescription
+            binding.tvWeatherCondition.text = it.weatherCondition
+            binding.tvMaxTemp.text = "Max : ${it.maxTemp} °C"
+            binding.tvMinTemp.text = "Min : ${it.minTemp} °C"
+            binding.tvTemp.text = "${it.temp} °C"
+            binding.tvFeelsLike.text = "Feels like : ${it.feelsLike} °C"
             binding.tvHumidity.text = "Humidity : ${it.humidity}%"
+            binding.tvWindSpeed.text = "${it.windSpeed} m/s"
+
         })
-
-        //tv_wind_speed.setText(wind_speed.toString() + "m/s")
-
-
 
         return binding.root
     }

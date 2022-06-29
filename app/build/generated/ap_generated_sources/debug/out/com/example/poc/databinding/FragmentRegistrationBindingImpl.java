@@ -24,7 +24,7 @@ public class FragmentRegistrationBindingImpl extends FragmentRegistrationBinding
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback3;
+    private final android.view.View.OnClickListener mCallback4;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -157,7 +157,7 @@ public class FragmentRegistrationBindingImpl extends FragmentRegistrationBinding
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback3 = new com.example.poc.generated.callback.OnClickListener(this, 1);
+        mCallback4 = new com.example.poc.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -239,7 +239,7 @@ public class FragmentRegistrationBindingImpl extends FragmentRegistrationBinding
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.btnRegistrationRegister.setOnClickListener(mCallback3);
+            this.btnRegistrationRegister.setOnClickListener(mCallback4);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.etConfirmPassword, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, etConfirmPasswordandroidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.etEmailId, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, etEmailIdandroidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.etPassword, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, etPasswordandroidTextAttrChanged);

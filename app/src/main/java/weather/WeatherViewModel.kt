@@ -9,27 +9,38 @@ import androidx.lifecycle.Observer
 import com.example.poc.R
 import models.Main
 import models.Weather
+import models.WeatherResponse
 import repository.WeatherRepository
 
 class WeatherViewModel(application: Application) : AndroidViewModel(application) {
 
+
+    var cityName: String = ""
     var citiesList: Array<String> = application.resources.getStringArray(R.array.cities)
     var cityAdapter: ArrayAdapter<String> = ArrayAdapter(application.applicationContext, android.R.layout.simple_list_item_1, citiesList)
-
     var weatherRepository: WeatherRepository = WeatherRepository()
-    var liveWeatherData: MutableLiveData<Weather> = MutableLiveData()
-    var liveWeatherDetails: MutableLiveData<Main> = MutableLiveData()
+    var liveWeatherData: MutableLiveData<WeatherResponse> = MutableLiveData()
 
-    fun fetchWeatherData(cityName: String)
+    private fun validate(s: String): Boolean
     {
-        weatherRepository.getCurrentWeatherData(cityName)
+        if(s.isEmpty())
+            return false
+        return true
+    }
+
+    fun fetchWeatherData()
+    {
+
+        if(!validate(cityName))
+        {
+            Toast.makeText(getApplication(),"Enter a valid city or region", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        weatherRepository.getCurrentWeatherData(cityName, getApplication())
 
         weatherRepository.liveData.observeForever(Observer {
             liveWeatherData.postValue(it)
-        })
-        weatherRepository.liveDetails.observeForever(Observer {
-            liveWeatherDetails.postValue(it)
-            //Toast.makeText(getApplication(),it.temp.toString(),Toast.LENGTH_SHORT).show()
         })
 
     }

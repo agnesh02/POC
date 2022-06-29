@@ -21,7 +21,7 @@ public class FragmentResetPasswordBindingImpl extends FragmentResetPasswordBindi
     private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
     // variables
     @Nullable
-    private final android.view.View.OnClickListener mCallback2;
+    private final android.view.View.OnClickListener mCallback3;
     // values
     // listeners
     // Inverse Binding Event Handlers
@@ -67,7 +67,7 @@ public class FragmentResetPasswordBindingImpl extends FragmentResetPasswordBindi
         this.mboundView0.setTag(null);
         setRootTag(root);
         // listeners
-        mCallback2 = new com.example.poc.generated.callback.OnClickListener(this, 1);
+        mCallback3 = new com.example.poc.generated.callback.OnClickListener(this, 1);
         invalidateAll();
     }
 
@@ -140,7 +140,7 @@ public class FragmentResetPasswordBindingImpl extends FragmentResetPasswordBindi
         if ((dirtyFlags & 0x2L) != 0) {
             // api target 1
 
-            this.btnResetPassword.setOnClickListener(mCallback2);
+            this.btnResetPassword.setOnClickListener(mCallback3);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.etResetPasswordEmailId, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, etResetPasswordEmailIdandroidTextAttrChanged);
         }
         if ((dirtyFlags & 0x3L) != 0) {
