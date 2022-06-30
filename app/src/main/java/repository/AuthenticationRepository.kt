@@ -131,7 +131,7 @@ class AuthenticationRepository {
         val i = Intent(application.applicationContext, AuthenticationActivity::class.java)
         i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(application.applicationContext, i, Bundle())
-        SideMenuActivity().finish()
+        //SideMenuActivity().finish()
     }
 
 }
