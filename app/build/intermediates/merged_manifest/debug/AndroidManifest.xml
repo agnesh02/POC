@@ -24,6 +24,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.POC" >
         <activity
+            android:name="com.example.poc.ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name="main.SideMenuActivity"
             android:exported="false"
             android:label="@string/title_activity_side_menu"

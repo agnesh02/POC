@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/activity_authentication.xml" value="0.26875" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/activity_edit_profile.xml" value="0.18478260869565216" />
+        <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/activity_profile.xml" value="0.26875" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/activity_side_menu.xml" value="0.25" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/app_bar_side_menu.xml" value="0.19519927536231885" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/content_side_menu.xml" value="0.19519927536231885" />
@@ -16,7 +17,7 @@
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/fragment_registration.xml" value="0.26875" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/fragment_reset_password.xml" value="0.26875" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/fragment_slideshow.xml" value="0.19519927536231885" />
-        <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/fragment_weather.xml" value="0.26875" />
+        <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/fragment_weather.xml" value="0.33" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/nav_header_side_menu.xml" value="0.1" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/menu/activity_main_drawer.xml" value="0.26875" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/menu/side_menu.xml" value="0.26875" />

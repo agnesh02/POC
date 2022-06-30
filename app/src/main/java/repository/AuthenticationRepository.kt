@@ -8,6 +8,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.MutableLiveData
+import authentication.AuthenticationActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.UserProfileChangeRequest
@@ -127,10 +128,10 @@ class AuthenticationRepository {
 
     fun logoutUser(application: Application) {
         auth.signOut()
-        val i = Intent(application.applicationContext, LoginFragment::class.java)
-        i.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+        val i = Intent(application.applicationContext, AuthenticationActivity::class.java)
+        i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(application.applicationContext, i, Bundle())
-
+        SideMenuActivity().finish()
     }
 
 }

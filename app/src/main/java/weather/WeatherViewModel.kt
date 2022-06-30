@@ -38,7 +38,6 @@ class WeatherViewModel(application: Application) : AndroidViewModel(application)
         }
 
         weatherRepository.getCurrentWeatherData(cityName, getApplication())
-
         weatherRepository.liveData.observeForever(Observer {
             liveWeatherData.postValue(it)
         })

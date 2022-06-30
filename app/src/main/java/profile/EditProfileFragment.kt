@@ -1,11 +1,13 @@
 package profile
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProvider
 import com.example.poc.R
@@ -66,6 +68,5 @@ class EditProfileFragment : Fragment() {
         binding.btnSaveEditProfile.visibility = View.VISIBLE
         binding.buttonnEditEditProfile.visibility = View.INVISIBLE
     }
-
 
 }

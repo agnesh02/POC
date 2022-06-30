@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:2:1-33:12
+ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:2:1-35:12
 MERGED from [androidx.databinding:databinding-adapters:7.2.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\ff0bc0afe12fd06cd20b67febefa901d\transformed\databinding-adapters-7.2.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-ktx:7.2.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\0a0a09faaeab052b9040ef148c765795\transformed\databinding-ktx-7.2.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-runtime:7.2.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\9507d4525913d519ca7cd76d4d1c69ab\transformed\databinding-runtime-7.2.1\AndroidManifest.xml:17:1-24:12
@@ -98,27 +98,27 @@ MERGED from [androidx.print:print:1.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\b06328c4a2be198126d57a9fbf6c0b34\transformed\annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\badd09793e0f195868c9bb2f207fa479\transformed\protolite-well-known-types-18.0.0\AndroidManifest.xml:2:1-11:12
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\8aea57479cd27b3caf0c395cb759d527\transformed\grpc-android-1.44.1\AndroidManifest.xml:2:1-11:12
-INJECTED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:2:1-33:12
-INJECTED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:2:1-35:12
+INJECTED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:2:1-35:12
 	package
 		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:4:5-30
 		INJECTED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:2:1-33:12
+		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:2:1-35:12
 		INJECTED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:2:1-33:12
+		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:2:1-35:12
 		INJECTED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:6:5-31:19
+ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:6:5-33:19
 MERGED from [com.firebaseui:firebase-ui-auth:7.2.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\22b5bc8109979b51e4970b5957e85061\transformed\firebase-ui-auth-7.2.0\AndroidManifest.xml:15:5-107:19
 MERGED from [com.firebaseui:firebase-ui-auth:7.2.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\22b5bc8109979b51e4970b5957e85061\transformed\firebase-ui-auth-7.2.0\AndroidManifest.xml:15:5-107:19
 MERGED from [androidx.window:window:1.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\a6979d1aefcd7b86e058726147ecfcc2\transformed\window-1.0.0\AndroidManifest.xml:24:5-31:19
@@ -189,32 +189,38 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Ag
 		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:14:9-41
 	android:dataExtractionRules
 		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:8:9-65
+activity#com.example.poc.ProfileActivity
+ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:16:9-18:40
+	android:exported
+		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:18:13-37
+	android:name
+		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:17:13-44
 activity#main.SideMenuActivity
-ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:17:9-21:60
+ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:19:9-23:60
 	android:label
-		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:20:13-61
+		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:22:13-61
 	android:exported
-		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:19:13-37
+		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:21:13-37
 	android:theme
-		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:21:13-57
+		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:23:13-57
 	android:name
-		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:18:13-49
+		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:20:13-49
 activity#authentication.AuthenticationActivity
-ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:22:9-30:20
+ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:24:9-32:20
 	android:exported
-		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:24:13-36
+		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:26:13-36
 	android:name
-		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:23:13-65
+		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:25:13-65
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:25:13-29:29
+ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:27:13-31:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:26:17-69
+ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:28:17-69
 	android:name
-		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:26:25-66
+		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:28:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:28:17-77
+ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:30:17-77
 	android:name
-		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:28:27-74
+		ADDED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:30:27-74
 uses-sdk
 INJECTED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml

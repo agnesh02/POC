@@ -84,6 +84,10 @@
         "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-57:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-55:\\layout_activity_profile.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-57:\\layout\\activity_profile.xml"
+    },
+    {
         "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-55:\\drawable-ldpi_ic_launcher_foreground.png.flat",
         "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-pngs-50:\\drawable-ldpi\\ic_launcher_foreground.png"
     },

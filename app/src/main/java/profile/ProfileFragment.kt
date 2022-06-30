@@ -29,9 +29,9 @@ class ProfileFragment : Fragment() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
 
-        val appCompatActivity: AppCompatActivity = (activity as AppCompatActivity)
-        appCompatActivity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        appCompatActivity.supportActionBar?.title = "profile"
+//        val appCompatActivity: AppCompatActivity = (activity as AppCompatActivity)
+//        appCompatActivity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
+//        appCompatActivity.supportActionBar?.title = "Profile"
 
         viewModel.getProfileData()
 

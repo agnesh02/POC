@@ -33,7 +33,7 @@ class ProfileViewModel(application: Application) : AndroidViewModel(application)
         profileRepository.getData()
 
         profileRepository.liveUserData.observeForever {
-            this.username.postValue("Welcome " + it.username)
+            this.username.postValue(it.username)
         }
         profileRepository.liveUserData.observeForever {
             this.fullName.postValue(it.fullname)

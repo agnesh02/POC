@@ -1,12 +1,19 @@
 package main
 
+import android.content.pm.PackageInfo
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavController
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.ui.*
 import com.example.poc.R
@@ -49,13 +56,15 @@ class SideMenuActivity : AppCompatActivity() {
             navViewHeaderBinding.tvHeaderEmail.text = it
         }
 
+        val manager: PackageManager = application.packageManager
+        val info: PackageInfo = manager.getPackageInfo(applicationContext.packageName, 0)
+        val version: MenuItem = navView.menu.findItem(R.id.nav_version)
+        version.title = "Version : ${info.versionName}"
 
         navView.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.nav_dashboard -> {
-                    navController.navigate(R.id.nav_dashboard); drawerLayout.closeDrawer(
-                        GravityCompat.START
-                    ); true
+                    navController.navigate(R.id.nav_dashboard); drawerLayout.closeDrawer(GravityCompat.START); true
                 }
                 R.id.nav_profile -> {
                     navController.navigate(R.id.nav_profile); drawerLayout.closeDrawer(GravityCompat.START); true
@@ -76,6 +85,16 @@ class SideMenuActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.side_menu, menu)
         return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId)
+        {
+            R.id.action_logout -> {
+                performLogout(); return true
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -103,6 +122,5 @@ class SideMenuActivity : AppCompatActivity() {
         alertDialog.show()
 
     }
-
 
 }
