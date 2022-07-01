@@ -1,10 +1,20 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.poc.app-mergeDebugResources-53:/values-v24/values-v24.xml",
+            "outputFile": "com.example.poc.app-mergeDebugResources-61:/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\caches\\transforms-3\\7ff1ad9d03aa7f318a68629e5b59d5b3\\transformed\\media-1.0.0\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\caches\\transforms-3\\8152c2b44ed6e2a66417f5973e020f86\\transformed\\appcompat-1.4.2\\res\\values-v24\\values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\caches\\transforms-3\\f5a762f61a134eac35955227a339dabc\\transformed\\media-1.0.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -21,7 +31,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\caches\\transforms-3\\df765440782738e22220512f3d54d9fd\\transformed\\material-1.6.1\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\caches\\transforms-3\\435abcd436886ca575e6f1ab445275c9\\transformed\\material-1.6.1\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,9,12,15",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -37,16 +47,6 @@
                         "endLines": "4,5,6,7,10,13,16,19",
                         "endColumns": "84,98,86,100,10,10,10,10",
                         "endOffsets": "427,526,613,714,913,1126,1327,1542"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\caches\\transforms-3\\5eec1583ec3dd66f56a5b356183ea45f\\transformed\\appcompat-1.4.2\\res\\values-v24\\values-v24.xml",
-                    "from": {
-                        "startLines": "2,3",
-                        "startColumns": "4,4",
-                        "startOffsets": "55,212",
-                        "endColumns": "156,134",
-                        "endOffsets": "207,342"
                     }
                 }
             ]

@@ -12,6 +12,7 @@ class AuthenticationViewModel(application: Application) : AndroidViewModel(appli
     var etEmail: String = ""
     var etPass: String = ""
     var etConfirmPass: String = ""
+    var checkBoxStatus: Boolean = false
     private var emailRegex: String = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
     var errorCode: MutableLiveData<Int> = MutableLiveData()
 
@@ -62,7 +63,7 @@ class AuthenticationViewModel(application: Application) : AndroidViewModel(appli
             return
         }
         errorCode.value = 0
-        authenticationRepository.loginUser(getApplication(), etEmail, etPass)
+        authenticationRepository.loginUser(getApplication(), etEmail, etPass, checkBoxStatus)
 
         startObservation()
 

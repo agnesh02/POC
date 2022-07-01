@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.poc.app-mergeDebugResources-53:/values-v26/values-v26.xml",
+            "outputFile": "com.example.poc.app-mergeDebugResources-61:/values-v26/values-v26.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\caches\\transforms-3\\5eec1583ec3dd66f56a5b356183ea45f\\transformed\\appcompat-1.4.2\\res\\values-v26\\values-v26.xml",
+                    "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\caches\\transforms-3\\8152c2b44ed6e2a66417f5973e020f86\\transformed\\appcompat-1.4.2\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\caches\\transforms-3\\22b5bc8109979b51e4970b5957e85061\\transformed\\firebase-ui-auth-7.2.0\\res\\values-v26\\values-v26.xml",
+                    "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\caches\\transforms-3\\e6d1e34026830202332946cdc5d7b0bb\\transformed\\firebase-ui-auth-7.2.0\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,6,10,14",
                         "startColumns": "4,4,4,4",

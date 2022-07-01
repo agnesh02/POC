@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.poc.R
 import com.example.poc.databinding.FragmentWeatherBinding
@@ -17,23 +16,22 @@ class WeatherFragment : Fragment() {
     lateinit var binding: FragmentWeatherBinding
     lateinit var viewModel: WeatherViewModel
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
 
         binding = FragmentWeatherBinding.inflate(layoutInflater)
-        viewModel = ViewModelProvider(this).get(WeatherViewModel::class.java)
+        viewModel = ViewModelProvider(this)[WeatherViewModel::class.java]
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
 
         val appCompatActivity: AppCompatActivity = activity as AppCompatActivity
-        var actionBar: ActionBar = appCompatActivity.supportActionBar!!
+        val actionBar: ActionBar = appCompatActivity.supportActionBar!!
         actionBar.setDisplayHomeAsUpEnabled(true)
         actionBar.title = "Weather"
 
         binding.searchView.setAdapter(viewModel.cityAdapter)
 
-        viewModel.liveWeatherData.observe(viewLifecycleOwner, Observer {
+        viewModel.liveWeatherData.observe(viewLifecycleOwner) {
 
-            binding.progressBarWeather.visibility = View.VISIBLE
             binding.tvWeatherDescription.text = it.weatherDescription
             binding.tvWeatherCondition.text = it.weatherCondition
             binding.tvMaxTemp.text = "Max : ${it.maxTemp} °C"
@@ -45,7 +43,7 @@ class WeatherFragment : Fragment() {
 
             setDrawables(it.temp, it.weatherDescription)
 
-        })
+        }
 
         return binding.root
     }

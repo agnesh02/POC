@@ -1,6 +1,5 @@
 package repository
 
-import authentication.LoginFragment
 import main.SideMenuActivity
 import models.UserData
 import android.app.Application
@@ -8,11 +7,14 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.MutableLiveData
+import androidx.room.Room
 import authentication.AuthenticationActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.firestore.FirebaseFirestore
+import models.database.Database
+import models.database.LoginData
 
 class AuthenticationRepository {
 
@@ -87,15 +89,27 @@ class AuthenticationRepository {
             }
     }
 
-    fun loginUser(application: Application, email: String, password: String) {
+
+    fun loginUser(application: Application, email: String, password: String, save: Boolean) {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener {
                 if (it.isSuccessful) {
+
+                    //Log.d("checkbox",save.toString())
+
+                    if(save)
+                    {
+                        val db = Room.databaseBuilder(application.applicationContext,Database::class.java,"userdb").allowMainThreadQueries().build()
+                        val loginDataObj = LoginData(1,true)
+                        db.accessDao().putData(loginDataObj)
+                    }
+
                     liveRepoMessage.postValue("Hi, " + firebaseUser?.displayName)
                     val i = Intent(application.applicationContext, SideMenuActivity::class.java)
                     i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
                     startActivity(application.applicationContext, i, Bundle())
                     loginStatus.value = true
+
                 } else {
                     liveRepoMessage.value = it.exception?.message
                     loginStatus.value = false
@@ -128,9 +142,12 @@ class AuthenticationRepository {
 
     fun logoutUser(application: Application) {
         auth.signOut()
+        val db = Room.databaseBuilder(application.applicationContext,Database::class.java,"userdb").allowMainThreadQueries().build()
+        db.accessDao().deleteData()
         val i = Intent(application.applicationContext, AuthenticationActivity::class.java)
         i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(application.applicationContext, i, Bundle())
+
         //SideMenuActivity().finish()
     }
 
