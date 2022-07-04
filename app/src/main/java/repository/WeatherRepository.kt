@@ -4,9 +4,7 @@ import android.app.Application
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import models.*
-import models.weather.RetrofitInterface
-import models.weather.Weather
-import models.weather.WeatherData
+import models.weather.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -17,8 +15,10 @@ import kotlin.math.roundToInt
 class WeatherRepository {
 
     val liveData: MutableLiveData<WeatherResponse> = MutableLiveData()
+    var forecastList: ArrayList<WeatherResponse> = ArrayList()
+    val liveForecastList: MutableLiveData<ArrayList<WeatherResponse>> = MutableLiveData()
 
-    fun getCurrentWeatherData(city: String, application: Application) {
+    fun getWeatherData(city: String, application: Application) {
 
         val retrofitBuilder = Retrofit.Builder()
             .baseUrl(BASE_URL)
@@ -26,9 +26,10 @@ class WeatherRepository {
             .build()
             .create(RetrofitInterface::class.java)
 
-        val retrofitData = retrofitBuilder.sendRequest(city, APP_ID)
+        val retrofitDataForCurrent = retrofitBuilder.sendRequestForCurrent(city, APP_ID)
+        val retrofitDataForForecast = retrofitBuilder.sendRequestForForecast(city, APP_ID)
 
-        retrofitData.enqueue(object : Callback<WeatherData> {
+        retrofitDataForCurrent.enqueue(object : Callback<WeatherData> {
             override fun onResponse(call: Call<WeatherData>, response: Response<WeatherData>) {
 
                 if (!response.isSuccessful) {
@@ -60,7 +61,7 @@ class WeatherRepository {
                     minTemp,
                     temp,
                     feelsLike,
-                    humidity
+                    humidity,""
                 )
                 liveData.postValue(obj)
 
@@ -73,6 +74,62 @@ class WeatherRepository {
             }
         })
 
+        forecastList.clear()
+        retrofitDataForForecast.enqueue(object : Callback<ForecastData> {
+            override fun onResponse(call: Call<ForecastData>, response: Response<ForecastData>) {
+//                if (!response.isSuccessful) {
+//                    Toast.makeText(application.applicationContext, "Some error occurred.\nTry entering a valid city / region", Toast.LENGTH_SHORT).show()
+//                    return
+//                }
+
+                for (i in 0..4)
+                {
+
+                    val responseBody = response.body()!!.list[i]
+
+                    val weatherData: List<Weather> = responseBody.weather
+                    val weatherMain = weatherData[0]
+                    val weatherCondition = weatherMain.main
+                    val weatherDescription = weatherMain.description
+
+                    val weatherDetails = responseBody.main
+                    val maxTemp = (weatherDetails.temp_max - 273.15).roundToInt()
+                    val minTemp = (weatherDetails.temp_min - 273.15).roundToInt()
+                    val temp = (weatherDetails.temp - 273.15).roundToInt()
+                    val feelsLike = (weatherDetails.feels_like - 273.15).roundToInt()
+                    val humidity = weatherDetails.humidity
+
+                    val windSpeed = responseBody.wind.speed.roundToInt()
+                    val timeAndDate = responseBody.dt_txt
+
+                    val separated: List<String> = timeAndDate.split(" ")
+                    val date = separated[0].split("-")
+                    val hrs = separated[1].split(":")
+                    val forecastTimeAndDate = date[2] + "/" + date[1] + " | " + hrs[0] + ":" + hrs[1] + "hrs"
+
+                    val obj = WeatherResponse(
+                        weatherCondition,
+                        weatherDescription,
+                        windSpeed,
+                        maxTemp,
+                        minTemp,
+                        temp,
+                        feelsLike,
+                        humidity,
+                        forecastTimeAndDate
+                    )
+
+                    forecastList.add(obj)
+                }
+
+                liveForecastList.postValue(forecastList)
+
+            }
+
+            override fun onFailure(call: Call<ForecastData?>, t: Throwable) {
+                Toast.makeText(application.applicationContext, t.message, Toast.LENGTH_SHORT).show()
+            }
+        })
 
     }
 

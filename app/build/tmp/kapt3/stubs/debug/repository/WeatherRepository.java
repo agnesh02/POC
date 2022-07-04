@@ -2,10 +2,14 @@ package repository;
 
 import java.lang.System;
 
-@kotlin.Metadata(mv = {1, 7, 1}, k = 1, d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u0000 \u000e2\u00020\u0001:\u0001\u000eB\u0005\u00a2\u0006\u0002\u0010\u0002J\u0016\u0010\b\u001a\u00020\t2\u0006\u0010\n\u001a\u00020\u000b2\u0006\u0010\f\u001a\u00020\rR\u0017\u0010\u0003\u001a\b\u0012\u0004\u0012\u00020\u00050\u0004\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0006\u0010\u0007\u00a8\u0006\u000f"}, d2 = {"Lrepository/WeatherRepository;", "", "()V", "liveData", "Landroidx/lifecycle/MutableLiveData;", "Lmodels/WeatherResponse;", "getLiveData", "()Landroidx/lifecycle/MutableLiveData;", "getCurrentWeatherData", "", "city", "", "application", "Landroid/app/Application;", "Companion", "app_debug"})
+@kotlin.Metadata(mv = {1, 7, 1}, k = 1, d1 = {"\u00008\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u0000 \u00172\u00020\u0001:\u0001\u0017B\u0005\u00a2\u0006\u0002\u0010\u0002J\u0016\u0010\u0011\u001a\u00020\u00122\u0006\u0010\u0013\u001a\u00020\u00142\u0006\u0010\u0015\u001a\u00020\u0016R*\u0010\u0003\u001a\u0012\u0012\u0004\u0012\u00020\u00050\u0004j\b\u0012\u0004\u0012\u00020\u0005`\u0006X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u0007\u0010\b\"\u0004\b\t\u0010\nR\u0017\u0010\u000b\u001a\b\u0012\u0004\u0012\u00020\u00050\f\u00a2\u0006\b\n\u0000\u001a\u0004\b\r\u0010\u000eR\'\u0010\u000f\u001a\u0018\u0012\u0014\u0012\u0012\u0012\u0004\u0012\u00020\u00050\u0004j\b\u0012\u0004\u0012\u00020\u0005`\u00060\f\u00a2\u0006\b\n\u0000\u001a\u0004\b\u0010\u0010\u000e\u00a8\u0006\u0018"}, d2 = {"Lrepository/WeatherRepository;", "", "()V", "forecastList", "Ljava/util/ArrayList;", "Lmodels/WeatherResponse;", "Lkotlin/collections/ArrayList;", "getForecastList", "()Ljava/util/ArrayList;", "setForecastList", "(Ljava/util/ArrayList;)V", "liveData", "Landroidx/lifecycle/MutableLiveData;", "getLiveData", "()Landroidx/lifecycle/MutableLiveData;", "liveForecastList", "getLiveForecastList", "getWeatherData", "", "city", "", "application", "Landroid/app/Application;", "Companion", "app_debug"})
 public final class WeatherRepository {
     @org.jetbrains.annotations.NotNull()
     private final androidx.lifecycle.MutableLiveData<models.WeatherResponse> liveData = null;
+    @org.jetbrains.annotations.NotNull()
+    private java.util.ArrayList<models.WeatherResponse> forecastList;
+    @org.jetbrains.annotations.NotNull()
+    private final androidx.lifecycle.MutableLiveData<java.util.ArrayList<models.WeatherResponse>> liveForecastList = null;
     @org.jetbrains.annotations.NotNull()
     public static final repository.WeatherRepository.Companion Companion = null;
     @org.jetbrains.annotations.NotNull()
@@ -22,7 +26,21 @@ public final class WeatherRepository {
         return null;
     }
     
-    public final void getCurrentWeatherData(@org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull()
+    public final java.util.ArrayList<models.WeatherResponse> getForecastList() {
+        return null;
+    }
+    
+    public final void setForecastList(@org.jetbrains.annotations.NotNull()
+    java.util.ArrayList<models.WeatherResponse> p0) {
+    }
+    
+    @org.jetbrains.annotations.NotNull()
+    public final androidx.lifecycle.MutableLiveData<java.util.ArrayList<models.WeatherResponse>> getLiveForecastList() {
+        return null;
+    }
+    
+    public final void getWeatherData(@org.jetbrains.annotations.NotNull()
     java.lang.String city, @org.jetbrains.annotations.NotNull()
     android.app.Application application) {
     }

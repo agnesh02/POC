@@ -8,5 +8,6 @@ data class WeatherResponse(
     val minTemp: Int,
     val temp: Int,
     val feelsLike: Int,
-    val humidity: Int
+    val humidity: Int,
+    val time: String
 )

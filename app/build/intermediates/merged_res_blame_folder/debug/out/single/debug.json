@@ -8,6 +8,10 @@
         "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-65:\\drawable\\ic_menu_gallery.xml"
     },
     {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-63:\\layout_custom_weather_card.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-65:\\layout\\custom_weather_card.xml"
+    },
+    {
         "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-63:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
         "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-65:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
@@ -84,6 +88,10 @@
         "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-65:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "com.example.poc.app-merged_res-63:/layout_custom_weather_card.xml.flat",
+        "source": "com.example.poc.app-main-65:/layout/custom_weather_card.xml"
+    },
+    {
         "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-63:\\layout_fragment_login.xml.flat",
         "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-65:\\layout\\fragment_login.xml"
     },
@@ -110,10 +118,6 @@
     {
         "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-63:\\layout_app_bar_side_menu.xml.flat",
         "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-65:\\layout\\app_bar_side_menu.xml"
-    },
-    {
-        "merged": "com.example.poc.app-merged_res-63:/layout_fragment_weather.xml.flat",
-        "source": "com.example.poc.app-main-65:/layout/fragment_weather.xml"
     },
     {
         "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-63:\\layout_fragment_reset_password.xml.flat",

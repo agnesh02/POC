@@ -8,8 +8,10 @@ import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.poc.R
 import com.example.poc.databinding.FragmentWeatherBinding
+import models.Common
 
 class WeatherFragment : Fragment() {
 
@@ -41,51 +43,19 @@ class WeatherFragment : Fragment() {
             binding.tvHumidity.text = "Humidity : ${it.humidity}%"
             binding.tvWindSpeed.text = "${it.windSpeed} m/s"
 
-            setDrawables(it.temp, it.weatherDescription)
-
+            Common.setDrawables( binding.weatherConditionImage, it.weatherDescription)
+            Common.setTempDrawables(binding.temperatureImg, it.temp)
+            binding.progressBarWeather.visibility = View.INVISIBLE
         }
+
+        viewModel.weatherAdapter.observe(viewLifecycleOwner) {
+
+            binding.forecastRecyclerView.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            binding.forecastRecyclerView.adapter = it
+        }
+
 
         return binding.root
-    }
-
-    private fun setDrawables(temp: Int, desc: String)
-    {
-        if (temp <= 25) {
-            binding.temperatureImg.setImageResource(R.drawable.cold)
-        } else {
-            binding.temperatureImg.setImageResource(R.drawable.hot)
-        }
-
-        if (desc == "clear sky") {
-            binding.weatherConditionImage.setImageResource(R.drawable.clear_sky)
-        }
-        if (desc == "few clouds") {
-            binding.weatherConditionImage.setImageResource(R.drawable.few_clouds)
-        }
-        if (desc == "scattered clouds") {
-            binding.weatherConditionImage.setImageResource(R.drawable.scattered_clouds)
-        }
-        if (desc == "broken clouds" || desc == "overcast clouds") {
-            binding.weatherConditionImage.setImageResource(R.drawable.broken_clouds)
-        }
-        if (desc == "shower rain") {
-            binding.weatherConditionImage.setImageResource(R.drawable.shower_rain)
-        }
-        if (desc == "rain" || desc == "light rain" || desc == "moderate rain") {
-            binding.weatherConditionImage.setImageResource(R.drawable.rain)
-        }
-        if (desc == "thunderstorm") {
-            binding.weatherConditionImage.setImageResource(R.drawable.thunderstorm)
-        }
-        if (desc == "snow") {
-            binding.weatherConditionImage.setImageResource(R.drawable.snow)
-        }
-        if (desc == "mist") {
-            binding.weatherConditionImage.setImageResource(R.drawable.mist)
-        }
-
-        binding.progressBarWeather.visibility = View.INVISIBLE
-
     }
 
 

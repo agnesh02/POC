@@ -2870,6 +2870,7 @@ id cardView3
 id card_bluetooth
 id card_profile
 id card_stream
+id card_time0
 id card_weather
 id carryVelocity
 id center
@@ -2915,6 +2916,11 @@ id cross_device_linking_body
 id currentState
 id custom
 id customPanel
+id custom_weather_card_description
+id custom_weather_card_feels_like
+id custom_weather_card_max_temp
+id custom_weather_card_time
+id custom_weather_image
 id cut
 id dark
 id dashboard_grid
@@ -3490,6 +3496,7 @@ layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout content_side_menu
 layout custom_dialog
+layout custom_weather_card
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -3664,11 +3671,13 @@ string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
 string bottomsheet_action_expand_halfway
+string c
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string choose_image
+string cities
 string clear_text_end_icon_content_description
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
@@ -3709,6 +3718,7 @@ string facebook_login_protocol_scheme
 string fallback_menu_item_copy_link
 string fallback_menu_item_open_in_browser
 string fallback_menu_item_share_link
+string feels_like
 string find_amp_connect
 string firebase_web_host
 string forgot_password_click_here
@@ -3809,12 +3819,14 @@ string fui_welcome_back_idp_prompt
 string fui_welcome_back_password_prompt_body
 string full_name
 string gcm_defaultSenderId
+string go
 string google_api_key
 string google_app_id
 string google_crash_reporting_api_key
 string google_storage_bucket
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
+string humidity
 string icon_content_description
 string item_view_role_description
 string label
@@ -3835,6 +3847,7 @@ string m3_sys_motion_easing_linear
 string m3_sys_motion_easing_standard
 string m3_sys_motion_easing_standard_accelerate
 string m3_sys_motion_easing_standard_decelerate
+string m_s
 string material_clock_display_divider
 string material_clock_toggle_content_description
 string material_hour_selection
@@ -3855,9 +3868,11 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
+string max_c
 string menu_gallery
 string menu_home
 string menu_slideshow
+string min_c
 string more
 string mtrl_badge_numberless_content_description
 string mtrl_chip_close_icon_content_description

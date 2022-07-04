@@ -49,11 +49,11 @@ public final class RoomDao_Impl implements RoomDao {
   }
 
   @Override
-  public void putData(final LoginData arg0) {
+  public void putData(final LoginData loginData) {
     __db.assertNotSuspendingTransaction();
     __db.beginTransaction();
     try {
-      __insertionAdapterOfLoginData.insert(arg0);
+      __insertionAdapterOfLoginData.insert(loginData);
       __db.setTransactionSuccessful();
     } finally {
       __db.endTransaction();

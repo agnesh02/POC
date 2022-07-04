@@ -16,12 +16,14 @@ class WeatherViewModel(application: Application) : AndroidViewModel(application)
     var cityAdapter: ArrayAdapter<String> = ArrayAdapter(application.applicationContext, android.R.layout.simple_list_item_1, citiesList)
     private var weatherRepository: WeatherRepository = WeatherRepository()
     var liveWeatherData: MutableLiveData<WeatherResponse> = MutableLiveData()
+    var weatherAdapter: MutableLiveData<WeatherAdapter> = MutableLiveData()
 
     private fun validate(s: String): Boolean {
         if (s.isEmpty())
             return false
         return true
     }
+
 
     fun fetchWeatherData() {
 
@@ -31,12 +33,15 @@ class WeatherViewModel(application: Application) : AndroidViewModel(application)
             return
         }
 
-        weatherRepository.getCurrentWeatherData(cityName, getApplication())
+        weatherRepository.getWeatherData(cityName, getApplication())
+
         weatherRepository.liveData.observeForever {
             liveWeatherData.postValue(it)
         }
+        weatherRepository.liveForecastList.observeForever {
+            weatherAdapter.postValue(WeatherAdapter(it))
+        }
 
     }
-
 
 }
