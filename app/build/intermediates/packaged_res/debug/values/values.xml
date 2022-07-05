@@ -245,6 +245,7 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="password">Password</string>
     <string name="phone">Phone</string>
+    <string name="play_content">Play content</string>
     <string name="profile">Profile</string>
     <string name="project_id" translatable="false">poc1-bb7e3</string>
     <string name="register">Register</string>

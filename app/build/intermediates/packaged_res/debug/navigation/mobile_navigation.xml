@@ -23,6 +23,12 @@
         android:label="Profile"
         tools:layout="@layout/fragment_weather" />
 
+    <fragment
+        android:id="@+id/nav_live_stream"
+        android:name="livestream.LiveStreamFragment"
+        android:label="Live Stream"
+        tools:layout="@layout/fragment_live_stream" />
+
 
 
 </navigation>

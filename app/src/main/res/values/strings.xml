@@ -52,6 +52,7 @@
     <string name="max_c">Max: °C</string>
     <string name="min_c">Min: °C</string>
     <string name="humidity">Humidity :</string>
+    <string name="play_content">Play content</string>
 
     <string-array name="cities">
         <item>Agartala</item>

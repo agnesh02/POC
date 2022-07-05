@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.poc.app-mergeDebugResources-61:/values-es-rPE/values-es-rPE.xml",
+            "outputFile": "com.example.poc.app-mergeDebugResources-63:/values-es-rPE/values-es-rPE.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\caches\\transforms-3\\e6d1e34026830202332946cdc5d7b0bb\\transformed\\firebase-ui-auth-7.2.0\\res\\values-es-rPE\\values-es-rPE.xml",

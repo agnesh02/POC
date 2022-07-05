@@ -31,6 +31,10 @@ class DashboardFragment : Fragment() {
             view?.findNavController()?.navigate(R.id.nav_weather)
         }
 
+        binding.cardStream.setOnClickListener {
+            view?.findNavController()?.navigate(R.id.nav_live_stream)
+        }
+
         return binding.root
     }
 

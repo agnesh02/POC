@@ -21,7 +21,10 @@ drawable cold
 drawable custom_email_icon
 drawable custom_lock_outline
 drawable custom_person_outline
+drawable drizzle
 drawable few_clouds
+drawable fog
+drawable haze
 drawable hot
 drawable humidity
 drawable ic_baseline_bluetooth_searching_24
@@ -61,6 +64,7 @@ id app_bar_side_menu
 id attendence
 id btn_choose_image
 id btn_login_login
+id btn_play_content
 id btn_registration_register
 id btn_reset_password
 id btn_save_edit_profile
@@ -144,6 +148,7 @@ id tv_temp
 id tv_weather_condition
 id tv_weather_description
 id tv_wind_speed
+id video_view
 id weather_condition_image
 layout activity_authentication
 layout activity_side_menu
@@ -152,6 +157,7 @@ layout content_side_menu
 layout custom_weather_card
 layout fragment_dashboard
 layout fragment_edit_profile
+layout fragment_live_stream
 layout fragment_login
 layout fragment_profile
 layout fragment_profile_picture
@@ -208,6 +214,7 @@ string navigation_drawer_close
 string navigation_drawer_open
 string password
 string phone
+string play_content
 string profile
 string project_id
 string register

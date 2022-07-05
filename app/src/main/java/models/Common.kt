@@ -1,13 +1,11 @@
 package models
 
-import android.view.View
 import android.widget.ImageView
 import com.example.poc.R
 
 object Common {
 
-    fun setDrawables(imageView: ImageView, desc: String)
-    {
+    fun setDrawables(imageView: ImageView, desc: String) {
         if (desc == "clear sky") {
             imageView.setImageResource(R.drawable.clear_sky)
         }
@@ -26,20 +24,28 @@ object Common {
         if (desc == "rain" || desc == "light rain" || desc == "moderate rain") {
             imageView.setImageResource(R.drawable.rain)
         }
-        if (desc == "thunderstorm") {
+        if (desc.contains("thunderstorm")) {
             imageView.setImageResource(R.drawable.thunderstorm)
         }
-        if (desc == "snow") {
+        if (desc.contains("snow")) {
             imageView.setImageResource(R.drawable.snow)
         }
         if (desc == "mist") {
             imageView.setImageResource(R.drawable.mist)
         }
+        if (desc == "haze") {
+            imageView.setImageResource(R.drawable.haze)
+        }
+        if (desc == "fog") {
+            imageView.setImageResource(R.drawable.fog)
+        }
+        if (desc == "drizzle") {
+            imageView.setImageResource(R.drawable.drizzle)
+        }
 
     }
 
-    fun setTempDrawables(imageView: ImageView, temp: Int)
-    {
+    fun setTempDrawables(imageView: ImageView, temp: Int) {
         if (temp <= 25) {
             imageView.setImageResource(R.drawable.cold)
         } else {
