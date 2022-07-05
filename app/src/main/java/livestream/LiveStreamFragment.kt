@@ -29,9 +29,6 @@ class LiveStreamFragment : Fragment() {
 //            simpleExoPlayer.playWhenReady = true
 //        })
 
-
-
-
         return binding.root
     }
 
