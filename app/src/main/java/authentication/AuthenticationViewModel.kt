@@ -2,9 +2,14 @@ package authentication
 
 import repository.AuthenticationRepository
 import android.app.Application
-import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
+import androidx.room.Room
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import models.Common.toast
+import models.database.Database
 
 class AuthenticationViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -15,15 +20,31 @@ class AuthenticationViewModel(application: Application) : AndroidViewModel(appli
     var checkBoxStatus: Boolean = false
     private var emailRegex: String = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
     var errorCode: MutableLiveData<Int> = MutableLiveData()
+    private var db: Database? =null
+    var dbData: MutableLiveData<Boolean> = MutableLiveData()
 
     private var authenticationRepository: AuthenticationRepository = AuthenticationRepository()
     private var msg: String = ""
+    var loginStatus: MutableLiveData<Boolean> = MutableLiveData()
+
+
+    fun checkForLogin()
+    {
+        viewModelScope.launch(Dispatchers.Default) {
+            db = Room.databaseBuilder(getApplication(), Database::class.java, "userdb").build()
+            dbData.postValue(db?.accessDao()!!.getData())
+        }
+    }
 
     private fun startObservation() {
         authenticationRepository.liveRepoMessage.observeForever {
             if (it != msg)
-                Toast.makeText(getApplication(), it, Toast.LENGTH_SHORT).show()
+                toast(getApplication(), it)
             msg = it
+        }
+
+        authenticationRepository.loginStatus.observeForever {
+            loginStatus.postValue(it)
         }
     }
 

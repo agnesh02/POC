@@ -6,6 +6,7 @@ import android.view.View;
 import androidx.databinding.DataBinderMapper;
 import androidx.databinding.DataBindingComponent;
 import androidx.databinding.ViewDataBinding;
+import com.example.poc.databinding.FragmentBleBindingImpl;
 import com.example.poc.databinding.FragmentDashboardBindingImpl;
 import com.example.poc.databinding.FragmentEditProfileBindingImpl;
 import com.example.poc.databinding.FragmentLiveStreamBindingImpl;
@@ -26,27 +27,30 @@ import java.util.HashMap;
 import java.util.List;
 
 public class DataBinderMapperImpl extends DataBinderMapper {
-  private static final int LAYOUT_FRAGMENTDASHBOARD = 1;
+  private static final int LAYOUT_FRAGMENTBLE = 1;
 
-  private static final int LAYOUT_FRAGMENTEDITPROFILE = 2;
+  private static final int LAYOUT_FRAGMENTDASHBOARD = 2;
 
-  private static final int LAYOUT_FRAGMENTLIVESTREAM = 3;
+  private static final int LAYOUT_FRAGMENTEDITPROFILE = 3;
 
-  private static final int LAYOUT_FRAGMENTLOGIN = 4;
+  private static final int LAYOUT_FRAGMENTLIVESTREAM = 4;
 
-  private static final int LAYOUT_FRAGMENTPROFILE = 5;
+  private static final int LAYOUT_FRAGMENTLOGIN = 5;
 
-  private static final int LAYOUT_FRAGMENTPROFILEPICTURE = 6;
+  private static final int LAYOUT_FRAGMENTPROFILE = 6;
 
-  private static final int LAYOUT_FRAGMENTREGISTRATION = 7;
+  private static final int LAYOUT_FRAGMENTPROFILEPICTURE = 7;
 
-  private static final int LAYOUT_FRAGMENTRESETPASSWORD = 8;
+  private static final int LAYOUT_FRAGMENTREGISTRATION = 8;
 
-  private static final int LAYOUT_FRAGMENTWEATHER = 9;
+  private static final int LAYOUT_FRAGMENTRESETPASSWORD = 9;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(9);
+  private static final int LAYOUT_FRAGMENTWEATHER = 10;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(10);
 
   static {
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.poc.R.layout.fragment_ble, LAYOUT_FRAGMENTBLE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.poc.R.layout.fragment_dashboard, LAYOUT_FRAGMENTDASHBOARD);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.poc.R.layout.fragment_edit_profile, LAYOUT_FRAGMENTEDITPROFILE);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.example.poc.R.layout.fragment_live_stream, LAYOUT_FRAGMENTLIVESTREAM);
@@ -67,6 +71,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
         throw new RuntimeException("view must have a tag");
       }
       switch(localizedLayoutId) {
+        case  LAYOUT_FRAGMENTBLE: {
+          if ("layout/fragment_ble_0".equals(tag)) {
+            return new FragmentBleBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_ble is invalid. Received: " + tag);
+        }
         case  LAYOUT_FRAGMENTDASHBOARD: {
           if ("layout/fragment_dashboard_0".equals(tag)) {
             return new FragmentDashboardBindingImpl(component, view);
@@ -175,9 +185,10 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(9);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(10);
 
     static {
+      sKeys.put("layout/fragment_ble_0", com.example.poc.R.layout.fragment_ble);
       sKeys.put("layout/fragment_dashboard_0", com.example.poc.R.layout.fragment_dashboard);
       sKeys.put("layout/fragment_edit_profile_0", com.example.poc.R.layout.fragment_edit_profile);
       sKeys.put("layout/fragment_live_stream_0", com.example.poc.R.layout.fragment_live_stream);

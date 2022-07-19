@@ -4,6 +4,7 @@ import android.app.Application
 import android.widget.Toast
 import androidx.lifecycle.MutableLiveData
 import models.*
+import models.Common.toast
 import models.weather.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -33,7 +34,7 @@ class WeatherRepository {
             override fun onResponse(call: Call<WeatherData>, response: Response<WeatherData>) {
 
                 if (!response.isSuccessful) {
-                    Toast.makeText(application.applicationContext, "Some error occurred.\nTry entering a valid city / region", Toast.LENGTH_SHORT).show()
+                    toast(application.applicationContext, "Some error occurred.\nTry entering a valid city / region")
                     return
                 }
 
@@ -65,12 +66,12 @@ class WeatherRepository {
                 )
                 liveData.postValue(obj)
 
-                Toast.makeText(application.applicationContext, city, Toast.LENGTH_SHORT).show()
+                toast(application.applicationContext, city)
 
             }
 
             override fun onFailure(call: Call<WeatherData?>, t: Throwable) {
-                Toast.makeText(application.applicationContext, t.message, Toast.LENGTH_SHORT).show()
+                toast(application.applicationContext, t.message.toString())
             }
         })
 
@@ -127,7 +128,7 @@ class WeatherRepository {
             }
 
             override fun onFailure(call: Call<ForecastData?>, t: Throwable) {
-                Toast.makeText(application.applicationContext, t.message, Toast.LENGTH_SHORT).show()
+                toast(application.applicationContext, t.message.toString())
             }
         })
 

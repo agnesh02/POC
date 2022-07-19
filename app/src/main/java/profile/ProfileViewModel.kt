@@ -7,6 +7,7 @@ import android.net.Uri
 import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
+import models.Common.toast
 
 class ProfileViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -24,7 +25,7 @@ class ProfileViewModel(application: Application) : AndroidViewModel(application)
         profileRepository.liveUserData.observeForever {
             msg.postValue(it.message)
             if (it.message != "ok") {
-                Toast.makeText(getApplication(), it.message, Toast.LENGTH_SHORT).show()
+                toast(getApplication(), it.message.toString())
             }
         }
     }

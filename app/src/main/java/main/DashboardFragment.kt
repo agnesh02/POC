@@ -35,6 +35,10 @@ class DashboardFragment : Fragment() {
             view?.findNavController()?.navigate(R.id.nav_live_stream)
         }
 
+        binding.cardBluetooth.setOnClickListener {
+            view?.findNavController()?.navigate(R.id.nav_ble)
+        }
+
         return binding.root
     }
 

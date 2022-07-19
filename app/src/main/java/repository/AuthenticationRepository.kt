@@ -1,10 +1,12 @@
 package repository
 
+import android.app.Activity
 import main.SideMenuActivity
 import models.UserData
 import android.app.Application
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.MutableLiveData
 import androidx.room.Room
@@ -13,24 +15,37 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.coroutines.DelicateCoroutinesApi
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import models.database.Database
 import models.database.LoginData
 
 class AuthenticationRepository {
 
-    private val auth: FirebaseAuth = FirebaseAuth.getInstance()
-    private val firebaseUser: FirebaseUser? = FirebaseAuth.getInstance().currentUser
+    private lateinit var auth: FirebaseAuth
+    private var firebaseUser: FirebaseUser?=null
     var user: MutableLiveData<String> = MutableLiveData()
     var email: MutableLiveData<String> = MutableLiveData()
     private var firestore: FirebaseFirestore = FirebaseFirestore.getInstance()
 
-    private var loginStatus: MutableLiveData<Boolean> = MutableLiveData()
+    var loginStatus: MutableLiveData<Boolean> = MutableLiveData()
     var liveRepoMessage: MutableLiveData<String> = MutableLiveData()
 
+    init {
+        GlobalScope.launch(Dispatchers.Default) {
+            auth = FirebaseAuth.getInstance()
+            firebaseUser = auth.currentUser
+        }
+    }
 
     fun getUser() {
-        user.postValue(firebaseUser!!.displayName!!)
-        email.postValue(firebaseUser.email!!)
+
+        GlobalScope.launch {
+            user.postValue(firebaseUser?.displayName!!)
+            email.postValue(firebaseUser?.email!!)
+        }
     }
 
     fun registerUser(username: String, email: String, password: String) {
@@ -90,21 +105,21 @@ class AuthenticationRepository {
     }
 
 
+    @OptIn(DelicateCoroutinesApi::class)
     fun loginUser(application: Application, email: String, password: String, save: Boolean) {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener {
                 if (it.isSuccessful) {
 
-                    //Log.d("checkbox",save.toString())
-
                     if(save)
                     {
-                        val db = Room.databaseBuilder(application.applicationContext,Database::class.java,"userdb").allowMainThreadQueries().build()
-                        val loginDataObj = LoginData(1,true)
-                        db.accessDao().putData(loginDataObj)
+                        GlobalScope.launch(Dispatchers.Default) {
+                            val db = Room.databaseBuilder(application.applicationContext,Database::class.java,"userdb").build()
+                            val loginDataObj = LoginData(1,true)
+                            db.accessDao().putData(loginDataObj)
+                        }
                     }
 
-                    liveRepoMessage.postValue("Hi, " + firebaseUser?.displayName)
                     val i = Intent(application.applicationContext, SideMenuActivity::class.java)
                     i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
                     startActivity(application.applicationContext, i, Bundle())
@@ -142,13 +157,14 @@ class AuthenticationRepository {
 
     fun logoutUser(application: Application) {
         auth.signOut()
-        val db = Room.databaseBuilder(application.applicationContext,Database::class.java,"userdb").allowMainThreadQueries().build()
-        db.accessDao().deleteData()
+        GlobalScope.launch {
+            val db = Room.databaseBuilder(application.applicationContext,Database::class.java,"userdb").build()
+            db.accessDao().deleteData()
+        }
         val i = Intent(application.applicationContext, AuthenticationActivity::class.java)
         i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(application.applicationContext, i, Bundle())
 
-        //SideMenuActivity().finish()
     }
 
 }

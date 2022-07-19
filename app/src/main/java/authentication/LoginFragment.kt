@@ -40,6 +40,11 @@ class LoginFragment : Fragment() {
             }
         })
 
+        viewModel.loginStatus.observe(viewLifecycleOwner) {
+            if(it)
+                activity?.finish()
+        }
+
         binding.tvLoginGoToRegister.setOnClickListener {
             fragmentChange(RegistrationFragment())
         }

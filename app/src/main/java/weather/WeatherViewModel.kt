@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import com.example.poc.R
+import models.Common.toast
 import models.WeatherResponse
 import repository.WeatherRepository
 
@@ -28,8 +29,7 @@ class WeatherViewModel(application: Application) : AndroidViewModel(application)
     fun fetchWeatherData() {
 
         if (!validate(cityName)) {
-            Toast.makeText(getApplication(), "Enter a valid city or region", Toast.LENGTH_SHORT)
-                .show()
+            toast(getApplication(), "Enter a valid city or region")
             return
         }
 

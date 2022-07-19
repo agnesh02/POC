@@ -9,7 +9,9 @@
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/activity_side_menu.xml" value="0.25" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/app_bar_side_menu.xml" value="0.19519927536231885" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/content_side_menu.xml" value="0.19519927536231885" />
+        <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/custom_layout_ble.xml" value="0.2006340579710145" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/custom_weather_card.xml" value="0.22" />
+        <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/fragment_ble.xml" value="0.26875" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/fragment_dashboard.xml" value="0.25" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/fragment_edit_profile.xml" value="0.25" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/fragment_live_stream.xml" value="0.26875" />
@@ -19,9 +21,12 @@
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/fragment_registration.xml" value="0.26875" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/fragment_reset_password.xml" value="0.26875" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/fragment_slideshow.xml" value="0.19519927536231885" />
+        <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/fragment_splash.xml" value="0.2006340579710145" />
+        <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/fragment_view_content.xml" value="0.19701086956521738" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/fragment_weather.xml" value="0.33" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/nav_header_side_menu.xml" value="0.1" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/menu/activity_main_drawer.xml" value="0.26875" />
+        <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/menu/live_stream_menu.xml" value="0.26875" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/menu/side_menu.xml" value="0.26875" />
       </map>
     </option>

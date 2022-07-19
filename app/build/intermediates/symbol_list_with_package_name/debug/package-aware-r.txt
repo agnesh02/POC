@@ -3009,11 +3009,12 @@ id browser_actions_menu_items
 id browser_actions_menu_view
 id btn_choose_image
 id btn_holder
+id btn_load_url
 id btn_login_login
-id btn_play_content
 id btn_registration_register
 id btn_reset_password
 id btn_save_edit_profile
+id btn_scan
 id btn_upload_image
 id btn_weather_go
 id buttonPanel
@@ -3078,6 +3079,9 @@ id cross_device_linking_body
 id currentState
 id custom
 id customPanel
+id custom_btn_connect
+id custom_tv_address
+id custom_tv_name
 id custom_weather_card_description
 id custom_weather_card_feels_like
 id custom_weather_card_max_temp
@@ -3147,9 +3151,12 @@ id et_edit_profile_full_name
 id et_edit_profile_phone
 id et_edit_profile_user_name
 id et_email_id
+id et_ip
 id et_login_email_id
 id et_login_password
 id et_password
+id et_path
+id et_port
 id et_reset_password_email_id
 id et_username
 id exitUntilCollapsed
@@ -3280,6 +3287,7 @@ id line3
 id linear
 id listMode
 id list_item
+id live_stream_recording
 id locale
 id logo
 id ltr
@@ -3410,11 +3418,13 @@ id progressBarProfilePic
 id progressBar_login
 id progressBar_profile
 id progressBar_weather
+id progress_bar
 id progress_circular
 id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recycler_view_devices
 id resend_barrier
 id resend_code
 id reverseSawtooth
@@ -3522,7 +3532,10 @@ id text2
 id textEnd
 id textInputLayout
 id textInputLayout11
+id textInputLayout2
+id textInputLayout3
 id textInputLayout37
+id textInputLayout4
 id textInputLayout5
 id textInputLayout6
 id textInputLayout7
@@ -3589,8 +3602,8 @@ id up
 id useLogo
 id vertical
 id vertical_only
+id videoView
 id video_decoder_gl_surface_view
-id video_view
 id view_offset_helper
 id view_transition
 id view_tree_lifecycle_owner
@@ -3600,6 +3613,7 @@ id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
 id weather_condition_image
+id webView
 id welcome_back_email_link_body
 id welcome_back_idp_button
 id welcome_back_idp_prompt
@@ -3721,6 +3735,7 @@ layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout content_side_menu
 layout custom_dialog
+layout custom_layout_ble
 layout custom_weather_card
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3748,6 +3763,7 @@ layout exo_styled_settings_list
 layout exo_styled_settings_list_item
 layout exo_styled_sub_settings_list_item
 layout exo_track_selection_dialog
+layout fragment_ble
 layout fragment_dashboard
 layout fragment_edit_profile
 layout fragment_live_stream
@@ -3756,6 +3772,8 @@ layout fragment_profile
 layout fragment_profile_picture
 layout fragment_registration
 layout fragment_reset_password
+layout fragment_splash
+layout fragment_view_content
 layout fragment_weather
 layout fui_activity_invisible
 layout fui_activity_register_email
@@ -3868,6 +3886,7 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu activity_main_drawer
+menu live_stream_menu
 menu side_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -3877,6 +3896,7 @@ plurals exo_controls_rewind_by_amount_description
 plurals fui_error_weak_password
 plurals mtrl_badge_content_description
 raw keep
+raw poc
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

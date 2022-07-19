@@ -1,338 +1,366 @@
 [
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_mist.png.flat",
-        "source": "com.example.poc.app-main-67:/drawable/mist.png"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_bluetooth.png.flat",
-        "source": "com.example.poc.app-main-67:/drawable/bluetooth.png"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_ic_baseline_ondemand_video_24.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\ic_baseline_ondemand_video_24.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_ic_baseline_perm_identity_24.xml.flat",
-        "source": "com.example.poc.app-main-67:/drawable/ic_baseline_perm_identity_24.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_custom_person_outline.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\custom_person_outline.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_custom_email_icon.xml.flat",
-        "source": "com.example.poc.app-main-67:/drawable/custom_email_icon.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\layout_custom_weather_card.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\custom_weather_card.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_person_outline_focused.xml.flat",
-        "source": "com.example.poc.app-main-67:/drawable/person_outline_focused.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_shower_rain.png.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\shower_rain.png"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/layout_fragment_login.xml.flat",
-        "source": "com.example.poc.app-main-67:/layout/fragment_login.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_cold.png.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\cold.png"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/layout_fragment_reset_password.xml.flat",
-        "source": "com.example.poc.app-main-67:/layout/fragment_reset_password.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_rain.png.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\rain.png"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/navigation_mobile_navigation.xml.flat",
-        "source": "com.example.poc.app-main-67:/navigation/mobile_navigation.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\font_poppins_light.ttf.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\font\\poppins_light.ttf"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_ic_baseline_lock_24.xml.flat",
-        "source": "com.example.poc.app-main-67:/drawable/ic_baseline_lock_24.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_wind.png.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\wind.png"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "com.example.poc.app-pngs-60:/drawable-xxxhdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-pngs-60:\\drawable-xxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_ic_baseline_home_24.xml.flat",
-        "source": "com.example.poc.app-main-67:/drawable/ic_baseline_home_24.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_ic_baseline_wb_sunny_24.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\ic_baseline_wb_sunny_24.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_ic_baseline_edit_24.xml.flat",
-        "source": "com.example.poc.app-main-67:/drawable/ic_baseline_edit_24.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_snow.png.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\snow.png"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/menu_activity_main_drawer.xml.flat",
-        "source": "com.example.poc.app-main-67:/menu/activity_main_drawer.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_few_clouds.png.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\few_clouds.png"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_ic_baseline_person_pin_24.xml.flat",
-        "source": "com.example.poc.app-main-67:/drawable/ic_baseline_person_pin_24.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\layout_content_side_menu.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\content_side_menu.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_ic_menu_gallery.xml.flat",
-        "source": "com.example.poc.app-main-67:/drawable/ic_menu_gallery.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_person_outline_focused.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\person_outline_focused.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_cold.png.flat",
-        "source": "com.example.poc.app-main-67:/drawable/cold.png"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-pngs-60:\\drawable-hdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/xml_data_extraction_rules.xml.flat",
-        "source": "com.example.poc.app-main-67:/xml/data_extraction_rules.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\layout_fragment_reset_password.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\fragment_reset_password.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_clear_sky.png.flat",
-        "source": "com.example.poc.app-main-67:/drawable/clear_sky.png"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\layout_fragment_view_content.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\fragment_view_content.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.example.poc.app-main-67:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.example.poc.app-main-67:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.poc.app-main-67:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_broken_clouds.png.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\broken_clouds.png"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "com.example.poc.app-pngs-60:/drawable-xxhdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_mist.png.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\mist.png"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/layout_custom_weather_card.xml.flat",
-        "source": "com.example.poc.app-main-67:/layout/custom_weather_card.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_live.png.flat",
-        "source": "com.example.poc.app-main-67:/drawable/live.png"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_live.png.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\live.png"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.poc.app-main-67:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\layout_fragment_login.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\fragment_login.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.example.poc.app-main-67:/drawable/ic_launcher_background.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\layout_fragment_edit_profile.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\fragment_edit_profile.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/layout_fragment_dashboard.xml.flat",
-        "source": "com.example.poc.app-main-67:/layout/fragment_dashboard.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_ic_menu_slideshow.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\ic_menu_slideshow.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/xml_backup_rules.xml.flat",
-        "source": "com.example.poc.app-main-67:/xml/backup_rules.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_ic_baseline_perm_device_information_24.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\ic_baseline_perm_device_information_24.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/font_poppins.ttf.flat",
-        "source": "com.example.poc.app-main-67:/font/poppins.ttf"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\layout_fragment_ble.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\fragment_ble.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable-xhdpi_ic_launcher_foreground.png.flat",
-        "source": "com.example.poc.app-pngs-60:/drawable-xhdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable-hdpi_ic_launcher_foreground.png.flat",
-        "source": "com.example.poc.app-pngs-60:/drawable-hdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\layout_fragment_profile.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\fragment_profile.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_ic_email_focused.xml.flat",
-        "source": "com.example.poc.app-main-67:/drawable/ic_email_focused.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_ic_baseline_power_settings_new_24.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\ic_baseline_power_settings_new_24.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/layout_activity_authentication.xml.flat",
-        "source": "com.example.poc.app-main-67:/layout/activity_authentication.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\layout_fragment_dashboard.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\fragment_dashboard.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_ic_baseline_power_settings_new_24.xml.flat",
-        "source": "com.example.poc.app-main-67:/drawable/ic_baseline_power_settings_new_24.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_ic_email_focused.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\ic_email_focused.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/layout_fragment_live_stream.xml.flat",
-        "source": "com.example.poc.app-main-67:/layout/fragment_live_stream.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\menu_live_stream_menu.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\menu\\live_stream_menu.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_humidity.png.flat",
-        "source": "com.example.poc.app-main-67:/drawable/humidity.png"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-pngs-60:\\drawable-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.example.poc.app-main-67:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_humidity.png.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\humidity.png"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_custom_lock_outline.xml.flat",
-        "source": "com.example.poc.app-main-67:/drawable/custom_lock_outline.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\font_poppins.ttf.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\font\\poppins.ttf"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_few_clouds.png.flat",
-        "source": "com.example.poc.app-main-67:/drawable/few_clouds.png"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_side_nav_bar.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\side_nav_bar.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_drizzle.png.flat",
-        "source": "com.example.poc.app-main-67:/drawable/drizzle.png"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-pngs-60:\\drawable-xhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "com.example.poc.app-pngs-60:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_user.png.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\user.png"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.example.poc.app-main-67:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.poc.app-main-67:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\layout_fragment_live_stream.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\fragment_live_stream.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/layout_fragment_edit_profile.xml.flat",
-        "source": "com.example.poc.app-main-67:/layout/fragment_edit_profile.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_user.png.flat",
-        "source": "com.example.poc.app-main-67:/drawable/user.png"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_ic_baseline_bluetooth_searching_24.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\ic_baseline_bluetooth_searching_24.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/layout_fragment_profile_picture.xml.flat",
-        "source": "com.example.poc.app-main-67:/layout/fragment_profile_picture.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_ic_menu_slideshow.xml.flat",
-        "source": "com.example.poc.app-main-67:/drawable/ic_menu_slideshow.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\raw_poc.mp4.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\raw\\poc.mp4"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/menu_side_menu.xml.flat",
-        "source": "com.example.poc.app-main-67:/menu/side_menu.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/layout_activity_side_menu.xml.flat",
-        "source": "com.example.poc.app-main-67:/layout/activity_side_menu.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\layout_fragment_registration.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\fragment_registration.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/layout_nav_header_side_menu.xml.flat",
-        "source": "com.example.poc.app-main-67:/layout/nav_header_side_menu.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_cloudyday.png.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\cloudyday.png"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_shower_rain.png.flat",
-        "source": "com.example.poc.app-main-67:/drawable/shower_rain.png"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_ic_baseline_email_24.xml.flat",
-        "source": "com.example.poc.app-main-67:/drawable/ic_baseline_email_24.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_ic_menu_gallery.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\ic_menu_gallery.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/layout_fragment_registration.xml.flat",
-        "source": "com.example.poc.app-main-67:/layout/fragment_registration.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_drizzle.png.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\drizzle.png"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/font_archivo_narrow.ttf.flat",
-        "source": "com.example.poc.app-main-67:/font/archivo_narrow.ttf"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_lock_focused.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\lock_focused.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_ic_baseline_perm_device_information_24.xml.flat",
-        "source": "com.example.poc.app-main-67:/drawable/ic_baseline_perm_device_information_24.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_haze.png.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\haze.png"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_thunderstorm.png.flat",
-        "source": "com.example.poc.app-main-67:/drawable/thunderstorm.png"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_custom_email_icon.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\custom_email_icon.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable-ldpi_ic_launcher_foreground.png.flat",
-        "source": "com.example.poc.app-pngs-60:/drawable-ldpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\layout_fragment_profile_picture.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\fragment_profile_picture.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/layout_fragment_profile.xml.flat",
-        "source": "com.example.poc.app-main-67:/layout/fragment_profile.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-pngs-60:\\drawable-mdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/layout_content_side_menu.xml.flat",
-        "source": "com.example.poc.app-main-67:/layout/content_side_menu.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\navigation_mobile_navigation.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\navigation\\mobile_navigation.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.poc.app-main-67:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_bluetooth.png.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\bluetooth.png"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_haze.png.flat",
-        "source": "com.example.poc.app-main-67:/drawable/haze.png"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_hot.png.flat",
-        "source": "com.example.poc.app-main-67:/drawable/hot.png"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_ic_baseline_home_24.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\ic_baseline_home_24.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/layout_fragment_weather.xml.flat",
-        "source": "com.example.poc.app-main-67:/layout/fragment_weather.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\menu_activity_main_drawer.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\menu\\activity_main_drawer.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_lock_focused.xml.flat",
-        "source": "com.example.poc.app-main-67:/drawable/lock_focused.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\font_archivo_narrow.ttf.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\font\\archivo_narrow.ttf"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_rain.png.flat",
-        "source": "com.example.poc.app-main-67:/drawable/rain.png"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\layout_fragment_splash.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\fragment_splash.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.example.poc.app-main-67:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_clear_sky.png.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\clear_sky.png"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/font_poppins_light.ttf.flat",
-        "source": "com.example.poc.app-main-67:/font/poppins_light.ttf"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\layout_activity_authentication.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\activity_authentication.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_cloudyday.png.flat",
-        "source": "com.example.poc.app-main-67:/drawable/cloudyday.png"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.poc.app-main-67:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_thunderstorm.png.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\thunderstorm.png"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_ic_baseline_wb_sunny_24.xml.flat",
-        "source": "com.example.poc.app-main-67:/drawable/ic_baseline_wb_sunny_24.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_ic_baseline_lock_24.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\ic_baseline_lock_24.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable-mdpi_ic_launcher_foreground.png.flat",
-        "source": "com.example.poc.app-pngs-60:/drawable-mdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_ic_baseline_edit_24.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\ic_baseline_edit_24.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_ic_menu_camera.xml.flat",
-        "source": "com.example.poc.app-main-67:/drawable/ic_menu_camera.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-pngs-60:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_ic_baseline_bluetooth_searching_24.xml.flat",
-        "source": "com.example.poc.app-main-67:/drawable/ic_baseline_bluetooth_searching_24.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\layout_activity_side_menu.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\activity_side_menu.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_fog.png.flat",
-        "source": "com.example.poc.app-main-67:/drawable/fog.png"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_ic_menu_camera.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\ic_menu_camera.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_side_nav_bar.xml.flat",
-        "source": "com.example.poc.app-main-67:/drawable/side_nav_bar.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_ic_baseline_ondemand_video_24.xml.flat",
-        "source": "com.example.poc.app-main-67:/drawable/ic_baseline_ondemand_video_24.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_ic_baseline_perm_identity_24.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\ic_baseline_perm_identity_24.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_broken_clouds.png.flat",
-        "source": "com.example.poc.app-main-67:/drawable/broken_clouds.png"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_custom_lock_outline.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\custom_lock_outline.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_scattered_clouds.png.flat",
-        "source": "com.example.poc.app-main-67:/drawable/scattered_clouds.png"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\layout_nav_header_side_menu.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\nav_header_side_menu.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/layout_app_bar_side_menu.xml.flat",
-        "source": "com.example.poc.app-main-67:/layout/app_bar_side_menu.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_ic_baseline_email_24.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\ic_baseline_email_24.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_custom_person_outline.xml.flat",
-        "source": "com.example.poc.app-main-67:/drawable/custom_person_outline.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\menu_side_menu.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\menu\\side_menu.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_snow.png.flat",
-        "source": "com.example.poc.app-main-67:/drawable/snow.png"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\layout_custom_layout_ble.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\custom_layout_ble.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.poc.app-main-67:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "com.example.poc.app-merged_res-65:/layout_fragment_splash.xml.flat",
+        "source": "com.example.poc.app-main-67:/layout/fragment_splash.xml"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/drawable_wind.png.flat",
-        "source": "com.example.poc.app-main-67:/drawable/wind.png"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.poc.app-merged_res-65:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.poc.app-main-67:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_fog.png.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\fog.png"
+    },
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable-ldpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-pngs-60:\\drawable-ldpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\layout_app_bar_side_menu.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\app_bar_side_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_hot.png.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\hot.png"
+    },
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_ic_baseline_person_pin_24.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\ic_baseline_person_pin_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\drawable_scattered_clouds.png.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\drawable\\scattered_clouds.png"
+    },
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-65:\\layout_fragment_weather.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\fragment_weather.xml"
     }
 ]

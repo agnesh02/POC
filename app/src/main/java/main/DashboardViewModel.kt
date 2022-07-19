@@ -2,8 +2,10 @@ package main
 
 import repository.AuthenticationRepository
 import android.app.Application
+import android.widget.Toast
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
+import models.Common.toast
 
 class DashboardViewModel(application: Application) : AndroidViewModel(application) {
 

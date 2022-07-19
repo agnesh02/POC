@@ -1,6 +1,8 @@
 package models
 
+import android.content.Context
 import android.widget.ImageView
+import android.widget.Toast
 import com.example.poc.R
 
 object Common {
@@ -18,7 +20,7 @@ object Common {
         if (desc == "broken clouds" || desc == "overcast clouds") {
             imageView.setImageResource(R.drawable.broken_clouds)
         }
-        if (desc == "shower rain") {
+        if (desc == "shower rain" || desc == "high intensity rain") {
             imageView.setImageResource(R.drawable.shower_rain)
         }
         if (desc == "rain" || desc == "light rain" || desc == "moderate rain") {
@@ -52,6 +54,11 @@ object Common {
             imageView.setImageResource(R.drawable.hot)
         }
 
+    }
+
+    fun toast(context: Context, msg: String)
+    {
+        Toast.makeText(context, msg, Toast.LENGTH_SHORT).show()
     }
 
 }

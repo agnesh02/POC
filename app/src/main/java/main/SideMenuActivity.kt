@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavController
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
@@ -18,12 +19,15 @@ import com.example.poc.R
 import com.example.poc.databinding.ActivitySideMenuBinding
 import com.example.poc.databinding.NavHeaderSideMenuBinding
 import com.google.android.material.navigation.NavigationView
+import livestream.LiveStreamFragment
+import models.Common.toast
 
 class SideMenuActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivitySideMenuBinding
     private lateinit var viewModel: DashboardViewModel
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,20 +38,21 @@ class SideMenuActivity : AppCompatActivity() {
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
-        val navController = findNavController(this, R.id.nav_host_fragment_content_side_menu)
+        navController = findNavController(this, R.id.nav_host_fragment_content_side_menu)
 
         val viewHeader = binding.navView.getHeaderView(0)
         val navViewHeaderBinding: NavHeaderSideMenuBinding =
             NavHeaderSideMenuBinding.bind(viewHeader)
 
         appBarConfiguration =
-            AppBarConfiguration(setOf(R.id.nav_dashboard, R.id.nav_profile, R.id.nav_weather, R.id.nav_live_stream), drawerLayout)
+            AppBarConfiguration(setOf(R.id.nav_dashboard, R.id.nav_profile, R.id.nav_weather, R.id.nav_live_stream, R.id.nav_ble), drawerLayout)
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
         NavigationUI.setupWithNavController(navView, navController)
 
         viewModel = ViewModelProvider(this)[(DashboardViewModel::class.java)]
         viewModel.getUser()
         viewModel.uname.observeForever {
+            toast(applicationContext,"Hi, $it.")
             navViewHeaderBinding.tvHeaderUname.text = it
         }
         viewModel.email.observeForever {
@@ -62,16 +67,24 @@ class SideMenuActivity : AppCompatActivity() {
         navView.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.nav_dashboard -> {
+                    navController.popBackStack()
                     navController.navigate(R.id.nav_dashboard); drawerLayout.closeDrawer(GravityCompat.START); true
                 }
                 R.id.nav_profile -> {
+                    navController.popBackStack()
                     navController.navigate(R.id.nav_profile); drawerLayout.closeDrawer(GravityCompat.START); true
                 }
                 R.id.nav_weather -> {
+                    navController.popBackStack()
                     navController.navigate(R.id.nav_weather); drawerLayout.closeDrawer(GravityCompat.START); true
                 }
                 R.id.nav_live_stream -> {
+                    navController.popBackStack()
                     navController.navigate(R.id.nav_live_stream); drawerLayout.closeDrawer(GravityCompat.START); true
+                }
+                R.id.nav_ble -> {
+                    navController.popBackStack()
+                    navController.navigate(R.id.nav_ble); drawerLayout.closeDrawer(GravityCompat.START); true
                 }
                 R.id.nav_logout -> {
                     performLogout(); true
@@ -103,6 +116,7 @@ class SideMenuActivity : AppCompatActivity() {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 
+
     private fun performLogout() {
 
         val builder = AlertDialog.Builder(this)
@@ -112,6 +126,7 @@ class SideMenuActivity : AppCompatActivity() {
         builder.setIcon(android.R.drawable.ic_dialog_alert)
 
         builder.setPositiveButton("Yes") { _, _ ->
+            this.finish()
             viewModel.performLogout()
         }
 

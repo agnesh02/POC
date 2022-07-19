@@ -1,62 +1,82 @@
 [
     {
-        "merged": "com.example.poc.app-mergeDebugResources-64:/layout/content_side_menu.xml",
-        "source": "com.example.poc.app-main-67:/layout/content_side_menu.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-64:\\layout\\fragment_registration.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\fragment_registration.xml"
     },
     {
-        "merged": "com.example.poc.app-mergeDebugResources-64:/layout/fragment_live_stream.xml",
-        "source": "com.example.poc.app-main-67:/layout/fragment_live_stream.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-64:\\layout\\activity_side_menu.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\activity_side_menu.xml"
     },
     {
-        "merged": "com.example.poc.app-mergeDebugResources-64:/layout/activity_authentication.xml",
-        "source": "com.example.poc.app-main-67:/layout/activity_authentication.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-64:\\layout\\fragment_profile_picture.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\fragment_profile_picture.xml"
     },
     {
-        "merged": "com.example.poc.app-mergeDebugResources-64:/layout/fragment_profile.xml",
-        "source": "com.example.poc.app-main-67:/layout/fragment_profile.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-64:\\layout\\fragment_edit_profile.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\fragment_edit_profile.xml"
     },
     {
-        "merged": "com.example.poc.app-mergeDebugResources-64:/layout/activity_side_menu.xml",
-        "source": "com.example.poc.app-main-67:/layout/activity_side_menu.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-64:\\layout\\nav_header_side_menu.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\nav_header_side_menu.xml"
     },
     {
-        "merged": "com.example.poc.app-mergeDebugResources-64:/layout/nav_header_side_menu.xml",
-        "source": "com.example.poc.app-main-67:/layout/nav_header_side_menu.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-64:\\layout\\activity_authentication.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\activity_authentication.xml"
     },
     {
-        "merged": "com.example.poc.app-mergeDebugResources-64:/layout/fragment_dashboard.xml",
-        "source": "com.example.poc.app-main-67:/layout/fragment_dashboard.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-64:\\layout\\content_side_menu.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\content_side_menu.xml"
     },
     {
-        "merged": "com.example.poc.app-mergeDebugResources-64:/layout/fragment_profile_picture.xml",
-        "source": "com.example.poc.app-main-67:/layout/fragment_profile_picture.xml"
+        "merged": "com.example.poc.app-mergeDebugResources-64:/layout/fragment_splash.xml",
+        "source": "com.example.poc.app-main-67:/layout/fragment_splash.xml"
     },
     {
-        "merged": "com.example.poc.app-mergeDebugResources-64:/layout/fragment_registration.xml",
-        "source": "com.example.poc.app-main-67:/layout/fragment_registration.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-64:\\layout\\fragment_login.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\fragment_login.xml"
     },
     {
-        "merged": "com.example.poc.app-mergeDebugResources-64:/layout/fragment_reset_password.xml",
-        "source": "com.example.poc.app-main-67:/layout/fragment_reset_password.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-64:\\layout\\fragment_weather.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\fragment_weather.xml"
     },
     {
-        "merged": "com.example.poc.app-mergeDebugResources-64:/layout/fragment_edit_profile.xml",
-        "source": "com.example.poc.app-main-67:/layout/fragment_edit_profile.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-64:\\layout\\fragment_dashboard.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\fragment_dashboard.xml"
     },
     {
-        "merged": "com.example.poc.app-mergeDebugResources-64:/layout/fragment_weather.xml",
-        "source": "com.example.poc.app-main-67:/layout/fragment_weather.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-64:\\layout\\fragment_live_stream.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\fragment_live_stream.xml"
     },
     {
-        "merged": "com.example.poc.app-mergeDebugResources-64:/layout/app_bar_side_menu.xml",
-        "source": "com.example.poc.app-main-67:/layout/app_bar_side_menu.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-64:\\layout\\fragment_splash.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\fragment_splash.xml"
     },
     {
-        "merged": "com.example.poc.app-mergeDebugResources-64:/layout/fragment_login.xml",
-        "source": "com.example.poc.app-main-67:/layout/fragment_login.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-64:\\layout\\custom_layout_ble.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\custom_layout_ble.xml"
     },
     {
-        "merged": "com.example.poc.app-mergeDebugResources-64:/layout/custom_weather_card.xml",
-        "source": "com.example.poc.app-main-67:/layout/custom_weather_card.xml"
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-64:\\layout\\app_bar_side_menu.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\app_bar_side_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-64:\\layout\\fragment_profile.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-64:\\layout\\fragment_reset_password.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\fragment_reset_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-64:\\layout\\fragment_view_content.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\fragment_view_content.xml"
+    },
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-64:\\layout\\custom_weather_card.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\custom_weather_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-mergeDebugResources-64:\\layout\\fragment_ble.xml",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-67:\\layout\\fragment_ble.xml"
     }
 ]

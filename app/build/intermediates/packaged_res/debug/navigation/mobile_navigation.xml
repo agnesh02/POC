@@ -29,6 +29,11 @@
         android:label="Live Stream"
         tools:layout="@layout/fragment_live_stream" />
 
+    <fragment
+        android:id="@+id/nav_ble"
+        android:name="ble.BleFragment"
+        android:label="Bluetooth"
+        tools:layout="@layout/fragment_ble" />
 
 
 </navigation>

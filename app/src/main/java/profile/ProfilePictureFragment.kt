@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import com.example.poc.R
 import com.example.poc.databinding.FragmentProfilePictureBinding
+import models.Common.toast
 
 
 class ProfilePictureFragment : Fragment() {
@@ -79,7 +80,7 @@ class ProfilePictureFragment : Fragment() {
             uri = it
             binding.picture.setImageURI(it)
             binding.btnUploadImage.visibility = View.VISIBLE
-            Toast.makeText(context, "An image has been selected", Toast.LENGTH_SHORT).show()
+            toast(context!!, "An image has been selected")
         }
     }
 

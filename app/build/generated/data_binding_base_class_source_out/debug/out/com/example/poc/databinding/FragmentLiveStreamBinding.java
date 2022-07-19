@@ -7,25 +7,60 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.example.poc.R;
-import com.google.android.exoplayer2.ui.PlayerView;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import java.lang.Deprecated;
 import java.lang.Object;
+import livestream.LiveStreamViewModel;
 
 public abstract class FragmentLiveStreamBinding extends ViewDataBinding {
   @NonNull
-  public final Button btnPlayContent;
+  public final Button btnLoadUrl;
 
   @NonNull
-  public final PlayerView videoView;
+  public final TextInputEditText etIp;
+
+  @NonNull
+  public final TextInputEditText etPath;
+
+  @NonNull
+  public final TextInputEditText etPort;
+
+  @NonNull
+  public final TextInputLayout textInputLayout2;
+
+  @NonNull
+  public final TextInputLayout textInputLayout3;
+
+  @NonNull
+  public final TextInputLayout textInputLayout4;
+
+  @Bindable
+  protected LiveStreamViewModel mViewModel;
 
   protected FragmentLiveStreamBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      Button btnPlayContent, PlayerView videoView) {
+      Button btnLoadUrl, TextInputEditText etIp, TextInputEditText etPath, TextInputEditText etPort,
+      TextInputLayout textInputLayout2, TextInputLayout textInputLayout3,
+      TextInputLayout textInputLayout4) {
     super(_bindingComponent, _root, _localFieldCount);
-    this.btnPlayContent = btnPlayContent;
-    this.videoView = videoView;
+    this.btnLoadUrl = btnLoadUrl;
+    this.etIp = etIp;
+    this.etPath = etPath;
+    this.etPort = etPort;
+    this.textInputLayout2 = textInputLayout2;
+    this.textInputLayout3 = textInputLayout3;
+    this.textInputLayout4 = textInputLayout4;
+  }
+
+  public abstract void setViewModel(@Nullable LiveStreamViewModel viewModel);
+
+  @Nullable
+  public LiveStreamViewModel getViewModel() {
+    return mViewModel;
   }
 
   @NonNull
