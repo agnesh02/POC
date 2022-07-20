@@ -2,13 +2,11 @@ package livestream
 
 import android.os.Bundle
 import android.view.*
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.poc.R
 import com.example.poc.databinding.FragmentLiveStreamBinding
 import models.Common.toast
-
 
 class LiveStreamFragment : Fragment() {
 

@@ -14,22 +14,21 @@ public class FragmentWeatherBindingImpl extends FragmentWeatherBinding implement
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.weather_condition_image, 3);
-        sViewsWithIds.put(R.id.tv_weather_condition, 4);
-        sViewsWithIds.put(R.id.tv_weather_description, 5);
-        sViewsWithIds.put(R.id.card_weather, 6);
-        sViewsWithIds.put(R.id.temperature_img, 7);
-        sViewsWithIds.put(R.id.tv_temp, 8);
-        sViewsWithIds.put(R.id.tv_feels_like, 9);
-        sViewsWithIds.put(R.id.imageView2, 10);
-        sViewsWithIds.put(R.id.tv_wind_speed, 11);
-        sViewsWithIds.put(R.id.tv_max_temp, 12);
-        sViewsWithIds.put(R.id.tv_min_temp, 13);
-        sViewsWithIds.put(R.id.textView6, 14);
-        sViewsWithIds.put(R.id.imageView3, 15);
-        sViewsWithIds.put(R.id.tv_humidity, 16);
-        sViewsWithIds.put(R.id.forecast_recycler_view, 17);
-        sViewsWithIds.put(R.id.progressBar_weather, 18);
+        sViewsWithIds.put(R.id.weather_condition_image, 4);
+        sViewsWithIds.put(R.id.tv_weather_condition, 5);
+        sViewsWithIds.put(R.id.tv_weather_description, 6);
+        sViewsWithIds.put(R.id.card_weather, 7);
+        sViewsWithIds.put(R.id.temperature_img, 8);
+        sViewsWithIds.put(R.id.tv_temp, 9);
+        sViewsWithIds.put(R.id.tv_feels_like, 10);
+        sViewsWithIds.put(R.id.imageView2, 11);
+        sViewsWithIds.put(R.id.tv_wind_speed, 12);
+        sViewsWithIds.put(R.id.tv_max_temp, 13);
+        sViewsWithIds.put(R.id.tv_min_temp, 14);
+        sViewsWithIds.put(R.id.textView6, 15);
+        sViewsWithIds.put(R.id.imageView3, 16);
+        sViewsWithIds.put(R.id.tv_humidity, 17);
+        sViewsWithIds.put(R.id.forecast_recycler_view, 18);
     }
     // views
     @NonNull
@@ -71,29 +70,30 @@ public class FragmentWeatherBindingImpl extends FragmentWeatherBinding implement
         this(bindingComponent, root, mapBindings(bindingComponent, root, 19, sIncludes, sViewsWithIds));
     }
     private FragmentWeatherBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 0
+        super(bindingComponent, root, 1
             , (android.widget.Button) bindings[2]
-            , (androidx.cardview.widget.CardView) bindings[6]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[17]
-            , (android.widget.ImageView) bindings[10]
-            , (android.widget.ImageView) bindings[15]
-            , (android.widget.ProgressBar) bindings[18]
+            , (androidx.cardview.widget.CardView) bindings[7]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[18]
+            , (android.widget.ImageView) bindings[11]
+            , (android.widget.ImageView) bindings[16]
+            , (android.widget.ProgressBar) bindings[3]
             , (android.widget.AutoCompleteTextView) bindings[1]
-            , (android.widget.ImageView) bindings[7]
+            , (android.widget.ImageView) bindings[8]
+            , (android.widget.TextView) bindings[15]
+            , (android.widget.TextView) bindings[10]
+            , (android.widget.TextView) bindings[17]
+            , (android.widget.TextView) bindings[13]
             , (android.widget.TextView) bindings[14]
             , (android.widget.TextView) bindings[9]
-            , (android.widget.TextView) bindings[16]
-            , (android.widget.TextView) bindings[12]
-            , (android.widget.TextView) bindings[13]
-            , (android.widget.TextView) bindings[8]
-            , (android.widget.TextView) bindings[4]
             , (android.widget.TextView) bindings[5]
-            , (android.widget.TextView) bindings[11]
-            , (android.widget.ImageView) bindings[3]
+            , (android.widget.TextView) bindings[6]
+            , (android.widget.TextView) bindings[12]
+            , (android.widget.ImageView) bindings[4]
             );
         this.btnWeatherGo.setTag(null);
         this.mboundView0 = (android.widget.FrameLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.progressBarWeather.setTag(null);
         this.searchView.setTag(null);
         setRootTag(root);
         // listeners
@@ -104,7 +104,7 @@ public class FragmentWeatherBindingImpl extends FragmentWeatherBinding implement
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -134,7 +134,7 @@ public class FragmentWeatherBindingImpl extends FragmentWeatherBinding implement
     public void setViewModel(@Nullable weather.WeatherViewModel ViewModel) {
         this.mViewModel = ViewModel;
         synchronized(this) {
-            mDirtyFlags |= 0x1L;
+            mDirtyFlags |= 0x2L;
         }
         notifyPropertyChanged(BR.viewModel);
         super.requestRebind();
@@ -143,6 +143,17 @@ public class FragmentWeatherBindingImpl extends FragmentWeatherBinding implement
     @Override
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
+            case 0 :
+                return onChangeViewModelPBarVisibility((androidx.lifecycle.MutableLiveData<java.lang.Boolean>) object, fieldId);
+        }
+        return false;
+    }
+    private boolean onChangeViewModelPBarVisibility(androidx.lifecycle.MutableLiveData<java.lang.Boolean> ViewModelPBarVisibility, int fieldId) {
+        if (fieldId == BR._all) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x1L;
+            }
+            return true;
         }
         return false;
     }
@@ -154,26 +165,65 @@ public class FragmentWeatherBindingImpl extends FragmentWeatherBinding implement
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        java.lang.Boolean viewModelPBarVisibilityGetValue = null;
+        androidx.lifecycle.MutableLiveData<java.lang.Boolean> viewModelPBarVisibility = null;
+        int viewModelPBarVisibilityViewVISIBLEViewINVISIBLE = 0;
         java.lang.String viewModelCityName = null;
+        boolean androidxDatabindingViewDataBindingSafeUnboxViewModelPBarVisibilityGetValue = false;
         weather.WeatherViewModel viewModel = mViewModel;
 
-        if ((dirtyFlags & 0x3L) != 0) {
+        if ((dirtyFlags & 0x7L) != 0) {
 
 
 
                 if (viewModel != null) {
-                    // read viewModel.cityName
-                    viewModelCityName = viewModel.getCityName();
+                    // read viewModel.pBarVisibility
+                    viewModelPBarVisibility = viewModel.getPBarVisibility();
                 }
+                updateLiveDataRegistration(0, viewModelPBarVisibility);
+
+
+                if (viewModelPBarVisibility != null) {
+                    // read viewModel.pBarVisibility.getValue()
+                    viewModelPBarVisibilityGetValue = viewModelPBarVisibility.getValue();
+                }
+
+
+                // read androidx.databinding.ViewDataBinding.safeUnbox(viewModel.pBarVisibility.getValue())
+                androidxDatabindingViewDataBindingSafeUnboxViewModelPBarVisibilityGetValue = androidx.databinding.ViewDataBinding.safeUnbox(viewModelPBarVisibilityGetValue);
+            if((dirtyFlags & 0x7L) != 0) {
+                if(androidxDatabindingViewDataBindingSafeUnboxViewModelPBarVisibilityGetValue) {
+                        dirtyFlags |= 0x10L;
+                }
+                else {
+                        dirtyFlags |= 0x8L;
+                }
+            }
+
+
+                // read androidx.databinding.ViewDataBinding.safeUnbox(viewModel.pBarVisibility.getValue()) ? View.VISIBLE : View.INVISIBLE
+                viewModelPBarVisibilityViewVISIBLEViewINVISIBLE = ((androidxDatabindingViewDataBindingSafeUnboxViewModelPBarVisibilityGetValue) ? (android.view.View.VISIBLE) : (android.view.View.INVISIBLE));
+            if ((dirtyFlags & 0x6L) != 0) {
+
+                    if (viewModel != null) {
+                        // read viewModel.cityName
+                        viewModelCityName = viewModel.getCityName();
+                    }
+            }
         }
         // batch finished
-        if ((dirtyFlags & 0x2L) != 0) {
+        if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
             this.btnWeatherGo.setOnClickListener(mCallback1);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.searchView, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, searchViewandroidTextAttrChanged);
         }
-        if ((dirtyFlags & 0x3L) != 0) {
+        if ((dirtyFlags & 0x7L) != 0) {
+            // api target 1
+
+            this.progressBarWeather.setVisibility(viewModelPBarVisibilityViewVISIBLEViewINVISIBLE);
+        }
+        if ((dirtyFlags & 0x6L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.searchView, viewModelCityName);
@@ -200,8 +250,11 @@ public class FragmentWeatherBindingImpl extends FragmentWeatherBinding implement
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): viewModel
-        flag 1 (0x2L): null
+        flag 0 (0x1L): viewModel.pBarVisibility
+        flag 1 (0x2L): viewModel
+        flag 2 (0x3L): null
+        flag 3 (0x4L): androidx.databinding.ViewDataBinding.safeUnbox(viewModel.pBarVisibility.getValue()) ? View.VISIBLE : View.INVISIBLE
+        flag 4 (0x5L): androidx.databinding.ViewDataBinding.safeUnbox(viewModel.pBarVisibility.getValue()) ? View.VISIBLE : View.INVISIBLE
     flag mapping end*/
     //end
 }

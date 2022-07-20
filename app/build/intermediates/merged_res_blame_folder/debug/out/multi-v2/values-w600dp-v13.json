@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.poc.app-mergeDebugResources-63:/values-w600dp-v13/values-w600dp-v13.xml",
+            "outputFile": "com.example.poc.app-mergeDebugResources-62:/values-w600dp-v13/values-w600dp-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Agnesh S Kumar\\AndroidStudioProjects\\POC\\app\\src\\main\\res\\values-w600dp\\dimens.xml",

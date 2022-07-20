@@ -205,6 +205,9 @@ string edit
 string edit_profile
 string email
 string email_id
+string enter_the_ip
+string enter_the_path
+string enter_the_port
 string enter_your_registered_e_mail_id
 string feels_like
 string find_amp_connect
@@ -218,6 +221,7 @@ string google_crash_reporting_api_key
 string google_storage_bucket
 string hello_blank_fragment
 string humidity
+string load
 string login
 string logout
 string m_s

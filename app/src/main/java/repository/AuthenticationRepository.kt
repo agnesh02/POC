@@ -35,15 +35,18 @@ class AuthenticationRepository {
     init {
         GlobalScope.launch(Dispatchers.Default) {
             auth = FirebaseAuth.getInstance()
-            firebaseUser = auth.currentUser
+            while (firebaseUser==null)
+            {
+                firebaseUser = auth.currentUser
+            }
         }
     }
 
     fun getUser() {
 
         GlobalScope.launch {
-            user.postValue(firebaseUser?.displayName!!)
-            email.postValue(firebaseUser?.email!!)
+            user.postValue(firebaseUser?.displayName)
+            email.postValue(firebaseUser?.email)
         }
     }
 
@@ -160,6 +163,7 @@ class AuthenticationRepository {
         }
         val i = Intent(application.applicationContext, AuthenticationActivity::class.java)
         i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        i.putExtra("STATUS",false)
         startActivity(application.applicationContext, i, Bundle())
 
     }

@@ -4,10 +4,10 @@ import android.app.Application
 import android.os.Environment
 import androidx.lifecycle.*
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import java.io.BufferedInputStream
 import java.io.FileOutputStream
+import java.io.OutputStream
 import java.net.URL
 import java.net.URLConnection
 
@@ -19,6 +19,8 @@ class LiveStreamViewModel(application: Application) : AndroidViewModel(applicati
     var path: String = ""
     var url: String = ""
     var msg:MutableLiveData<String> = MutableLiveData()
+    private var inStream: BufferedInputStream?=null
+    private var outStream: OutputStream?=null
 
     companion object {
         const val TIMEOUT_CONNECTION = 5000//5sec
@@ -48,7 +50,7 @@ class LiveStreamViewModel(application: Application) : AndroidViewModel(applicati
     {
         val startTime = System.currentTimeMillis()
         val urlLink = URL(url)
-        viewModelScope.launch(Dispatchers.IO) {
+        viewModelScope.launch(Dispatchers.Default) {
             record(urlLink, startTime)
         }
 
@@ -62,29 +64,33 @@ class LiveStreamViewModel(application: Application) : AndroidViewModel(applicati
 
         try {
             val inputStream = urlConnection.getInputStream()
-            val inStream = BufferedInputStream(inputStream, 1024 * 5)
-            val outStream = FileOutputStream(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).toString() + "/reclive2.mp4")
+            inStream = BufferedInputStream(inputStream, 1024 * 5)
+            outStream = FileOutputStream(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).toString() + "/reclive5.mp4")
             val buff = ByteArray(1024 * 5)
             //Read bytes (and store them) until there is nothing more to read(-1)
             var len: Int?
-            while ((inStream.read(buff).also { len = it }) != -1) {
-                outStream.write(buff, 0, len!!)
+            while ((inStream?.read(buff).also { len = it }) != -1) {
+                outStream?.write(buff, 0, len!!)
             }
 
-            outStream.flush()
-            outStream.close()
-            inStream.close()
+//            outStream.flush()
+//            outStream.close()
+//            inStream.close()
             msg.postValue("completed in " + ((System.currentTimeMillis() - startTime) / 1000) + " sec")
         }
         catch (e: Exception)
         {
-            msg.postValue(e.message)
+//            msg.postValue(e.message)
         }
-
 
     }
 
-
+    fun stopRecording() {
+        outStream?.flush()
+        outStream?.close()
+        inStream?.close()
+        msg.postValue("Recording stopped")
+    }
 
 
 }

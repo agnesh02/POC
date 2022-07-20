@@ -30,6 +30,7 @@ MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] C:\Users\Agnesh
 MERGED from [androidx.window:window:1.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\4cd125fe307b433b6d4b4fb9b394fd9e\transformed\window-1.0.0\AndroidManifest.xml:17:1-33:12
 MERGED from [com.google.android.material:material:1.6.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\6f6f7c5a22d53aaaed4ecf461d6f6192\transformed\material-1.6.1\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\c0589d02362a575666b846acd8f23bc6\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
+MERGED from [pub.devrel:easypermissions:3.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\1400f98cbc1e6be7fe6f9ec281e776bb\transformed\easypermissions-3.0.0\AndroidManifest.xml:2:1-19:12
 MERGED from [me.zhanghai.android.materialprogressbar:library:1.6.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\75beef670cd808197ec4e121bdae04b1\transformed\library-1.6.1\AndroidManifest.xml:6:1-15:12
 MERGED from [androidx.appcompat:appcompat:1.4.2] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\4b25110f4a58309a9d8c8daa125c1785\transformed\appcompat-1.4.2\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.5] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\d9d639fee2dceff2fe62fe92428b3f1e\transformed\firebase-auth-ktx-21.0.5\AndroidManifest.xml:2:1-17:12
@@ -61,7 +62,6 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.0] C:\Users\Agnesh S Kum
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\8ead6e9eacd0b3c015702a1b9380d307\transformed\lifecycle-viewmodel-savedstate-2.5.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core-ktx:1.8.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\41e5577fa98bb845a39e11a847d18938\transformed\core-ktx-1.8.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.room:room-runtime:2.4.2] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\ba156ddf8b2cc61760f05a88e04fa828\transformed\room-runtime-2.4.2\AndroidManifest.xml:17:1-31:12
-MERGED from [com.google.android.exoplayer:exoplayer:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\dfe1d2e2803eaa15ab907d9d6852cfac\transformed\exoplayer-2.17.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.4.2] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\63e30b9adbb1c1bf7fdd9fc519c18f85\transformed\appcompat-resources-1.4.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\d07cf72e7ae7446dcbf7ba73b6c53e2c\transformed\emoji2-views-helper-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\d34804ce9084d281ac113eeaec314a4e\transformed\emoji2-1.0.0\AndroidManifest.xml:17:1-37:12
@@ -70,18 +70,12 @@ MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Agnesh
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\f631732a9ae63b5284fb371b5422b8e3\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\4251cdd5fe67c3d41251baa7b8ef8cbe\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.browser:browser:1.4.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\3e632d781caf9500a943c218019bda00\transformed\browser-1.4.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-dash:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\4e1ff0f83d3b4cb391fc51f3b7689080\transformed\exoplayer-dash-2.17.1\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-hls:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\d616aca45e19b6c3549f1174702e1c82\transformed\exoplayer-hls-2.17.1\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-rtsp:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\1dfbd0509afc3c345def9e99a919bb09\transformed\exoplayer-rtsp-2.17.1\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\e3ad45def6a0a2b7c140d30fd50f7565\transformed\exoplayer-smoothstreaming-2.17.1\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-ui:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\d1da6d356a1c27a90c6211670a4ab17f\transformed\exoplayer-ui-2.17.1\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-core:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\06e7118c2d87741f1d2c52a491f645c8\transformed\exoplayer-core-2.17.1\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\5f44cb78c1fbca129955f35ae948aeb2\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\8eac1bf813573bec93fb53bdc63ebc02\transformed\recyclerview-1.2.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\6a76d23709f43d7fc4cf66138fe1fbee\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\6d0f4e5c39904356597e0fbb768e2c84\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\0fab36e74d32a6e1b7670d251301b9a5\transformed\media-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\052402adfd914169f60ae30113f73cc2\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\3a957ba19c112ea1a020b4d46936411a\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.media:media:1.4.3] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\5b59e11af259bf99381ba271b6eb2829\transformed\media-1.4.3\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.transition:transition:1.4.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\3ba8449b072474acfda61d57b074ec7a\transformed\transition-1.4.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core:1.8.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\11d442f0a4e72d58ed8dc7d7468f0c04\transformed\core-1.8.0\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\3dacf83d7bb4a8bd555b393a5ac8c20f\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -95,11 +89,6 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\Agnesh S Kumar\.gr
 MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\d83416d062fd97db73a0ae073240b0b2\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.sqlite:sqlite-framework:2.2.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\1a6b629717081f52e8072322f796db83\transformed\sqlite-framework-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.sqlite:sqlite:2.2.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\4c2858b63be2553db5410930c4b6b0e3\transformed\sqlite-2.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-datasource:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\6beb38c436b42f158fb625ae550c0996\transformed\exoplayer-datasource-2.17.1\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-database:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\615d7fbe479e56c7801f026269fc2514\transformed\exoplayer-database-2.17.1\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-extractor:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\411106375aa91a9bc0b9d12b01e23e02\transformed\exoplayer-extractor-2.17.1\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-decoder:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\55a74d1cd909b1fb4bebf601508b0ccb\transformed\exoplayer-decoder-2.17.1\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.exoplayer:exoplayer-common:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\bd8ae9178783991c65d9e6b0fbd191ba\transformed\exoplayer-common-2.17.1\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\078bf76ca3deff7d2121ea232f30642c\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.5.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\3a1e92a46529470750256cad1ff8bb0e\transformed\lifecycle-livedata-2.5.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\3b706cf7e5613f1240253edf951b58e8\transformed\lifecycle-livedata-core-ktx-2.5.0\AndroidManifest.xml:17:1-24:12
@@ -216,6 +205,8 @@ MERGED from [com.google.android.material:material:1.6.1] C:\Users\Agnesh S Kumar
 MERGED from [com.google.android.material:material:1.6.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\6f6f7c5a22d53aaaed4ecf461d6f6192\transformed\material-1.6.1\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\c0589d02362a575666b846acd8f23bc6\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\c0589d02362a575666b846acd8f23bc6\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [pub.devrel:easypermissions:3.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\1400f98cbc1e6be7fe6f9ec281e776bb\transformed\easypermissions-3.0.0\AndroidManifest.xml:11:5-17:19
+MERGED from [pub.devrel:easypermissions:3.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\1400f98cbc1e6be7fe6f9ec281e776bb\transformed\easypermissions-3.0.0\AndroidManifest.xml:11:5-17:19
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.5] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\d9d639fee2dceff2fe62fe92428b3f1e\transformed\firebase-auth-ktx-21.0.5\AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.firebase:firebase-auth-ktx:21.0.5] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\d9d639fee2dceff2fe62fe92428b3f1e\transformed\firebase-auth-ktx-21.0.5\AndroidManifest.xml:7:5-15:19
 MERGED from [com.google.firebase:firebase-auth:21.0.6] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\f923b500ce98ace76b2d1124929283bc\transformed\firebase-auth-21.0.6\AndroidManifest.xml:26:5-71:19
@@ -370,6 +361,8 @@ MERGED from [com.google.android.material:material:1.6.1] C:\Users\Agnesh S Kumar
 MERGED from [com.google.android.material:material:1.6.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\6f6f7c5a22d53aaaed4ecf461d6f6192\transformed\material-1.6.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\c0589d02362a575666b846acd8f23bc6\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\c0589d02362a575666b846acd8f23bc6\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
+MERGED from [pub.devrel:easypermissions:3.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\1400f98cbc1e6be7fe6f9ec281e776bb\transformed\easypermissions-3.0.0\AndroidManifest.xml:7:5-9:41
+MERGED from [pub.devrel:easypermissions:3.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\1400f98cbc1e6be7fe6f9ec281e776bb\transformed\easypermissions-3.0.0\AndroidManifest.xml:7:5-9:41
 MERGED from [me.zhanghai.android.materialprogressbar:library:1.6.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\75beef670cd808197ec4e121bdae04b1\transformed\library-1.6.1\AndroidManifest.xml:11:5-13:41
 MERGED from [me.zhanghai.android.materialprogressbar:library:1.6.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\75beef670cd808197ec4e121bdae04b1\transformed\library-1.6.1\AndroidManifest.xml:11:5-13:41
 MERGED from [androidx.appcompat:appcompat:1.4.2] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\4b25110f4a58309a9d8c8daa125c1785\transformed\appcompat-1.4.2\AndroidManifest.xml:20:5-22:41
@@ -432,8 +425,6 @@ MERGED from [androidx.core:core-ktx:1.8.0] C:\Users\Agnesh S Kumar\.gradle\cache
 MERGED from [androidx.core:core-ktx:1.8.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\41e5577fa98bb845a39e11a847d18938\transformed\core-ktx-1.8.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.room:room-runtime:2.4.2] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\ba156ddf8b2cc61760f05a88e04fa828\transformed\room-runtime-2.4.2\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.room:room-runtime:2.4.2] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\ba156ddf8b2cc61760f05a88e04fa828\transformed\room-runtime-2.4.2\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\dfe1d2e2803eaa15ab907d9d6852cfac\transformed\exoplayer-2.17.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\dfe1d2e2803eaa15ab907d9d6852cfac\transformed\exoplayer-2.17.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat-resources:1.4.2] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\63e30b9adbb1c1bf7fdd9fc519c18f85\transformed\appcompat-resources-1.4.2\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat-resources:1.4.2] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\63e30b9adbb1c1bf7fdd9fc519c18f85\transformed\appcompat-resources-1.4.2\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\d07cf72e7ae7446dcbf7ba73b6c53e2c\transformed\emoji2-views-helper-1.0.0\AndroidManifest.xml:20:5-22:41
@@ -450,30 +441,18 @@ MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Agnesh S Kum
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\4251cdd5fe67c3d41251baa7b8ef8cbe\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.browser:browser:1.4.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\3e632d781caf9500a943c218019bda00\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.browser:browser:1.4.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\3e632d781caf9500a943c218019bda00\transformed\browser-1.4.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-dash:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\4e1ff0f83d3b4cb391fc51f3b7689080\transformed\exoplayer-dash-2.17.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-dash:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\4e1ff0f83d3b4cb391fc51f3b7689080\transformed\exoplayer-dash-2.17.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-hls:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\d616aca45e19b6c3549f1174702e1c82\transformed\exoplayer-hls-2.17.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-hls:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\d616aca45e19b6c3549f1174702e1c82\transformed\exoplayer-hls-2.17.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-rtsp:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\1dfbd0509afc3c345def9e99a919bb09\transformed\exoplayer-rtsp-2.17.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-rtsp:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\1dfbd0509afc3c345def9e99a919bb09\transformed\exoplayer-rtsp-2.17.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\e3ad45def6a0a2b7c140d30fd50f7565\transformed\exoplayer-smoothstreaming-2.17.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\e3ad45def6a0a2b7c140d30fd50f7565\transformed\exoplayer-smoothstreaming-2.17.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-ui:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\d1da6d356a1c27a90c6211670a4ab17f\transformed\exoplayer-ui-2.17.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-ui:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\d1da6d356a1c27a90c6211670a4ab17f\transformed\exoplayer-ui-2.17.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-core:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\06e7118c2d87741f1d2c52a491f645c8\transformed\exoplayer-core-2.17.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-core:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\06e7118c2d87741f1d2c52a491f645c8\transformed\exoplayer-core-2.17.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\5f44cb78c1fbca129955f35ae948aeb2\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\5f44cb78c1fbca129955f35ae948aeb2\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\8eac1bf813573bec93fb53bdc63ebc02\transformed\recyclerview-1.2.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\8eac1bf813573bec93fb53bdc63ebc02\transformed\recyclerview-1.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\6a76d23709f43d7fc4cf66138fe1fbee\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\6a76d23709f43d7fc4cf66138fe1fbee\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\6d0f4e5c39904356597e0fbb768e2c84\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\6d0f4e5c39904356597e0fbb768e2c84\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\0fab36e74d32a6e1b7670d251301b9a5\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\0fab36e74d32a6e1b7670d251301b9a5\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\052402adfd914169f60ae30113f73cc2\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\052402adfd914169f60ae30113f73cc2\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\3a957ba19c112ea1a020b4d46936411a\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\3a957ba19c112ea1a020b4d46936411a\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.media:media:1.4.3] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\5b59e11af259bf99381ba271b6eb2829\transformed\media-1.4.3\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.media:media:1.4.3] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\5b59e11af259bf99381ba271b6eb2829\transformed\media-1.4.3\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.transition:transition:1.4.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\3ba8449b072474acfda61d57b074ec7a\transformed\transition-1.4.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.transition:transition:1.4.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\3ba8449b072474acfda61d57b074ec7a\transformed\transition-1.4.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.8.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\11d442f0a4e72d58ed8dc7d7468f0c04\transformed\core-1.8.0\AndroidManifest.xml:20:5-22:41
@@ -500,16 +479,6 @@ MERGED from [androidx.sqlite:sqlite-framework:2.2.0] C:\Users\Agnesh S Kumar\.gr
 MERGED from [androidx.sqlite:sqlite-framework:2.2.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\1a6b629717081f52e8072322f796db83\transformed\sqlite-framework-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.sqlite:sqlite:2.2.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\4c2858b63be2553db5410930c4b6b0e3\transformed\sqlite-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.sqlite:sqlite:2.2.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\4c2858b63be2553db5410930c4b6b0e3\transformed\sqlite-2.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-datasource:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\6beb38c436b42f158fb625ae550c0996\transformed\exoplayer-datasource-2.17.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-datasource:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\6beb38c436b42f158fb625ae550c0996\transformed\exoplayer-datasource-2.17.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-database:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\615d7fbe479e56c7801f026269fc2514\transformed\exoplayer-database-2.17.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-database:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\615d7fbe479e56c7801f026269fc2514\transformed\exoplayer-database-2.17.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-extractor:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\411106375aa91a9bc0b9d12b01e23e02\transformed\exoplayer-extractor-2.17.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-extractor:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\411106375aa91a9bc0b9d12b01e23e02\transformed\exoplayer-extractor-2.17.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-decoder:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\55a74d1cd909b1fb4bebf601508b0ccb\transformed\exoplayer-decoder-2.17.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-decoder:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\55a74d1cd909b1fb4bebf601508b0ccb\transformed\exoplayer-decoder-2.17.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-common:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\bd8ae9178783991c65d9e6b0fbd191ba\transformed\exoplayer-common-2.17.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.exoplayer:exoplayer-common:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\bd8ae9178783991c65d9e6b0fbd191ba\transformed\exoplayer-common-2.17.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\078bf76ca3deff7d2121ea232f30642c\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\078bf76ca3deff7d2121ea232f30642c\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.5.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\3a1e92a46529470750256cad1ff8bb0e\transformed\lifecycle-livedata-2.5.0\AndroidManifest.xml:20:5-22:41
@@ -558,10 +527,6 @@ MERGED from [com.google.firebase:firebase-firestore:24.2.0] C:\Users\Agnesh S Ku
 MERGED from [com.google.firebase:firebase-firestore:24.2.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\43e6a27769ed951ddd9e54bc0dddbc37\transformed\firebase-firestore-24.2.0\AndroidManifest.xml:13:5-79
 MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\c0d233d7691c82f166a4978981fe8e38\transformed\firebase-storage-20.0.1\AndroidManifest.xml:26:5-79
 MERGED from [com.google.firebase:firebase-storage:20.0.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\c0d233d7691c82f166a4978981fe8e38\transformed\firebase-storage-20.0.1\AndroidManifest.xml:26:5-79
-MERGED from [com.google.android.exoplayer:exoplayer-core:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\06e7118c2d87741f1d2c52a491f645c8\transformed\exoplayer-core-2.17.1\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.exoplayer:exoplayer-core:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\06e7118c2d87741f1d2c52a491f645c8\transformed\exoplayer-core-2.17.1\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.exoplayer:exoplayer-common:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\bd8ae9178783991c65d9e6b0fbd191ba\transformed\exoplayer-common-2.17.1\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.exoplayer:exoplayer-common:2.17.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\bd8ae9178783991c65d9e6b0fbd191ba\transformed\exoplayer-common-2.17.1\AndroidManifest.xml:24:5-79
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\379fa40dda6c97007ff603a6d2875a90\transformed\grpc-android-1.44.1\AndroidManifest.xml:9:5-79
 MERGED from [io.grpc:grpc-android:1.44.1] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\379fa40dda6c97007ff603a6d2875a90\transformed\grpc-android-1.44.1\AndroidManifest.xml:9:5-79
 	android:name
@@ -768,6 +733,16 @@ ADDED from [androidx.window:window:1.0.0] C:\Users\Agnesh S Kumar\.gradle\caches
 		ADDED from [androidx.window:window:1.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\4cd125fe307b433b6d4b4fb9b394fd9e\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
 	android:name
 		ADDED from [androidx.window:window:1.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\4cd125fe307b433b6d4b4fb9b394fd9e\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+activity#pub.devrel.easypermissions.AppSettingsDialogHolderActivity
+ADDED from [pub.devrel:easypermissions:3.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\1400f98cbc1e6be7fe6f9ec281e776bb\transformed\easypermissions-3.0.0\AndroidManifest.xml:12:9-16:66
+	android:label
+		ADDED from [pub.devrel:easypermissions:3.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\1400f98cbc1e6be7fe6f9ec281e776bb\transformed\easypermissions-3.0.0\AndroidManifest.xml:15:13-29
+	android:exported
+		ADDED from [pub.devrel:easypermissions:3.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\1400f98cbc1e6be7fe6f9ec281e776bb\transformed\easypermissions-3.0.0\AndroidManifest.xml:14:13-37
+	android:theme
+		ADDED from [pub.devrel:easypermissions:3.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\1400f98cbc1e6be7fe6f9ec281e776bb\transformed\easypermissions-3.0.0\AndroidManifest.xml:16:13-63
+	android:name
+		ADDED from [pub.devrel:easypermissions:3.0.0] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\1400f98cbc1e6be7fe6f9ec281e776bb\transformed\easypermissions-3.0.0\AndroidManifest.xml:13:13-86
 service#com.google.firebase.components.ComponentDiscoveryService
 ADDED from [com.google.firebase:firebase-auth-ktx:21.0.5] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\d9d639fee2dceff2fe62fe92428b3f1e\transformed\firebase-auth-ktx-21.0.5\AndroidManifest.xml:8:9-14:19
 MERGED from [com.google.firebase:firebase-auth:21.0.6] C:\Users\Agnesh S Kumar\.gradle\caches\transforms-3\f923b500ce98ace76b2d1124929283bc\transformed\firebase-auth-21.0.6\AndroidManifest.xml:64:9-70:19

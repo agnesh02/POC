@@ -18,7 +18,10 @@ class WeatherViewModel(application: Application) : AndroidViewModel(application)
     var liveWeatherData: MutableLiveData<WeatherResponse> = MutableLiveData()
     var weatherAdapter: MutableLiveData<WeatherAdapter> = MutableLiveData()
 
+    var pBarVisibility: MutableLiveData<Boolean> = MutableLiveData(false)
+
     private fun validate(s: String): Boolean {
+        pBarVisibility.postValue(true)
         if (s.isEmpty())
             return false
         return true
@@ -32,13 +35,15 @@ class WeatherViewModel(application: Application) : AndroidViewModel(application)
             return
         }
 
-        weatherRepository.getWeatherData(cityName, getApplication())
+        weatherRepository.getWeatherData(cityName.trim(), getApplication())
 
         weatherRepository.liveData.observeForever {
             liveWeatherData.postValue(it)
         }
         weatherRepository.liveForecastList.observeForever {
             weatherAdapter.postValue(WeatherAdapter(it))
+            if(it!=null)
+                pBarVisibility.postValue(false)
         }
 
     }

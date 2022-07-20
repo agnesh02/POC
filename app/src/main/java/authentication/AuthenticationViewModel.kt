@@ -2,6 +2,8 @@ package authentication
 
 import repository.AuthenticationRepository
 import android.app.Application
+import android.opengl.Visibility
+import android.view.View
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
@@ -26,6 +28,7 @@ class AuthenticationViewModel(application: Application) : AndroidViewModel(appli
     private var authenticationRepository: AuthenticationRepository = AuthenticationRepository()
     private var msg: String = ""
     var loginStatus: MutableLiveData<Boolean> = MutableLiveData()
+    var pBarVisibility: MutableLiveData<Boolean> = MutableLiveData(false)
 
 
     fun checkForLogin()
@@ -75,6 +78,9 @@ class AuthenticationViewModel(application: Application) : AndroidViewModel(appli
 
     fun onLogin() {
 
+        etEmail = etEmail.trim()
+        etPass = etPass.trim()
+
         if (!validateEmail(etEmail)) {
             errorCode.value = 2
             return
@@ -84,6 +90,7 @@ class AuthenticationViewModel(application: Application) : AndroidViewModel(appli
             return
         }
         errorCode.value = 0
+        pBarVisibility.postValue(true)
         authenticationRepository.loginUser(getApplication(), etEmail, etPass, checkBoxStatus)
 
         startObservation()

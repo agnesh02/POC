@@ -11,11 +11,13 @@ import android.content.Context
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
+import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import quevedo.soares.leandro.blemadeeasy.BLE
 
+@OptIn(DelicateCoroutinesApi::class)
 class BleViewModel(application: Application) : AndroidViewModel(application) {
 
     private lateinit var bluetoothManager: BluetoothManager
@@ -24,9 +26,13 @@ class BleViewModel(application: Application) : AndroidViewModel(application) {
     var buttonText:MutableLiveData<String> = MutableLiveData("start scanning")
     var liveDevicesList: MutableLiveData<ArrayList<BluetoothDevice>> = MutableLiveData()
     var deviceList: ArrayList<BluetoothDevice> = ArrayList()
+    var pBarVisibility: MutableLiveData<Boolean> = MutableLiveData(false)
 
     private fun requestPermission(ble: BLE)
     {
+        deviceList.clear()
+        liveDevicesList.postValue(deviceList)
+        pBarVisibility.postValue(true)
         GlobalScope.launch {
             val granted = ble.verifyPermissions(rationaleRequestCallback = { next ->
                 next()
@@ -97,8 +103,8 @@ class BleViewModel(application: Application) : AndroidViewModel(application) {
         override fun onScanResult(callbackType: Int, result: ScanResult) {
 
             if (!deviceList.contains(result.device)){
-                Log.d("DEVICE",result.device.toString())
-                deviceList.add(result.device);
+                //Log.d("DEVICE",result.device.toString())
+                deviceList.add(result.device)
             }
 
             liveDevicesList.postValue(deviceList)
@@ -107,7 +113,6 @@ class BleViewModel(application: Application) : AndroidViewModel(application) {
 
     private fun startScanning() {
         GlobalScope.launch {
-            deviceList.clear()
             bluetoothLeScanner.startScan(leScanCallback)
         }
     }
@@ -115,6 +120,7 @@ class BleViewModel(application: Application) : AndroidViewModel(application) {
     private fun stopScanning() {
         GlobalScope.launch {
             bluetoothLeScanner.stopScan(leScanCallback)
+            pBarVisibility.postValue(false)
         }
     }
 

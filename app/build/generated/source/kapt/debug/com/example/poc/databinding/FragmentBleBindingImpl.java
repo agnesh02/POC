@@ -14,8 +14,7 @@ public class FragmentBleBindingImpl extends FragmentBleBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.recycler_view_devices, 2);
-        sViewsWithIds.put(R.id.progress_bar, 3);
+        sViewsWithIds.put(R.id.recycler_view_devices, 3);
     }
     // views
     @NonNull
@@ -66,14 +65,15 @@ public class FragmentBleBindingImpl extends FragmentBleBinding  {
         this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
     }
     private FragmentBleBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 1
+        super(bindingComponent, root, 2
             , (android.widget.Button) bindings[1]
-            , (android.widget.ProgressBar) bindings[3]
-            , (androidx.recyclerview.widget.RecyclerView) bindings[2]
+            , (android.widget.ProgressBar) bindings[2]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[3]
             );
         this.btnScan.setTag(null);
         this.mboundView0 = (android.widget.FrameLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.progressBar.setTag(null);
         setRootTag(root);
         // listeners
         invalidateAll();
@@ -82,7 +82,7 @@ public class FragmentBleBindingImpl extends FragmentBleBinding  {
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x4L;
+                mDirtyFlags = 0x8L;
         }
         requestRebind();
     }
@@ -112,7 +112,7 @@ public class FragmentBleBindingImpl extends FragmentBleBinding  {
     public void setViewModel(@Nullable ble.BleViewModel ViewModel) {
         this.mViewModel = ViewModel;
         synchronized(this) {
-            mDirtyFlags |= 0x2L;
+            mDirtyFlags |= 0x4L;
         }
         notifyPropertyChanged(BR.viewModel);
         super.requestRebind();
@@ -123,6 +123,8 @@ public class FragmentBleBindingImpl extends FragmentBleBinding  {
         switch (localFieldId) {
             case 0 :
                 return onChangeViewModelButtonText((androidx.lifecycle.MutableLiveData<java.lang.String>) object, fieldId);
+            case 1 :
+                return onChangeViewModelPBarVisibility((androidx.lifecycle.MutableLiveData<java.lang.Boolean>) object, fieldId);
         }
         return false;
     }
@@ -130,6 +132,15 @@ public class FragmentBleBindingImpl extends FragmentBleBinding  {
         if (fieldId == BR._all) {
             synchronized(this) {
                     mDirtyFlags |= 0x1L;
+            }
+            return true;
+        }
+        return false;
+    }
+    private boolean onChangeViewModelPBarVisibility(androidx.lifecycle.MutableLiveData<java.lang.Boolean> ViewModelPBarVisibility, int fieldId) {
+        if (fieldId == BR._all) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x2L;
             }
             return true;
         }
@@ -143,36 +154,77 @@ public class FragmentBleBindingImpl extends FragmentBleBinding  {
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        java.lang.String viewModelButtonTextGetValue = null;
-        ble.BleViewModel viewModel = mViewModel;
+        int viewModelPBarVisibilityViewVISIBLEViewINVISIBLE = 0;
         androidx.lifecycle.MutableLiveData<java.lang.String> viewModelButtonText = null;
+        java.lang.String viewModelButtonTextGetValue = null;
+        java.lang.Boolean viewModelPBarVisibilityGetValue = null;
+        boolean androidxDatabindingViewDataBindingSafeUnboxViewModelPBarVisibilityGetValue = false;
+        androidx.lifecycle.MutableLiveData<java.lang.Boolean> viewModelPBarVisibility = null;
+        ble.BleViewModel viewModel = mViewModel;
 
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0xfL) != 0) {
 
 
+            if ((dirtyFlags & 0xdL) != 0) {
 
-                if (viewModel != null) {
-                    // read viewModel.buttonText
-                    viewModelButtonText = viewModel.getButtonText();
+                    if (viewModel != null) {
+                        // read viewModel.buttonText
+                        viewModelButtonText = viewModel.getButtonText();
+                    }
+                    updateLiveDataRegistration(0, viewModelButtonText);
+
+
+                    if (viewModelButtonText != null) {
+                        // read viewModel.buttonText.getValue()
+                        viewModelButtonTextGetValue = viewModelButtonText.getValue();
+                    }
+            }
+            if ((dirtyFlags & 0xeL) != 0) {
+
+                    if (viewModel != null) {
+                        // read viewModel.pBarVisibility
+                        viewModelPBarVisibility = viewModel.getPBarVisibility();
+                    }
+                    updateLiveDataRegistration(1, viewModelPBarVisibility);
+
+
+                    if (viewModelPBarVisibility != null) {
+                        // read viewModel.pBarVisibility.getValue()
+                        viewModelPBarVisibilityGetValue = viewModelPBarVisibility.getValue();
+                    }
+
+
+                    // read androidx.databinding.ViewDataBinding.safeUnbox(viewModel.pBarVisibility.getValue())
+                    androidxDatabindingViewDataBindingSafeUnboxViewModelPBarVisibilityGetValue = androidx.databinding.ViewDataBinding.safeUnbox(viewModelPBarVisibilityGetValue);
+                if((dirtyFlags & 0xeL) != 0) {
+                    if(androidxDatabindingViewDataBindingSafeUnboxViewModelPBarVisibilityGetValue) {
+                            dirtyFlags |= 0x20L;
+                    }
+                    else {
+                            dirtyFlags |= 0x10L;
+                    }
                 }
-                updateLiveDataRegistration(0, viewModelButtonText);
 
 
-                if (viewModelButtonText != null) {
-                    // read viewModel.buttonText.getValue()
-                    viewModelButtonTextGetValue = viewModelButtonText.getValue();
-                }
+                    // read androidx.databinding.ViewDataBinding.safeUnbox(viewModel.pBarVisibility.getValue()) ? View.VISIBLE : View.INVISIBLE
+                    viewModelPBarVisibilityViewVISIBLEViewINVISIBLE = ((androidxDatabindingViewDataBindingSafeUnboxViewModelPBarVisibilityGetValue) ? (android.view.View.VISIBLE) : (android.view.View.INVISIBLE));
+            }
         }
         // batch finished
-        if ((dirtyFlags & 0x7L) != 0) {
+        if ((dirtyFlags & 0xdL) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.btnScan, viewModelButtonTextGetValue);
         }
-        if ((dirtyFlags & 0x4L) != 0) {
+        if ((dirtyFlags & 0x8L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.btnScan, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, btnScanandroidTextAttrChanged);
+        }
+        if ((dirtyFlags & 0xeL) != 0) {
+            // api target 1
+
+            this.progressBar.setVisibility(viewModelPBarVisibilityViewVISIBLEViewINVISIBLE);
         }
     }
     // Listener Stub Implementations
@@ -181,8 +233,11 @@ public class FragmentBleBindingImpl extends FragmentBleBinding  {
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
         flag 0 (0x1L): viewModel.buttonText
-        flag 1 (0x2L): viewModel
-        flag 2 (0x3L): null
+        flag 1 (0x2L): viewModel.pBarVisibility
+        flag 2 (0x3L): viewModel
+        flag 3 (0x4L): null
+        flag 4 (0x5L): androidx.databinding.ViewDataBinding.safeUnbox(viewModel.pBarVisibility.getValue()) ? View.VISIBLE : View.INVISIBLE
+        flag 5 (0x6L): androidx.databinding.ViewDataBinding.safeUnbox(viewModel.pBarVisibility.getValue()) ? View.VISIBLE : View.INVISIBLE
     flag mapping end*/
     //end
 }

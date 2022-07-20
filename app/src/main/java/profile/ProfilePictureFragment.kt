@@ -57,11 +57,7 @@ class ProfilePictureFragment : Fragment() {
 
         binding.btnUploadImage.setOnClickListener {
             viewModel.uploadProfilePicture(uri)
-            Toast.makeText(
-                context,
-                "Uploading please wait...\nThis depends upon your network speed",
-                Toast.LENGTH_LONG
-            ).show()
+            Toast.makeText(context, "Uploading please wait...\nThis depends upon your network speed", Toast.LENGTH_LONG).show()
             binding.progressBarProfilePic.visibility = View.VISIBLE
         }
 

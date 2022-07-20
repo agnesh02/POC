@@ -41,8 +41,10 @@ class LoginFragment : Fragment() {
         })
 
         viewModel.loginStatus.observe(viewLifecycleOwner) {
-            if(it)
+            if(it) {
+                binding.progressBarLogin.visibility = View.INVISIBLE
                 activity?.finish()
+            }
         }
 
         binding.tvLoginGoToRegister.setOnClickListener {

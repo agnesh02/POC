@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.poc.app-mergeDebugResources-63:/values-v24/values-v24.xml",
+            "outputFile": "com.example.poc.app-mergeDebugResources-62:/values-v24/values-v24.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\caches\\transforms-3\\4b25110f4a58309a9d8c8daa125c1785\\transformed\\appcompat-1.4.2\\res\\values-v24\\values-v24.xml",
@@ -33,7 +33,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\caches\\transforms-3\\5b59e11af259bf99381ba271b6eb2829\\transformed\\media-1.4.3\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\caches\\transforms-3\\0fab36e74d32a6e1b7670d251301b9a5\\transformed\\media-1.0.0\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

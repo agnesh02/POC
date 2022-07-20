@@ -14,11 +14,10 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements co
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.textInputLayout7, 5);
-        sViewsWithIds.put(R.id.textInputLayout5, 6);
-        sViewsWithIds.put(R.id.tv_login_go_to_register, 7);
-        sViewsWithIds.put(R.id.tv_login_reset_password, 8);
-        sViewsWithIds.put(R.id.progressBar_login, 9);
+        sViewsWithIds.put(R.id.textInputLayout7, 6);
+        sViewsWithIds.put(R.id.textInputLayout5, 7);
+        sViewsWithIds.put(R.id.tv_login_go_to_register, 8);
+        sViewsWithIds.put(R.id.tv_login_reset_password, 9);
     }
     // views
     @NonNull
@@ -112,16 +111,16 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements co
         this(bindingComponent, root, mapBindings(bindingComponent, root, 10, sIncludes, sViewsWithIds));
     }
     private FragmentLoginBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 0
+        super(bindingComponent, root, 1
             , (android.widget.Button) bindings[3]
             , (android.widget.CheckBox) bindings[4]
             , (com.google.android.material.textfield.TextInputEditText) bindings[1]
             , (com.google.android.material.textfield.TextInputEditText) bindings[2]
-            , (android.widget.ProgressBar) bindings[9]
+            , (android.widget.ProgressBar) bindings[5]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[7]
             , (com.google.android.material.textfield.TextInputLayout) bindings[6]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[5]
-            , (android.widget.TextView) bindings[7]
             , (android.widget.TextView) bindings[8]
+            , (android.widget.TextView) bindings[9]
             );
         this.btnLoginLogin.setTag(null);
         this.checkBox.setTag(null);
@@ -129,6 +128,7 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements co
         this.etLoginPassword.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.progressBarLogin.setTag(null);
         setRootTag(root);
         // listeners
         mCallback2 = new com.example.poc.generated.callback.OnClickListener(this, 1);
@@ -138,7 +138,7 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements co
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -168,7 +168,7 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements co
     public void setViewModel(@Nullable authentication.AuthenticationViewModel ViewModel) {
         this.mViewModel = ViewModel;
         synchronized(this) {
-            mDirtyFlags |= 0x1L;
+            mDirtyFlags |= 0x2L;
         }
         notifyPropertyChanged(BR.viewModel);
         super.requestRebind();
@@ -177,6 +177,17 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements co
     @Override
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
+            case 0 :
+                return onChangeViewModelPBarVisibility((androidx.lifecycle.MutableLiveData<java.lang.Boolean>) object, fieldId);
+        }
+        return false;
+    }
+    private boolean onChangeViewModelPBarVisibility(androidx.lifecycle.MutableLiveData<java.lang.Boolean> ViewModelPBarVisibility, int fieldId) {
+        if (fieldId == BR._all) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x1L;
+            }
+            return true;
         }
         return false;
     }
@@ -188,26 +199,60 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements co
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
+        java.lang.Boolean viewModelPBarVisibilityGetValue = null;
+        androidx.lifecycle.MutableLiveData<java.lang.Boolean> viewModelPBarVisibility = null;
         boolean viewModelCheckBoxStatus = false;
+        int viewModelPBarVisibilityViewVISIBLEViewINVISIBLE = 0;
         java.lang.String viewModelEtEmail = null;
         java.lang.String viewModelEtPass = null;
+        boolean androidxDatabindingViewDataBindingSafeUnboxViewModelPBarVisibilityGetValue = false;
         authentication.AuthenticationViewModel viewModel = mViewModel;
 
-        if ((dirtyFlags & 0x3L) != 0) {
+        if ((dirtyFlags & 0x7L) != 0) {
 
 
 
                 if (viewModel != null) {
-                    // read viewModel.checkBoxStatus
-                    viewModelCheckBoxStatus = viewModel.getCheckBoxStatus();
-                    // read viewModel.etEmail
-                    viewModelEtEmail = viewModel.getEtEmail();
-                    // read viewModel.etPass
-                    viewModelEtPass = viewModel.getEtPass();
+                    // read viewModel.pBarVisibility
+                    viewModelPBarVisibility = viewModel.getPBarVisibility();
                 }
+                updateLiveDataRegistration(0, viewModelPBarVisibility);
+
+
+                if (viewModelPBarVisibility != null) {
+                    // read viewModel.pBarVisibility.getValue()
+                    viewModelPBarVisibilityGetValue = viewModelPBarVisibility.getValue();
+                }
+
+
+                // read androidx.databinding.ViewDataBinding.safeUnbox(viewModel.pBarVisibility.getValue())
+                androidxDatabindingViewDataBindingSafeUnboxViewModelPBarVisibilityGetValue = androidx.databinding.ViewDataBinding.safeUnbox(viewModelPBarVisibilityGetValue);
+            if((dirtyFlags & 0x7L) != 0) {
+                if(androidxDatabindingViewDataBindingSafeUnboxViewModelPBarVisibilityGetValue) {
+                        dirtyFlags |= 0x10L;
+                }
+                else {
+                        dirtyFlags |= 0x8L;
+                }
+            }
+
+
+                // read androidx.databinding.ViewDataBinding.safeUnbox(viewModel.pBarVisibility.getValue()) ? View.VISIBLE : View.INVISIBLE
+                viewModelPBarVisibilityViewVISIBLEViewINVISIBLE = ((androidxDatabindingViewDataBindingSafeUnboxViewModelPBarVisibilityGetValue) ? (android.view.View.VISIBLE) : (android.view.View.INVISIBLE));
+            if ((dirtyFlags & 0x6L) != 0) {
+
+                    if (viewModel != null) {
+                        // read viewModel.checkBoxStatus
+                        viewModelCheckBoxStatus = viewModel.getCheckBoxStatus();
+                        // read viewModel.etEmail
+                        viewModelEtEmail = viewModel.getEtEmail();
+                        // read viewModel.etPass
+                        viewModelEtPass = viewModel.getEtPass();
+                    }
+            }
         }
         // batch finished
-        if ((dirtyFlags & 0x2L) != 0) {
+        if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
             this.btnLoginLogin.setOnClickListener(mCallback2);
@@ -215,12 +260,17 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements co
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.etLoginEmailId, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, etLoginEmailIdandroidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.etLoginPassword, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, etLoginPasswordandroidTextAttrChanged);
         }
-        if ((dirtyFlags & 0x3L) != 0) {
+        if ((dirtyFlags & 0x6L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.CompoundButtonBindingAdapter.setChecked(this.checkBox, viewModelCheckBoxStatus);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.etLoginEmailId, viewModelEtEmail);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.etLoginPassword, viewModelEtPass);
+        }
+        if ((dirtyFlags & 0x7L) != 0) {
+            // api target 1
+
+            this.progressBarLogin.setVisibility(viewModelPBarVisibilityViewVISIBLEViewINVISIBLE);
         }
     }
     // Listener Stub Implementations
@@ -244,8 +294,11 @@ public class FragmentLoginBindingImpl extends FragmentLoginBinding implements co
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): viewModel
-        flag 1 (0x2L): null
+        flag 0 (0x1L): viewModel.pBarVisibility
+        flag 1 (0x2L): viewModel
+        flag 2 (0x3L): null
+        flag 3 (0x4L): androidx.databinding.ViewDataBinding.safeUnbox(viewModel.pBarVisibility.getValue()) ? View.VISIBLE : View.INVISIBLE
+        flag 4 (0x5L): androidx.databinding.ViewDataBinding.safeUnbox(viewModel.pBarVisibility.getValue()) ? View.VISIBLE : View.INVISIBLE
     flag mapping end*/
     //end
 }
