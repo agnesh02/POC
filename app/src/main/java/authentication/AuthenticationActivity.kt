@@ -28,7 +28,7 @@ class AuthenticationActivity : AppCompatActivity() {
         viewModel.dbData.observe(this) {
             if (it) {
                 val i = Intent(applicationContext, SideMenuActivity::class.java)
-                i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                i.flags = Intent.FLAG_ACTIVITY_NEW_TASK + Intent.FLAG_ACTIVITY_NO_ANIMATION
                 ContextCompat.startActivity(applicationContext, i, Bundle())
                 this.finish()
             } else {

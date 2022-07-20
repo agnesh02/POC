@@ -19,7 +19,6 @@ import com.example.poc.R
 import com.example.poc.databinding.ActivitySideMenuBinding
 import com.example.poc.databinding.NavHeaderSideMenuBinding
 import com.google.android.material.navigation.NavigationView
-import livestream.LiveStreamFragment
 import models.Common.toast
 
 class SideMenuActivity : AppCompatActivity() {

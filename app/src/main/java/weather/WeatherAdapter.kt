@@ -10,7 +10,7 @@ import com.example.poc.R
 import models.Common
 import models.WeatherResponse
 
-class WeatherAdapter(val list: List<WeatherResponse>) : RecyclerView.Adapter<WeatherAdapter.MyViewHolder>() {
+class WeatherAdapter(private val list: List<WeatherResponse>) : RecyclerView.Adapter<WeatherAdapter.MyViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {

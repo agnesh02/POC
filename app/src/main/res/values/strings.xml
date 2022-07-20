@@ -53,6 +53,10 @@
     <string name="min_c">Min: °C</string>
     <string name="humidity">Humidity :</string>
     <string name="play_content">Play content</string>
+    <string name="enter_the_ip">Enter the ip</string>
+    <string name="enter_the_port">Enter the port</string>
+    <string name="enter_the_path">Enter the path</string>
+    <string name="load">load</string>
 
     <string-array name="cities">
         <item>Agartala</item>

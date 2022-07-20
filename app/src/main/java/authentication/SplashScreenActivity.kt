@@ -5,10 +5,6 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
@@ -16,9 +12,6 @@ import com.example.poc.R
 import com.example.poc.databinding.FragmentSplashBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import main.SideMenuActivity
-import models.Common
-
 
 class SplashScreenActivity : AppCompatActivity() {
 
@@ -39,7 +32,7 @@ class SplashScreenActivity : AppCompatActivity() {
 
         Handler(Looper.getMainLooper()).postDelayed({
             val i = Intent(applicationContext, AuthenticationActivity::class.java)
-            i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            i.flags = Intent.FLAG_ACTIVITY_NEW_TASK + Intent.FLAG_ACTIVITY_NO_ANIMATION
             ContextCompat.startActivity(applicationContext, i, Bundle())
             this.finish()
         },3000)

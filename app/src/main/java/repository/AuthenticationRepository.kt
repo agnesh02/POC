@@ -1,12 +1,10 @@
 package repository
 
-import android.app.Activity
 import main.SideMenuActivity
 import models.UserData
 import android.app.Application
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.MutableLiveData
 import androidx.room.Room
@@ -22,6 +20,7 @@ import kotlinx.coroutines.launch
 import models.database.Database
 import models.database.LoginData
 
+@OptIn(DelicateCoroutinesApi::class)
 class AuthenticationRepository {
 
     private lateinit var auth: FirebaseAuth
@@ -104,8 +103,6 @@ class AuthenticationRepository {
             }
     }
 
-
-    @OptIn(DelicateCoroutinesApi::class)
     fun loginUser(application: Application, email: String, password: String, save: Boolean) {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener {

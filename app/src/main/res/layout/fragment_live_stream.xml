@@ -36,7 +36,7 @@
                     android:id="@+id/et_ip"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter the ip"
+                    android:hint="@string/enter_the_ip"
                     android:inputType="text"
                     android:text="@={viewModel.ip}" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -57,7 +57,7 @@
                     android:id="@+id/et_port"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter the port"
+                    android:hint="@string/enter_the_port"
                     android:inputType="number"
                     android:text="@={viewModel.port}" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -78,7 +78,7 @@
                     android:id="@+id/et_path"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter the path"
+                    android:hint="@string/enter_the_path"
                     android:text="@={viewModel.path}" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -88,7 +88,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:onClick="@{()->viewModel.validate()}"
-                android:text="load"
+                android:text="@string/load"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
                 app:layout_constraintHorizontal_bias="0.498"
