@@ -96,7 +96,6 @@ class SideMenuActivity : AppCompatActivity() {
             }
         }
 
-
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

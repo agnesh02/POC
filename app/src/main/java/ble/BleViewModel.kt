@@ -30,8 +30,6 @@ class BleViewModel(application: Application) : AndroidViewModel(application) {
     var deviceList: ArrayList<BluetoothDevice> = ArrayList()
     var pBarVisibility: MutableLiveData<Boolean> = MutableLiveData(false)
 
-    var upOnConnection: MutableLiveData<DataOnConnection> = MutableLiveData()
-    var connectionStatus: MutableLiveData<String> = MutableLiveData()
 
     private fun requestPermission(ble: BLE)
     {
@@ -109,7 +107,6 @@ class BleViewModel(application: Application) : AndroidViewModel(application) {
                 deviceList.add(result.device)
             }
 
-            liveDevicesList.postValue(deviceList)
         }
     }
 
@@ -127,64 +124,8 @@ class BleViewModel(application: Application) : AndroidViewModel(application) {
         viewModelScope.launch(Dispatchers.Default) {
             bluetoothLeScanner.stopScan(leScanCallback)
             pBarVisibility.postValue(false)
+            liveDevicesList.postValue(deviceList)
         }
-    }
-
-    fun connectDevice(ble: BLE, device: BluetoothDevice, status: Boolean, dName: String?, dAddr: String)
-    {
-        connectionStatus.postValue("trying to connect")
-        viewModelScope.launch(Dispatchers.Default) {
-            ble.connect(device)?.let { connection ->
-                while(!connection.isActive) {
-                    connectDevice(ble, device, status, dName, dAddr)
-                }
-                connectionStatus.postValue("connected")
-                //Log.d("CONNECTION",connection.readableCharacteristics.toString())
-                onConnection(status, device, dName, dAddr)
-            }
-        }
-    }
-
-
-    private fun onConnection(status: Boolean, device: BluetoothDevice, dName: String?, dAddr: String)
-    {
-        val obj = DataOnConnection()
-        obj.fragmentChangeStatus = status
-        obj.device = device
-        obj.deviceName = dName
-        obj.deviceAddress = dAddr
-
-        upOnConnection.postValue(obj)
-    }
-
-    fun disconnectDevice(ble: BLE, device: BluetoothDevice)
-    {
-        viewModelScope.launch(Dispatchers.Default) {
-            ble.connect(device)?.let { connection ->
-                connection.close()
-                connectionStatus.postValue("disconnected")
-            }
-        }
-    }
-
-    fun writeData(ble: BLE, device: BluetoothDevice) {
-        viewModelScope.launch(Dispatchers.Default) {
-            ble.connect(device)?.let { connection ->
-                val data = "A50419" + Integer.toHexString((System.currentTimeMillis() / 1000).toInt())
-                val value = connection.write("f000ee07-0451-4000-b000-000000000000", data)
-                Handler(Looper.getMainLooper()).postDelayed({
-                    toast(getApplication(), value.toString())
-                }, 1000)
-            }
-        }
-
-//                Log.e("ble write", "response:  "+value)
-//                Log.d("CON", connection.readableCharacteristics.toString())
-//                val readValue = connection.read("f000ee03-0451-4000-b000-000000000000")
-//                val values = connection.write("f000ee07-0451-4000-b000-000000000000", "A50014")
-//                for(service in connection.services)
-//                    for(chara in service.characteristics)
-//                        Log.d("SERVICE :  $service","CHARA:   "+chara.uuid.toString())
     }
 
 

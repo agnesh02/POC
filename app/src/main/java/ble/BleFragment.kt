@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.poc.R
 import com.example.poc.databinding.FragmentBleBinding
+import main.DashboardFragment
 import models.Common.toast
 import quevedo.soares.leandro.blemadeeasy.BLE
 
@@ -29,7 +30,8 @@ class BleFragment : Fragment() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
 
-        ble = BLE(this)
+        BleManager.createBleInstance(BLE(this))
+        ble = BleManager.ble!!
 
         binding.btnScan.setOnClickListener {
             viewModel.scanState(ble)
@@ -37,43 +39,53 @@ class BleFragment : Fragment() {
 
         viewModel.liveDevicesList.observe(viewLifecycleOwner) {
 
-            binding.recyclerViewDevices.adapter = CustomAdapterBLE(viewModel,ble,it)
+            binding.recyclerViewDevices.adapter = CustomAdapterBLE(it)
             binding.recyclerViewDevices.layoutManager = LinearLayoutManager(context)
             binding.recyclerViewDevices.addItemDecoration(DividerItemDecoration(context,DividerItemDecoration.VERTICAL))
             binding.recyclerViewDevices.adapter?.notifyDataSetChanged()
 
         }
 
-        viewModel.connectionStatus.observe(viewLifecycleOwner) {
-            if(it == "trying to connect")
-            {
-                val builder = AlertDialog.Builder(context!!)
-                builder.setCancelable(false)
-                builder.setTitle("Connecting..")
-                builder.setMessage("Please wait till the connection is active")
-                builder.setIcon(R.drawable.ic_baseline_bluetooth_searching_24)
-                alertDialog= builder.create()
-                alertDialog.show()
-            }
-            else{
-                toast(requireContext(), "Device connected successfully")
-                alertDialog.dismiss()
-            }
+        BleManager.connectionStatus.observeForever {
+            when (it) {
+                "trying to connect" -> {
+                    val builder = AlertDialog.Builder(context!!)
+                    builder.setCancelable(false)
+                        .setTitle("Connecting..")
+                        .setMessage("Please wait till the connection is active")
+                        .setIcon(R.drawable.ic_baseline_bluetooth_searching_24)
+                    alertDialog= builder.create()
+                    alertDialog.show()
+                }
+                "connection lost" -> {
+                    toast(requireContext(), it)
+                    val builder = AlertDialog.Builder(context!!)
+                    builder.setCancelable(false)
+                        .setTitle("Connecting Lost")
+                        .setMessage("Please try reconnecting")
+                        .setIcon(R.drawable.ic_baseline_bluetooth_disabled_24)
+                        .setPositiveButton("Reconnect") { _, _ ->
+                            BleManager.connectDevice()
+                        }
+                        .setNegativeButton("Exit") { dialogInterface, _ ->
+                            val transaction = parentFragmentManager.beginTransaction()
+                            transaction.replace(R.id.nav_host_fragment_content_side_menu, DashboardFragment()).commit()
+                            dialogInterface.dismiss()
+                        }
 
-        }
+                    alertDialog= builder.create()
+                    alertDialog.show()
+                }
+                "no device, scan again" -> {
+                    toast(requireContext(),it)
+                }
+                else -> {
+                    toast(requireContext(), "Device connected successfully")
+                    alertDialog.dismiss()
+                    val transaction = parentFragmentManager.beginTransaction()
+                    transaction.replace(R.id.nav_host_fragment_content_side_menu, DeviceFragment()).commit()
 
-        viewModel.upOnConnection.observe(viewLifecycleOwner) {
-            if(it.fragmentChangeStatus == true)
-            {
-                val bundle = Bundle()
-                bundle.putParcelable("DEVICE",it.device)
-                bundle.putString("DEVICE NAME",it.deviceName)
-                bundle.putString("DEVICE ADDRESS",it.deviceAddress)
-                val fragment = DeviceFragment(ble)
-                fragment.arguments = bundle
-
-                val transaction = parentFragmentManager.beginTransaction()
-                transaction.replace(R.id.nav_host_fragment_content_side_menu, fragment).commit()
+                }
             }
         }
 

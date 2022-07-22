@@ -9,10 +9,11 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import com.example.poc.R
 import com.example.poc.databinding.FragmentDeviceBinding
+import main.DashboardFragment
 import models.Common.toast
 import quevedo.soares.leandro.blemadeeasy.BLE
 
-class DeviceFragment(private val ble: BLE) : Fragment() {
+class DeviceFragment : Fragment() {
 
     lateinit var binding: FragmentDeviceBinding
     private lateinit var viewModel: BleViewModel
@@ -24,30 +25,30 @@ class DeviceFragment(private val ble: BLE) : Fragment() {
 
         viewModel = ViewModelProvider(this)[BleViewModel::class.java]
 
-        val bundle = this.arguments
-        if(bundle != null)
-        {
-            binding.tvFragDeviceName.text = bundle.getString("DEVICE NAME")
-            binding.tvFragDeviceAddress.text = bundle.getString("DEVICE ADDRESS")
-            device = bundle.getParcelable("DEVICE")!!
-        }
+        device = BleManager.bluetoothDevice!!
+        binding.tvFragDeviceName.text = device.name
+        binding.tvFragDeviceAddress.text = device.address
 
-        viewModel.connectionStatus.observe(viewLifecycleOwner) {
+        BleManager.connectionStatus.observeForever {
             if(it=="disconnected")
             {
-                toast(requireContext(), "Device disconnected successfully")
+                toast(context!!, "Device disconnected successfully")
 
                 val transaction = parentFragmentManager.beginTransaction()
-                transaction.replace(R.id.nav_host_fragment_content_side_menu, BleFragment()).commit()
+                transaction.replace(R.id.nav_host_fragment_content_side_menu, DashboardFragment()).commit()
             }
         }
 
+        BleManager.writeStatus.observeForever {
+            toast(context!!, it)
+        }
+
         binding.btnFragDeviceDisconnect.setOnClickListener {
-            viewModel.disconnectDevice(ble,device)
+            BleManager.disconnectDevice()
         }
 
         binding.btnFragDeviceWriteData.setOnClickListener {
-            viewModel.writeData(ble, device)
+            BleManager.writeData()
         }
 
         return binding.root

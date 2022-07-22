@@ -20,12 +20,12 @@
         "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-66:\\layout\\fragment_dashboard.xml"
     },
     {
-        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-64:\\drawable_ic_menu_camera.xml.flat",
-        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-66:\\drawable\\ic_menu_camera.xml"
-    },
-    {
         "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-64:\\drawable_clear_sky.png.flat",
         "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-66:\\drawable\\clear_sky.png"
+    },
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-64:\\drawable_ic_menu_camera.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-66:\\drawable\\ic_menu_camera.xml"
     },
     {
         "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-64:\\drawable-hdpi_ic_launcher_foreground.png.flat",
@@ -110,6 +110,10 @@
     {
         "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-64:\\layout_fragment_device.xml.flat",
         "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-66:\\layout\\fragment_device.xml"
+    },
+    {
+        "merged": "com.example.poc.app-merged_res-64:/drawable_ic_baseline_bluetooth_disabled_24.xml.flat",
+        "source": "com.example.poc.app-main-66:/drawable/ic_baseline_bluetooth_disabled_24.xml"
     },
     {
         "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-64:\\raw_poc2.gif.flat",

@@ -5,6 +5,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.ViewModelProvider
@@ -13,6 +14,7 @@ import com.example.poc.R
 import com.example.poc.databinding.FragmentSplashBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import models.Common
 
 class SplashScreenActivity : AppCompatActivity() {
 
@@ -24,6 +26,9 @@ class SplashScreenActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = FragmentSplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        if(!Common.isOnline(applicationContext))
+            Toast.makeText(applicationContext,"Network connectivity not available",Toast.LENGTH_LONG).show()
 
         viewModel = ViewModelProvider(this)[AuthenticationViewModel::class.java]
         viewModel.checkForLogin()

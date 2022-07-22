@@ -10,11 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.poc.R
 import quevedo.soares.leandro.blemadeeasy.BLE
 
-class CustomAdapterBLE(
-    private val viewModel: BleViewModel,
-    private val ble: BLE,
-    private val deviceList: ArrayList<BluetoothDevice>
-) : RecyclerView.Adapter<CustomAdapterBLE.MyViewHolder>() {
+class CustomAdapterBLE(private val deviceList: ArrayList<BluetoothDevice>) : RecyclerView.Adapter<CustomAdapterBLE.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.custom_layout_ble, parent, false)
@@ -22,13 +18,15 @@ class CustomAdapterBLE(
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        var dName = deviceList[position].name?.toString()
-        var dAddr = deviceList[position].address
+
+        val dName = deviceList[position].name?.toString()
+        val dAddr = deviceList[position].address
 
         holder.tvName.text = dName
         holder.tvAddress.text = dAddr
         holder.connect.setOnClickListener {
-            viewModel.connectDevice(ble, deviceList[position], true, dName, dAddr)
+            BleManager.setDevice(deviceList[position])
+            BleManager.connectDevice()
         }
 
     }

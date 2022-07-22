@@ -2648,6 +2648,7 @@ int drawable googleg_standard_color_18 0x7f080099
 int drawable haze 0x7f08009a
 int drawable hot 0x7f08009b
 int drawable humidity 0x7f08009c
+int drawable ic_baseline_bluetooth_disabled_24 0x7f0800f0
 int drawable ic_baseline_bluetooth_searching_24 0x7f08009d
 int drawable ic_baseline_edit_24 0x7f08009e
 int drawable ic_baseline_email_24 0x7f08009f

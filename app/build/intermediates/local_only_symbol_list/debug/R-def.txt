@@ -27,6 +27,7 @@ drawable fog
 drawable haze
 drawable hot
 drawable humidity
+drawable ic_baseline_bluetooth_disabled_24
 drawable ic_baseline_bluetooth_searching_24
 drawable ic_baseline_edit_24
 drawable ic_baseline_email_24
