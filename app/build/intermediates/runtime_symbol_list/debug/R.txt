@@ -2849,6 +2849,8 @@ int id browser_actions_menu_item_text 0x7f0a006f
 int id browser_actions_menu_items 0x7f0a0070
 int id browser_actions_menu_view 0x7f0a0071
 int id btn_choose_image 0x7f0a0072
+int id btn_frag_device_disconnect 0x7f0a02a6
+int id btn_frag_device_write_data 0x7f0a02a7
 int id btn_holder 0x7f0a0073
 int id btn_load_url 0x7f0a0074
 int id btn_login_login 0x7f0a0075
@@ -3362,6 +3364,8 @@ int id triangle 0x7f0a0270
 int id trouble_signing_in 0x7f0a0271
 int id trouble_signing_in_possible_fixes 0x7f0a0272
 int id tv_feels_like 0x7f0a0273
+int id tv_frag_device_address 0x7f0a02a8
+int id tv_frag_device_name 0x7f0a02a9
 int id tv_go_to_edit_profile 0x7f0a0274
 int id tv_header_email 0x7f0a0275
 int id tv_header_uname 0x7f0a0276
@@ -3533,6 +3537,7 @@ int layout design_text_input_end_icon 0x7f0d0032
 int layout design_text_input_start_icon 0x7f0d0033
 int layout fragment_ble 0x7f0d0034
 int layout fragment_dashboard 0x7f0d0035
+int layout fragment_device 0x7f0d00ae
 int layout fragment_edit_profile 0x7f0d0036
 int layout fragment_live_stream 0x7f0d0037
 int layout fragment_login 0x7f0d0038

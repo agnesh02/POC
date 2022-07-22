@@ -2850,6 +2850,8 @@ id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
 id btn_choose_image
+id btn_frag_device_disconnect
+id btn_frag_device_write_data
 id btn_holder
 id btn_load_url
 id btn_login_login
@@ -3363,6 +3365,8 @@ id triangle
 id trouble_signing_in
 id trouble_signing_in_possible_fixes
 id tv_feels_like
+id tv_frag_device_address
+id tv_frag_device_name
 id tv_go_to_edit_profile
 id tv_header_email
 id tv_header_uname
@@ -3534,6 +3538,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fragment_ble
 layout fragment_dashboard
+layout fragment_device
 layout fragment_edit_profile
 layout fragment_live_stream
 layout fragment_login

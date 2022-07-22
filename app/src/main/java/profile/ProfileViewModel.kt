@@ -1,11 +1,11 @@
 package profile
 
-import repository.AuthenticationRepository
 import repository.ProfileRepository
 import android.app.Application
 import android.net.Uri
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
+import main.SideMenuActivity
 import models.Common.toast
 
 class ProfileViewModel(application: Application) : AndroidViewModel(application) {
@@ -30,24 +30,14 @@ class ProfileViewModel(application: Application) : AndroidViewModel(application)
     }
 
     fun getProfileData() {
-        profileRepository.getData()
 
+        profileRepository.getData()
         profileRepository.liveUserData.observeForever {
             this.username.postValue(it.username)
-        }
-        profileRepository.liveUserData.observeForever {
             this.fullName.postValue(it.fullname)
-        }
-        profileRepository.liveUserData.observeForever {
             this.dob.postValue(it.dob)
-        }
-        profileRepository.liveUserData.observeForever {
             this.email.postValue(it.email)
-        }
-        profileRepository.liveUserData.observeForever {
             this.phone.postValue(it.phone)
-        }
-        profileRepository.liveUserData.observeForever {
             this.uri.postValue(it.image_uri)
         }
 
@@ -56,11 +46,9 @@ class ProfileViewModel(application: Application) : AndroidViewModel(application)
     }
 
     fun updateProfileData() {
-        if (username != profileRepository.liveUserData) {
-            val authenticationRepository = AuthenticationRepository()
-            authenticationRepository.updateUsername(username.value.toString())
-        }
+
         profileRepository.updateData(
+            username.value.toString(),
             fullName.value.toString(),
             dob.value.toString(),
             phone.value.toString()
@@ -74,5 +62,7 @@ class ProfileViewModel(application: Application) : AndroidViewModel(application)
         profileRepository.updateProfilePicture(uri)
         startObservation()
     }
+
+
 
 }

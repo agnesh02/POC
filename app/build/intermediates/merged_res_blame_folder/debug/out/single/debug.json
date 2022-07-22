@@ -28,10 +28,6 @@
         "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-66:\\drawable\\clear_sky.png"
     },
     {
-        "merged": "com.example.poc.app-merged_res-64:/layout_fragment_weather.xml.flat",
-        "source": "com.example.poc.app-main-66:/layout/fragment_weather.xml"
-    },
-    {
         "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-64:\\drawable-hdpi_ic_launcher_foreground.png.flat",
         "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-pngs-59:\\drawable-hdpi\\ic_launcher_foreground.png"
     },
@@ -110,6 +106,14 @@
     {
         "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-64:\\font_archivo_narrow.ttf.flat",
         "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-66:\\font\\archivo_narrow.ttf"
+    },
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-64:\\layout_fragment_device.xml.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-66:\\layout\\fragment_device.xml"
+    },
+    {
+        "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-64:\\raw_poc2.gif.flat",
+        "source": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-main-66:\\raw\\poc2.gif"
     },
     {
         "merged": "C:\\Users\\Agnesh S Kumar\\.gradle\\daemon\\7.3.3\\com.example.poc.app-merged_res-64:\\mipmap-anydpi-v26_ic_launcher.xml.flat",

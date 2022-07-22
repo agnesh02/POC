@@ -20,12 +20,16 @@ import com.example.poc.databinding.ActivitySideMenuBinding
 import com.example.poc.databinding.NavHeaderSideMenuBinding
 import com.google.android.material.navigation.NavigationView
 import models.Common.toast
+import profile.ProfileViewModel
+import repository.AuthenticationRepository
+import repository.ProfileRepository
 
 class SideMenuActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivitySideMenuBinding
     private lateinit var viewModel: DashboardViewModel
+    private val profileRepository = ProfileRepository()
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,9 +53,9 @@ class SideMenuActivity : AppCompatActivity() {
         NavigationUI.setupWithNavController(navView, navController)
 
         viewModel = ViewModelProvider(this)[(DashboardViewModel::class.java)]
-        viewModel.getUser()
+        viewModel.getUsernameAndEmail()
         viewModel.uname.observeForever {
-            toast(applicationContext,"Hi, $it.")
+            toast(applicationContext, "Hi, ${it}.")
             navViewHeaderBinding.tvHeaderUname.text = it
         }
         viewModel.email.observeForever {

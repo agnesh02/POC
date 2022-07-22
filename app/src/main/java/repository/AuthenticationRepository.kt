@@ -11,7 +11,6 @@ import androidx.room.Room
 import authentication.AuthenticationActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.auth.UserProfileChangeRequest
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
@@ -25,8 +24,6 @@ class AuthenticationRepository {
 
     private lateinit var auth: FirebaseAuth
     private var firebaseUser: FirebaseUser?=null
-    var user: MutableLiveData<String> = MutableLiveData()
-    var email: MutableLiveData<String> = MutableLiveData()
     private var firestore: FirebaseFirestore = FirebaseFirestore.getInstance()
 
     var loginStatus: MutableLiveData<Boolean> = MutableLiveData()
@@ -42,20 +39,12 @@ class AuthenticationRepository {
         }
     }
 
-    fun getUser() {
-
-        GlobalScope.launch {
-            user.postValue(firebaseUser?.displayName)
-            email.postValue(firebaseUser?.email)
-        }
-    }
 
     fun registerUser(username: String, email: String, password: String) {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener {
                 if (it.isSuccessful) {
-                    updateProfile(email)
-                    updateUsername(username)
+                    setProfile(email,username)
                 } else {
                     liveRepoMessage.value = it.exception?.message
                     return@addOnCompleteListener
@@ -67,34 +56,14 @@ class AuthenticationRepository {
             }
     }
 
-    fun updateUsername(username: String) {
-        val profileChangeRequest: UserProfileChangeRequest = UserProfileChangeRequest.Builder()
-            .setDisplayName(username)
-            .build()
-
-        firebaseUser?.updateProfile(profileChangeRequest)
-            ?.addOnCompleteListener {
-                if (it.isSuccessful) {
-                    liveRepoMessage.value = "User registered successfully"
-                } else {
-                    liveRepoMessage.value = it.exception?.message
-                    return@addOnCompleteListener
-                }
-            }
-            ?.addOnFailureListener {
-                liveRepoMessage.value = it.message
-                return@addOnFailureListener
-            }
-    }
-
-    private fun updateProfile(email: String) {
-        val userData = UserData("", "", "", "")
+    private fun setProfile(email: String, username: String) {
+        val userData = UserData(username, "", "", "","")
 
         firestore.collection("USERS").document(email)
             .set(userData)
             .addOnCompleteListener {
                 if (it.isSuccessful) {
-                    //
+                    liveRepoMessage.value = "User has been registered successfully"
                 } else {
                     liveRepoMessage.value = it.exception?.message
                     return@addOnCompleteListener

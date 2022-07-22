@@ -17,14 +17,25 @@ class ProfileRepository {
     private var auth: FirebaseAuth = FirebaseAuth.getInstance()
     private var firebaseUser: FirebaseUser = auth.currentUser!!
     private var firestore: FirebaseFirestore = FirebaseFirestore.getInstance()
-    private var documentReference: DocumentReference =
-        firestore.collection("USERS").document(firebaseUser.email!!)
+    private var documentReference: DocumentReference = firestore.collection("USERS").document(firebaseUser.email!!)
     var liveUserData: MutableLiveData<UserData> = MutableLiveData()
 
+    fun getUsernameAndEmail()
+    {
+        documentReference.get()
+            .addOnCompleteListener {
+                if (it.isSuccessful) {
+                    val snapshot: DocumentSnapshot = it.result
+                    val obj = UserData()
+                    obj.username = snapshot.getString("username")
+                    obj.email = auth.currentUser!!.email
+                    liveUserData.postValue(obj)
+                }
+            }
+    }
 
     fun getData() {
         var obj: UserData
-
         documentReference.get()
             .addOnCompleteListener {
                 if (it.isSuccessful) {
@@ -33,7 +44,7 @@ class ProfileRepository {
 
                     val userData = UserData()
 
-                    userData.username = firebaseUser.displayName
+                    userData.username = obj.username
                     userData.fullname = obj.fullname
                     userData.dob = obj.dob
                     userData.email = firebaseUser.email
@@ -41,7 +52,6 @@ class ProfileRepository {
                     userData.image_uri = obj.image_uri
 
                     userData.message = "ok"
-
                     liveUserData.postValue(userData)
 
                 } else {
@@ -58,8 +68,9 @@ class ProfileRepository {
 
     }
 
-    fun updateData(fullname: String, dob: String, phone: String) {
+    fun updateData(userName: String, fullname: String, dob: String, phone: String) {
         val map: HashMap<String, Any> = HashMap()
+        map["username"] = userName
         map["fullname"] = fullname
         map["dob"] = dob
         map["phone"] = phone

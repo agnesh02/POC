@@ -1,15 +1,22 @@
 package profile
 
+import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.ViewModelProvider
+import authentication.AuthenticationActivity
 import com.example.poc.R
 import com.example.poc.databinding.FragmentEditProfileBinding
+import main.SideMenuActivity
+import models.Common.toast
 
 class EditProfileFragment : Fragment() {
 
@@ -41,9 +48,18 @@ class EditProfileFragment : Fragment() {
         binding.btnSaveEditProfile.setOnClickListener {
             viewModel.updateProfileData()
             disableViews()
-            val transaction: FragmentTransaction = parentFragmentManager.beginTransaction()
-            transaction.replace(R.id.nav_host_fragment_content_side_menu, ProfileFragment())
-                .commit()
+        }
+
+        viewModel.msg.observeForever {
+            if(it == "Profile updated successfully")
+            {
+                Handler(Looper.getMainLooper()).postDelayed({
+                    val i = Intent(requireContext(), SideMenuActivity::class.java)
+                    i.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK + Intent.FLAG_ACTIVITY_NEW_TASK
+                    i.putExtra("STATUS",false)
+                    ContextCompat.startActivity(requireContext(), i, Bundle())
+                },500)
+            }
         }
 
         return binding.root

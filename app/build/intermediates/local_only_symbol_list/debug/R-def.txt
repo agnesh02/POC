@@ -63,6 +63,8 @@ id action_logout
 id app_bar_side_menu
 id attendence
 id btn_choose_image
+id btn_frag_device_disconnect
+id btn_frag_device_write_data
 id btn_load_url
 id btn_login_login
 id btn_registration_register
@@ -144,6 +146,8 @@ id textInputLayout7
 id textView6
 id toolbar
 id tv_feels_like
+id tv_frag_device_address
+id tv_frag_device_name
 id tv_go_to_edit_profile
 id tv_header_email
 id tv_header_uname
@@ -172,6 +176,7 @@ layout custom_layout_ble
 layout custom_weather_card
 layout fragment_ble
 layout fragment_dashboard
+layout fragment_device
 layout fragment_edit_profile
 layout fragment_live_stream
 layout fragment_login
