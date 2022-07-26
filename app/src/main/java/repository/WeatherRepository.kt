@@ -77,10 +77,11 @@ class WeatherRepository {
         forecastList.clear()
         retrofitDataForForecast.enqueue(object : Callback<ForecastData> {
             override fun onResponse(call: Call<ForecastData>, response: Response<ForecastData>) {
-//                if (!response.isSuccessful) {
-//                    Toast.makeText(application.applicationContext, "Some error occurred.\nTry entering a valid city / region", Toast.LENGTH_SHORT).show()
-//                    return
-//                }
+
+                if (!response.isSuccessful) {
+                    toast(application.applicationContext, "Some error occurred.\nTry entering a valid city / region")
+                    return
+                }
 
                 for (i in 0..4)
                 {

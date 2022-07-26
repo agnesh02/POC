@@ -209,6 +209,9 @@
     <string name="confirm_password">Confirm password</string>
     <string name="dashboard">Dashboard</string>
     <string name="default_web_client_id" translatable="false">444956905417-92ctpjcjajqabgp570u6gvvod4mivhpj.apps.googleusercontent.com</string>
+    <string name="device_address">Device Address :</string>
+    <string name="device_name">Device name :</string>
+    <string name="disconnect">Disconnect</string>
     <string name="dob">DOB</string>
     <string name="does_not_have_an_account_register_now">Does not have an account ? Register now.</string>
     <string name="e_mail_id">E-mail id</string>
@@ -252,6 +255,7 @@
     <string name="play_content">Play content</string>
     <string name="profile">Profile</string>
     <string name="project_id" translatable="false">poc1-bb7e3</string>
+    <string name="read_data">read data</string>
     <string name="register">Register</string>
     <string name="remember_me">Remember Me</string>
     <string name="save">save</string>
@@ -264,6 +268,7 @@
     <string name="username">Username</string>
     <string name="version">Version</string>
     <string name="weather">Weather</string>
+    <string name="write_data">write data</string>
     <style name="Theme.POC" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         
         <item name="colorPrimary">@color/purple_500</item>

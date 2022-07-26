@@ -187,7 +187,7 @@
         <item>Wayanad Wildlife Sanctuary</item>
         <item>Yercaud</item>
         <item>Zanskar</item>
-    </string-array></file><file path="C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\res\values\themes.xml" qualifiers=""><style name="Theme.POC" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    </string-array><string name="device_address">Device Address :</string><string name="read_data">read data</string><string name="device_name">Device name :</string><string name="write_data">write data</string><string name="disconnect">Disconnect</string></file><file path="C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\res\values\themes.xml" qualifiers=""><style name="Theme.POC" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>

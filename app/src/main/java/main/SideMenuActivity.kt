@@ -5,6 +5,7 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -15,21 +16,19 @@ import androidx.navigation.Navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.navigateUp
+import ble.AlertWindow
+import ble.BLE
 import com.example.poc.R
 import com.example.poc.databinding.ActivitySideMenuBinding
 import com.example.poc.databinding.NavHeaderSideMenuBinding
 import com.google.android.material.navigation.NavigationView
 import models.Common.toast
-import profile.ProfileViewModel
-import repository.AuthenticationRepository
-import repository.ProfileRepository
 
 class SideMenuActivity : AppCompatActivity() {
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivitySideMenuBinding
     private lateinit var viewModel: DashboardViewModel
-    private val profileRepository = ProfileRepository()
     private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,7 +47,7 @@ class SideMenuActivity : AppCompatActivity() {
             NavHeaderSideMenuBinding.bind(viewHeader)
 
         appBarConfiguration =
-            AppBarConfiguration(setOf(R.id.nav_dashboard, R.id.nav_profile, R.id.nav_weather, R.id.nav_live_stream, R.id.nav_ble), drawerLayout)
+            AppBarConfiguration(setOf(R.id.nav_dashboard, R.id.nav_profile, R.id.nav_weather, R.id.nav_live_stream, R.id.nav_ble, R.id.nav_device), drawerLayout)
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
         NavigationUI.setupWithNavController(navView, navController)
 
@@ -96,6 +95,53 @@ class SideMenuActivity : AppCompatActivity() {
             }
         }
 
+        BLE.connectionStatus.observeForever {
+            if (it=="trying to connect")
+            {
+                AlertWindow.buildWindow(this, "Connecting...","Please wait till the connection is active", R.drawable.ic_baseline_bluetooth_searching_24)
+                AlertWindow.showWindow()
+            }
+            if(it=="connection failed")
+            {
+                AlertWindow.buildWindow(this, "Connection Failed","Please try again", android.R.drawable.ic_dialog_alert)
+                AlertWindow.builder
+                    .setNegativeButton("Exit") { dialogInterface, _ ->
+                        dialogInterface.dismiss()
+                    }
+
+                AlertWindow.showWindow()
+            }
+            if(it=="connected")
+            {
+                AlertWindow.dismissWindow()
+                navController.popBackStack()
+                navController.navigate(R.id.nav_device)
+            }
+            if(it=="connection lost")
+            {
+                AlertWindow.buildWindow(this, "Connection Lost","Please try reconnecting",R.drawable.ic_baseline_bluetooth_disabled_24)
+                AlertWindow.builder
+                    .setPositiveButton("Reconnect") { _, _ ->
+                        AlertWindow.dismissWindow()
+                        BLE.connect(BLE.selectedDevice.value!!)
+                    }
+                    .setNegativeButton("Exit") { dialogInterface, _ ->
+                        dialogInterface.dismiss()
+                        navController.popBackStack()
+                        navController.navigate(R.id.nav_ble); drawerLayout.closeDrawer(GravityCompat.START)
+                    }
+
+                AlertWindow.showWindow()
+            }
+            if(it=="disconnected")
+            {
+                Toast.makeText(applicationContext, "Device disconnected successfully", Toast.LENGTH_SHORT).show()
+                navController.popBackStack()
+                navController.navigate(R.id.nav_ble); drawerLayout.closeDrawer(GravityCompat.START)
+            }
+        }
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -140,5 +186,6 @@ class SideMenuActivity : AppCompatActivity() {
         alertDialog.show()
 
     }
+
 
 }

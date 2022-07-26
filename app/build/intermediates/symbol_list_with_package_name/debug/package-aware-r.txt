@@ -2852,6 +2852,7 @@ id browser_actions_menu_items
 id browser_actions_menu_view
 id btn_choose_image
 id btn_frag_device_disconnect
+id btn_frag_device_read_data
 id btn_frag_device_write_data
 id btn_holder
 id btn_load_url
@@ -3150,6 +3151,7 @@ id name_layout
 id nav_ble
 id nav_controller_view_tag
 id nav_dashboard
+id nav_device
 id nav_host_fragment_container
 id nav_host_fragment_content_side_menu
 id nav_live_stream
@@ -3206,6 +3208,7 @@ id position
 id postLayout
 id profile_profile_pic
 id progressBarProfilePic
+id progressBarWebView
 id progressBar_login
 id progressBar_profile
 id progressBar_weather
@@ -3733,6 +3736,9 @@ string confirm_password
 string copy_toast_msg
 string dashboard
 string default_web_client_id
+string device_address
+string device_name
+string disconnect
 string dob
 string does_not_have_an_account_register_now
 string e_mail_id
@@ -3965,6 +3971,7 @@ string profile
 string project_id
 string rationale_ask
 string rationale_ask_again
+string read_data
 string register
 string remember_me
 string save
@@ -3980,6 +3987,7 @@ string user
 string username
 string version
 string weather
+string write_data
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow

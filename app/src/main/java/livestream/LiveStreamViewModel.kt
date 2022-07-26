@@ -6,10 +6,12 @@ import androidx.lifecycle.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.io.BufferedInputStream
+import java.io.File
 import java.io.FileOutputStream
 import java.io.OutputStream
 import java.net.URL
 import java.net.URLConnection
+import java.util.*
 
 class LiveStreamViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -29,6 +31,10 @@ class LiveStreamViewModel(application: Application) : AndroidViewModel(applicati
 
     fun validate()
     {
+        path = path.trim()
+        port = port.trim()
+        ip = ip.trim()
+
         if(path=="" || path.isEmpty())
             msg.postValue("Enter a valid PATH")
         if(port=="" || port.isEmpty())
@@ -48,15 +54,13 @@ class LiveStreamViewModel(application: Application) : AndroidViewModel(applicati
 
     fun startRecording(url: String)
     {
-        val startTime = System.currentTimeMillis()
         val urlLink = URL(url)
         viewModelScope.launch(Dispatchers.Default) {
-            record(urlLink, startTime)
+            record(urlLink)
         }
-
     }
 
-    private fun record(url: URL, startTime:Long)
+    private fun record(url: URL)
     {
         val urlConnection: URLConnection = url.openConnection()
         urlConnection.readTimeout = TIMEOUT_CONNECTION
@@ -65,22 +69,25 @@ class LiveStreamViewModel(application: Application) : AndroidViewModel(applicati
         try {
             val inputStream = urlConnection.getInputStream()
             inStream = BufferedInputStream(inputStream, 1024 * 5)
-            outStream = FileOutputStream(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).toString() + "/reclive5.mp4")
+
+            val rootPath = Environment.getExternalStorageDirectory().toString()
+            val filePath = "POC-Recordings"
+            val fileName = Calendar.getInstance().time.toString()
+            val folder = File(rootPath,filePath)
+            if(!folder.exists())
+                folder.mkdir()
+
+            outStream = FileOutputStream(folder.toString()+"/rec-"+fileName.lowercase()+".mp4")
             val buff = ByteArray(1024 * 5)
             //Read bytes (and store them) until there is nothing more to read(-1)
             var len: Int?
             while ((inStream?.read(buff).also { len = it }) != -1) {
                 outStream?.write(buff, 0, len!!)
             }
-
-//            outStream.flush()
-//            outStream.close()
-//            inStream.close()
-            msg.postValue("completed in " + ((System.currentTimeMillis() - startTime) / 1000) + " sec")
         }
         catch (e: Exception)
         {
-//            msg.postValue(e.message)
+            //msg.postValue(e.message)
         }
 
     }

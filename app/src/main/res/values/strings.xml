@@ -57,6 +57,11 @@
     <string name="enter_the_port">Enter the port</string>
     <string name="enter_the_path">Enter the path</string>
     <string name="load">load</string>
+    <string name="device_name">Device name :</string>
+    <string name="device_address">Device Address :</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="read_data">read data</string>
+    <string name="write_data">write data</string>
 
     <string-array name="cities">
         <item>Agartala</item>

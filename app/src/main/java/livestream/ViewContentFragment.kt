@@ -3,6 +3,9 @@ package livestream
 import android.Manifest
 import android.os.Bundle
 import android.view.*
+import android.webkit.WebResourceError
+import android.webkit.WebResourceRequest
+import android.webkit.WebView
 import androidx.fragment.app.Fragment
 import android.webkit.WebViewClient
 import androidx.core.view.MenuHost
@@ -31,11 +34,35 @@ class ViewContentFragment : Fragment(), EasyPermissions.PermissionCallbacks {
         }
 
         binding.webView.settings.javaScriptEnabled = true
-        binding.webView.webViewClient = WebViewClient()
+        binding.webView.setInitialScale(1)
+        binding.webView.settings.loadWithOverviewMode = true
+        binding.webView.settings.useWideViewPort = true
         binding.webView.loadUrl(url)
 
-        viewModel = ViewModelProvider(this)[LiveStreamViewModel::class.java]
+        binding.webView.webViewClient = object : WebViewClient(){
+            override fun shouldOverrideUrlLoading(view: WebView?, url: String?): Boolean {
+                view?.loadUrl(url!!)
+                return true
+            }
+            override fun onLoadResource(view: WebView?, url: String?) {
+                super.onLoadResource(view, url)
+                toast(context!!, "Pleas wait till the content is being loaded")
+                binding.progressBarWebView.visibility = View.INVISIBLE
+            }
 
+            override fun onPageFinished(view: WebView?, url: String?) {
+                super.onPageFinished(view, url)
+                //toast(context!!, "Content loaded successfully")
+            }
+
+            override fun onReceivedError(view: WebView?, request: WebResourceRequest?, error: WebResourceError?) {
+                super.onReceivedError(view, request, error)
+                toast(context!!, error.toString())
+            }
+        }
+
+
+        viewModel = ViewModelProvider(this)[LiveStreamViewModel::class.java]
         viewModel.msg.observe(viewLifecycleOwner) {
             toast(context!!,it)
         }
@@ -102,12 +129,11 @@ class ViewContentFragment : Fragment(), EasyPermissions.PermissionCallbacks {
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        //super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         EasyPermissions.onRequestPermissionsResult(requestCode, permissions, grantResults, this)
     }
 
     override fun onPermissionsGranted(requestCode: Int, perms: MutableList<String>) {
-        toast(requireContext(), "Permission granted")
+        toast(requireContext(), "Permission granted. Click on 'start recording' to begin recording")
     }
 
     override fun onPermissionsDenied(requestCode: Int, perms: MutableList<String>) {

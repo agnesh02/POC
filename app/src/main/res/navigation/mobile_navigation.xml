@@ -35,5 +35,11 @@
         android:label="Bluetooth"
         tools:layout="@layout/fragment_ble" />
 
+    <fragment
+        android:id="@+id/nav_device"
+        android:name="ble.DeviceFragment"
+        android:label="Device"
+        tools:layout="@layout/fragment_device" />
+
 
 </navigation>

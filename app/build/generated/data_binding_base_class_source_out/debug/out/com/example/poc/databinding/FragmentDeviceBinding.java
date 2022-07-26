@@ -24,6 +24,9 @@ public final class FragmentDeviceBinding implements ViewBinding {
   public final Button btnFragDeviceDisconnect;
 
   @NonNull
+  public final Button btnFragDeviceReadData;
+
+  @NonNull
   public final Button btnFragDeviceWriteData;
 
   @NonNull
@@ -33,10 +36,12 @@ public final class FragmentDeviceBinding implements ViewBinding {
   public final TextView tvFragDeviceName;
 
   private FragmentDeviceBinding(@NonNull FrameLayout rootView,
-      @NonNull Button btnFragDeviceDisconnect, @NonNull Button btnFragDeviceWriteData,
-      @NonNull TextView tvFragDeviceAddress, @NonNull TextView tvFragDeviceName) {
+      @NonNull Button btnFragDeviceDisconnect, @NonNull Button btnFragDeviceReadData,
+      @NonNull Button btnFragDeviceWriteData, @NonNull TextView tvFragDeviceAddress,
+      @NonNull TextView tvFragDeviceName) {
     this.rootView = rootView;
     this.btnFragDeviceDisconnect = btnFragDeviceDisconnect;
+    this.btnFragDeviceReadData = btnFragDeviceReadData;
     this.btnFragDeviceWriteData = btnFragDeviceWriteData;
     this.tvFragDeviceAddress = tvFragDeviceAddress;
     this.tvFragDeviceName = tvFragDeviceName;
@@ -75,6 +80,12 @@ public final class FragmentDeviceBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btn_frag_device_read_data;
+      Button btnFragDeviceReadData = ViewBindings.findChildViewById(rootView, id);
+      if (btnFragDeviceReadData == null) {
+        break missingId;
+      }
+
       id = R.id.btn_frag_device_write_data;
       Button btnFragDeviceWriteData = ViewBindings.findChildViewById(rootView, id);
       if (btnFragDeviceWriteData == null) {
@@ -94,7 +105,7 @@ public final class FragmentDeviceBinding implements ViewBinding {
       }
 
       return new FragmentDeviceBinding((FrameLayout) rootView, btnFragDeviceDisconnect,
-          btnFragDeviceWriteData, tvFragDeviceAddress, tvFragDeviceName);
+          btnFragDeviceReadData, btnFragDeviceWriteData, tvFragDeviceAddress, tvFragDeviceName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

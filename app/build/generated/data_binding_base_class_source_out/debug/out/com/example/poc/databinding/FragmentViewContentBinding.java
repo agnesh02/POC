@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.FrameLayout;
+import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -20,10 +21,15 @@ public final class FragmentViewContentBinding implements ViewBinding {
   private final FrameLayout rootView;
 
   @NonNull
+  public final ProgressBar progressBarWebView;
+
+  @NonNull
   public final WebView webView;
 
-  private FragmentViewContentBinding(@NonNull FrameLayout rootView, @NonNull WebView webView) {
+  private FragmentViewContentBinding(@NonNull FrameLayout rootView,
+      @NonNull ProgressBar progressBarWebView, @NonNull WebView webView) {
     this.rootView = rootView;
+    this.progressBarWebView = progressBarWebView;
     this.webView = webView;
   }
 
@@ -54,13 +60,19 @@ public final class FragmentViewContentBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.progressBarWebView;
+      ProgressBar progressBarWebView = ViewBindings.findChildViewById(rootView, id);
+      if (progressBarWebView == null) {
+        break missingId;
+      }
+
       id = R.id.webView;
       WebView webView = ViewBindings.findChildViewById(rootView, id);
       if (webView == null) {
         break missingId;
       }
 
-      return new FragmentViewContentBinding((FrameLayout) rootView, webView);
+      return new FragmentViewContentBinding((FrameLayout) rootView, progressBarWebView, webView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
