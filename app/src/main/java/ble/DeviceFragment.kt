@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import com.clj.fastble.data.BleDevice
 import com.example.poc.databinding.FragmentDeviceBinding
+import models.Common.toast
 
 class DeviceFragment : Fragment() {
 
@@ -44,6 +45,26 @@ class DeviceFragment : Fragment() {
 
         binding.btnFragDeviceDisconnect.setOnClickListener {
             BLE.disconnect(device)
+        }
+
+        BLE.requestQueueStatus.observeForever {
+            if(!it)
+            {
+                binding.progressBarDeviceFrag.visibility = View.VISIBLE
+                binding.btnFragDeviceReadData.isEnabled = false
+                binding.btnFragDeviceWriteData.isEnabled = false
+                if(isAdded)
+                    toast(requireContext(),"Please wait till a request is being completed")
+            }
+            else
+            {
+                if(isAdded)
+                    toast(requireContext(),BLE.strData)
+                binding.progressBarDeviceFrag.visibility = View.INVISIBLE
+                binding.btnFragDeviceReadData.isEnabled = true
+                binding.btnFragDeviceWriteData.isEnabled = true
+            }
+
         }
 
 

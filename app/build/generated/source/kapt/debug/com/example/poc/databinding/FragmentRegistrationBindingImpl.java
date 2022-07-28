@@ -14,10 +14,10 @@ public class FragmentRegistrationBindingImpl extends FragmentRegistrationBinding
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.textInputLayout, 6);
-        sViewsWithIds.put(R.id.textInputLayout7, 7);
-        sViewsWithIds.put(R.id.textInputLayout5, 8);
-        sViewsWithIds.put(R.id.textInputLayout6, 9);
+        sViewsWithIds.put(R.id.textInputLayout, 7);
+        sViewsWithIds.put(R.id.textInputLayout7, 8);
+        sViewsWithIds.put(R.id.textInputLayout5, 9);
+        sViewsWithIds.put(R.id.textInputLayout6, 10);
     }
     // views
     @NonNull
@@ -134,19 +134,20 @@ public class FragmentRegistrationBindingImpl extends FragmentRegistrationBinding
     };
 
     public FragmentRegistrationBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 10, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 11, sIncludes, sViewsWithIds));
     }
     private FragmentRegistrationBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
-        super(bindingComponent, root, 0
+        super(bindingComponent, root, 1
             , (android.widget.Button) bindings[5]
             , (com.google.android.material.textfield.TextInputEditText) bindings[4]
             , (com.google.android.material.textfield.TextInputEditText) bindings[2]
             , (com.google.android.material.textfield.TextInputEditText) bindings[3]
             , (com.google.android.material.textfield.TextInputEditText) bindings[1]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[6]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[8]
-            , (com.google.android.material.textfield.TextInputLayout) bindings[9]
+            , (android.widget.ProgressBar) bindings[6]
             , (com.google.android.material.textfield.TextInputLayout) bindings[7]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[9]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[10]
+            , (com.google.android.material.textfield.TextInputLayout) bindings[8]
             );
         this.btnRegistrationRegister.setTag(null);
         this.etConfirmPassword.setTag(null);
@@ -155,6 +156,7 @@ public class FragmentRegistrationBindingImpl extends FragmentRegistrationBinding
         this.etUsername.setTag(null);
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];
         this.mboundView0.setTag(null);
+        this.progressBarReg.setTag(null);
         setRootTag(root);
         // listeners
         mCallback4 = new com.example.poc.generated.callback.OnClickListener(this, 1);
@@ -164,7 +166,7 @@ public class FragmentRegistrationBindingImpl extends FragmentRegistrationBinding
     @Override
     public void invalidateAll() {
         synchronized(this) {
-                mDirtyFlags = 0x2L;
+                mDirtyFlags = 0x4L;
         }
         requestRebind();
     }
@@ -194,7 +196,7 @@ public class FragmentRegistrationBindingImpl extends FragmentRegistrationBinding
     public void setViewModel(@Nullable authentication.AuthenticationViewModel ViewModel) {
         this.mViewModel = ViewModel;
         synchronized(this) {
-            mDirtyFlags |= 0x1L;
+            mDirtyFlags |= 0x2L;
         }
         notifyPropertyChanged(BR.viewModel);
         super.requestRebind();
@@ -203,6 +205,17 @@ public class FragmentRegistrationBindingImpl extends FragmentRegistrationBinding
     @Override
     protected boolean onFieldChange(int localFieldId, Object object, int fieldId) {
         switch (localFieldId) {
+            case 0 :
+                return onChangeViewModelPBarVisibility((androidx.lifecycle.MutableLiveData<java.lang.Boolean>) object, fieldId);
+        }
+        return false;
+    }
+    private boolean onChangeViewModelPBarVisibility(androidx.lifecycle.MutableLiveData<java.lang.Boolean> ViewModelPBarVisibility, int fieldId) {
+        if (fieldId == BR._all) {
+            synchronized(this) {
+                    mDirtyFlags |= 0x1L;
+            }
+            return true;
         }
         return false;
     }
@@ -214,29 +227,63 @@ public class FragmentRegistrationBindingImpl extends FragmentRegistrationBinding
             dirtyFlags = mDirtyFlags;
             mDirtyFlags = 0;
         }
-        java.lang.String viewModelEtUsername = null;
         java.lang.String viewModelEtConfirmPass = null;
+        java.lang.Boolean viewModelPBarVisibilityGetValue = null;
+        androidx.lifecycle.MutableLiveData<java.lang.Boolean> viewModelPBarVisibility = null;
+        java.lang.String viewModelEtUsername = null;
+        int viewModelPBarVisibilityViewVISIBLEViewINVISIBLE = 0;
         java.lang.String viewModelEtEmail = null;
         java.lang.String viewModelEtPass = null;
+        boolean androidxDatabindingViewDataBindingSafeUnboxViewModelPBarVisibilityGetValue = false;
         authentication.AuthenticationViewModel viewModel = mViewModel;
 
-        if ((dirtyFlags & 0x3L) != 0) {
+        if ((dirtyFlags & 0x7L) != 0) {
 
 
+            if ((dirtyFlags & 0x6L) != 0) {
+
+                    if (viewModel != null) {
+                        // read viewModel.etConfirmPass
+                        viewModelEtConfirmPass = viewModel.getEtConfirmPass();
+                        // read viewModel.etUsername
+                        viewModelEtUsername = viewModel.getEtUsername();
+                        // read viewModel.etEmail
+                        viewModelEtEmail = viewModel.getEtEmail();
+                        // read viewModel.etPass
+                        viewModelEtPass = viewModel.getEtPass();
+                    }
+            }
 
                 if (viewModel != null) {
-                    // read viewModel.etUsername
-                    viewModelEtUsername = viewModel.getEtUsername();
-                    // read viewModel.etConfirmPass
-                    viewModelEtConfirmPass = viewModel.getEtConfirmPass();
-                    // read viewModel.etEmail
-                    viewModelEtEmail = viewModel.getEtEmail();
-                    // read viewModel.etPass
-                    viewModelEtPass = viewModel.getEtPass();
+                    // read viewModel.pBarVisibility
+                    viewModelPBarVisibility = viewModel.getPBarVisibility();
                 }
+                updateLiveDataRegistration(0, viewModelPBarVisibility);
+
+
+                if (viewModelPBarVisibility != null) {
+                    // read viewModel.pBarVisibility.getValue()
+                    viewModelPBarVisibilityGetValue = viewModelPBarVisibility.getValue();
+                }
+
+
+                // read androidx.databinding.ViewDataBinding.safeUnbox(viewModel.pBarVisibility.getValue())
+                androidxDatabindingViewDataBindingSafeUnboxViewModelPBarVisibilityGetValue = androidx.databinding.ViewDataBinding.safeUnbox(viewModelPBarVisibilityGetValue);
+            if((dirtyFlags & 0x7L) != 0) {
+                if(androidxDatabindingViewDataBindingSafeUnboxViewModelPBarVisibilityGetValue) {
+                        dirtyFlags |= 0x10L;
+                }
+                else {
+                        dirtyFlags |= 0x8L;
+                }
+            }
+
+
+                // read androidx.databinding.ViewDataBinding.safeUnbox(viewModel.pBarVisibility.getValue()) ? View.VISIBLE : View.INVISIBLE
+                viewModelPBarVisibilityViewVISIBLEViewINVISIBLE = ((androidxDatabindingViewDataBindingSafeUnboxViewModelPBarVisibilityGetValue) ? (android.view.View.VISIBLE) : (android.view.View.INVISIBLE));
         }
         // batch finished
-        if ((dirtyFlags & 0x2L) != 0) {
+        if ((dirtyFlags & 0x4L) != 0) {
             // api target 1
 
             this.btnRegistrationRegister.setOnClickListener(mCallback4);
@@ -245,13 +292,18 @@ public class FragmentRegistrationBindingImpl extends FragmentRegistrationBinding
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.etPassword, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, etPasswordandroidTextAttrChanged);
             androidx.databinding.adapters.TextViewBindingAdapter.setTextWatcher(this.etUsername, (androidx.databinding.adapters.TextViewBindingAdapter.BeforeTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.OnTextChanged)null, (androidx.databinding.adapters.TextViewBindingAdapter.AfterTextChanged)null, etUsernameandroidTextAttrChanged);
         }
-        if ((dirtyFlags & 0x3L) != 0) {
+        if ((dirtyFlags & 0x6L) != 0) {
             // api target 1
 
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.etConfirmPassword, viewModelEtConfirmPass);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.etEmailId, viewModelEtEmail);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.etPassword, viewModelEtPass);
             androidx.databinding.adapters.TextViewBindingAdapter.setText(this.etUsername, viewModelEtUsername);
+        }
+        if ((dirtyFlags & 0x7L) != 0) {
+            // api target 1
+
+            this.progressBarReg.setVisibility(viewModelPBarVisibilityViewVISIBLEViewINVISIBLE);
         }
     }
     // Listener Stub Implementations
@@ -275,8 +327,11 @@ public class FragmentRegistrationBindingImpl extends FragmentRegistrationBinding
     // dirty flag
     private  long mDirtyFlags = 0xffffffffffffffffL;
     /* flag mapping
-        flag 0 (0x1L): viewModel
-        flag 1 (0x2L): null
+        flag 0 (0x1L): viewModel.pBarVisibility
+        flag 1 (0x2L): viewModel
+        flag 2 (0x3L): null
+        flag 3 (0x4L): androidx.databinding.ViewDataBinding.safeUnbox(viewModel.pBarVisibility.getValue()) ? View.VISIBLE : View.INVISIBLE
+        flag 4 (0x5L): androidx.databinding.ViewDataBinding.safeUnbox(viewModel.pBarVisibility.getValue()) ? View.VISIBLE : View.INVISIBLE
     flag mapping end*/
     //end
 }

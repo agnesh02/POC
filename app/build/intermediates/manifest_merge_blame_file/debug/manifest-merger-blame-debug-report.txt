@@ -2,7 +2,7 @@
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.example.poc"
 4    android:versionCode="1"
-5    android:versionName="1.0" >
+5    android:versionName="1.5" >
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
@@ -79,12 +79,12 @@
 44        android:debuggable="true"
 45        android:fullBackupContent="@xml/backup_rules"
 45-->C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:27:9-54
-46        android:icon="@mipmap/ic_launcher"
-46-->C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:28:9-43
+46        android:icon="@drawable/pocicon"
+46-->C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:28:9-41
 47        android:label="@string/app_name"
 47-->C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:29:9-41
-48        android:roundIcon="@mipmap/ic_launcher_round"
-48-->C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:30:9-54
+48        android:roundIcon="@drawable/pocicon"
+48-->C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:30:9-46
 49        android:supportsRtl="true"
 49-->C:\Users\Agnesh S Kumar\AndroidStudioProjects\POC\app\src\main\AndroidManifest.xml:31:9-35
 50        android:testOnly="true"

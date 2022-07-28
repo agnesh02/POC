@@ -5,7 +5,8 @@ import android.app.Application
 import android.net.Uri
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import main.SideMenuActivity
+import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.launch
 import models.Common.toast
 
 class ProfileViewModel(application: Application) : AndroidViewModel(application) {
@@ -59,7 +60,9 @@ class ProfileViewModel(application: Application) : AndroidViewModel(application)
 
     fun uploadProfilePicture(uri: Uri) {
         msg.postValue("in progress")
-        profileRepository.updateProfilePicture(uri)
+        viewModelScope.launch{
+            profileRepository.updateProfilePicture(uri)
+        }
         startObservation()
     }
 

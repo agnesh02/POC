@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/drawable/ic_baseline_bluetooth_connected_24.xml" value="0.2715" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/activity_authentication.xml" value="0.26875" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/activity_edit_profile.xml" value="0.18478260869565216" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/activity_profile.xml" value="0.26875" />
@@ -13,7 +14,7 @@
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/custom_weather_card.xml" value="0.22" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/fragment_ble.xml" value="0.26875" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/fragment_dashboard.xml" value="0.25" />
-        <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/fragment_device.xml" value="0.25" />
+        <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/fragment_device.xml" value="0.33" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/fragment_edit_profile.xml" value="0.25" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/fragment_live_stream.xml" value="0.26875" />
         <entry key="..\:/Users/Agnesh S Kumar/AndroidStudioProjects/POC/app/src/main/res/layout/fragment_login.xml" value="0.26875" />

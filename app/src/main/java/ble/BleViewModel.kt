@@ -2,10 +2,18 @@ package ble
 
 import android.Manifest
 import android.app.Application
+import android.content.Context
+import android.content.Intent
+import android.location.LocationManager
+import android.os.Bundle
+import android.provider.Settings
 import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
+import models.Common.toast
 import pub.devrel.easypermissions.EasyPermissions
+
 
 class BleViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -42,6 +50,9 @@ class BleViewModel(application: Application) : AndroidViewModel(application) {
         BLE.initiate(getApplication())
         if(BLE.checkBleSupport())
             checkLocationPermission()
+        else
+            toast(getApplication(),"Bluetooth was turned off. It has been turned on now. Try scanning again")
+
     }
 
     private fun checkLocationPermission()
@@ -51,7 +62,23 @@ class BleViewModel(application: Application) : AndroidViewModel(application) {
         if(!hasLocationPermission)
             locationPermissionStatus.postValue(false)
         else
+            checkLocationEnabled()
+    }
+
+    private fun checkLocationEnabled()
+    {
+        val locationManager = getApplication<Application>().getSystemService(Context.LOCATION_SERVICE) as LocationManager
+
+        if(locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER))
             BLE.startScan()
+        else
+        {
+            toast(getApplication(), "Location should be enabled to scan BLE devices. Enable GPS and try scanning again")
+            val intent = Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(getApplication(),intent, Bundle())
+        }
+
     }
 
     private fun stopScanning()

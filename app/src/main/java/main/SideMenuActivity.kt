@@ -5,7 +5,6 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.GravityCompat
@@ -22,6 +21,8 @@ import com.example.poc.R
 import com.example.poc.databinding.ActivitySideMenuBinding
 import com.example.poc.databinding.NavHeaderSideMenuBinding
 import com.google.android.material.navigation.NavigationView
+import com.orhanobut.logger.Logger
+import models.Common
 import models.Common.toast
 
 class SideMenuActivity : AppCompatActivity() {
@@ -37,6 +38,8 @@ class SideMenuActivity : AppCompatActivity() {
         binding = ActivitySideMenuBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.appBarSideMenu.toolbar)
+        Common.setUpLogger()
+        Logger.d("Logger setup successful")
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
@@ -96,48 +99,48 @@ class SideMenuActivity : AppCompatActivity() {
         }
 
         BLE.connectionStatus.observeForever {
-            if (it=="trying to connect")
+            when(it)
             {
-                AlertWindow.buildWindow(this, "Connecting...","Please wait till the connection is active", R.drawable.ic_baseline_bluetooth_searching_24)
-                AlertWindow.showWindow()
-            }
-            if(it=="connection failed")
-            {
-                AlertWindow.buildWindow(this, "Connection Failed","Please try again", android.R.drawable.ic_dialog_alert)
-                AlertWindow.builder
-                    .setNegativeButton("Exit") { dialogInterface, _ ->
-                        dialogInterface.dismiss()
-                    }
+                0->{
+                    AlertWindow.buildWindow(this, "Connecting...","Please wait till the connection is active", R.drawable.ic_baseline_bluetooth_searching_24)
+                    AlertWindow.showWindow()
+                }
+                1->{
+                    AlertWindow.dismissWindow()
+                    AlertWindow.buildWindow(this, "Connection Failed","Please try again", android.R.drawable.ic_dialog_alert)
+                    AlertWindow.builder
+                        .setNegativeButton("Exit") { dialogInterface, _ ->
+                            dialogInterface.dismiss()
+                        }
 
-                AlertWindow.showWindow()
-            }
-            if(it=="connected")
-            {
-                AlertWindow.dismissWindow()
-                navController.popBackStack()
-                navController.navigate(R.id.nav_device)
-            }
-            if(it=="connection lost")
-            {
-                AlertWindow.buildWindow(this, "Connection Lost","Please try reconnecting",R.drawable.ic_baseline_bluetooth_disabled_24)
-                AlertWindow.builder
-                    .setPositiveButton("Reconnect") { _, _ ->
-                        AlertWindow.dismissWindow()
-                        BLE.connect(BLE.selectedDevice.value!!)
-                    }
-                    .setNegativeButton("Exit") { dialogInterface, _ ->
-                        dialogInterface.dismiss()
-                        navController.popBackStack()
-                        navController.navigate(R.id.nav_ble); drawerLayout.closeDrawer(GravityCompat.START)
-                    }
+                    AlertWindow.showWindow()
+                }
+                2->{
+                    AlertWindow.dismissWindow()
+                    toast(this, "Connected to the device successfully")
+                    navController.popBackStack()
+                    navController.navigate(R.id.nav_device)
+                }
+                3->{
+                    AlertWindow.buildWindow(this, "Connection Lost","Please try reconnecting",R.drawable.ic_baseline_bluetooth_disabled_24)
+                    AlertWindow.builder
+                        .setPositiveButton("Reconnect") { _, _ ->
+                            AlertWindow.dismissWindow()
+                            BLE.connect(BLE.selectedDevice.value!!)
+                        }
+                        .setNegativeButton("Exit") { dialogInterface, _ ->
+                            dialogInterface.dismiss()
+                            navController.popBackStack()
+                            navController.navigate(R.id.nav_ble); drawerLayout.closeDrawer(GravityCompat.START)
+                        }
 
-                AlertWindow.showWindow()
-            }
-            if(it=="disconnected")
-            {
-                Toast.makeText(applicationContext, "Device disconnected successfully", Toast.LENGTH_SHORT).show()
-                navController.popBackStack()
-                navController.navigate(R.id.nav_ble); drawerLayout.closeDrawer(GravityCompat.START)
+                    AlertWindow.showWindow()
+                }
+                4->{
+                    toast(applicationContext, "Device disconnected successfully. (Please turn of your bluetooth and GPS)")
+                    navController.popBackStack()
+                    navController.navigate(R.id.nav_ble); drawerLayout.closeDrawer(GravityCompat.START)
+                }
             }
         }
 

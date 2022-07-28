@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -30,6 +32,15 @@ public final class FragmentDeviceBinding implements ViewBinding {
   public final Button btnFragDeviceWriteData;
 
   @NonNull
+  public final ImageView imageView5;
+
+  @NonNull
+  public final ProgressBar progressBarDeviceFrag;
+
+  @NonNull
+  public final TextView textView;
+
+  @NonNull
   public final TextView tvFragDeviceAddress;
 
   @NonNull
@@ -37,12 +48,16 @@ public final class FragmentDeviceBinding implements ViewBinding {
 
   private FragmentDeviceBinding(@NonNull FrameLayout rootView,
       @NonNull Button btnFragDeviceDisconnect, @NonNull Button btnFragDeviceReadData,
-      @NonNull Button btnFragDeviceWriteData, @NonNull TextView tvFragDeviceAddress,
-      @NonNull TextView tvFragDeviceName) {
+      @NonNull Button btnFragDeviceWriteData, @NonNull ImageView imageView5,
+      @NonNull ProgressBar progressBarDeviceFrag, @NonNull TextView textView,
+      @NonNull TextView tvFragDeviceAddress, @NonNull TextView tvFragDeviceName) {
     this.rootView = rootView;
     this.btnFragDeviceDisconnect = btnFragDeviceDisconnect;
     this.btnFragDeviceReadData = btnFragDeviceReadData;
     this.btnFragDeviceWriteData = btnFragDeviceWriteData;
+    this.imageView5 = imageView5;
+    this.progressBarDeviceFrag = progressBarDeviceFrag;
+    this.textView = textView;
     this.tvFragDeviceAddress = tvFragDeviceAddress;
     this.tvFragDeviceName = tvFragDeviceName;
   }
@@ -92,6 +107,24 @@ public final class FragmentDeviceBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.imageView5;
+      ImageView imageView5 = ViewBindings.findChildViewById(rootView, id);
+      if (imageView5 == null) {
+        break missingId;
+      }
+
+      id = R.id.progressBarDeviceFrag;
+      ProgressBar progressBarDeviceFrag = ViewBindings.findChildViewById(rootView, id);
+      if (progressBarDeviceFrag == null) {
+        break missingId;
+      }
+
+      id = R.id.textView;
+      TextView textView = ViewBindings.findChildViewById(rootView, id);
+      if (textView == null) {
+        break missingId;
+      }
+
       id = R.id.tv_frag_device_address;
       TextView tvFragDeviceAddress = ViewBindings.findChildViewById(rootView, id);
       if (tvFragDeviceAddress == null) {
@@ -105,7 +138,8 @@ public final class FragmentDeviceBinding implements ViewBinding {
       }
 
       return new FragmentDeviceBinding((FrameLayout) rootView, btnFragDeviceDisconnect,
-          btnFragDeviceReadData, btnFragDeviceWriteData, tvFragDeviceAddress, tvFragDeviceName);
+          btnFragDeviceReadData, btnFragDeviceWriteData, imageView5, progressBarDeviceFrag,
+          textView, tvFragDeviceAddress, tvFragDeviceName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

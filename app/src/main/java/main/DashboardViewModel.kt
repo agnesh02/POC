@@ -4,7 +4,6 @@ import repository.AuthenticationRepository
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import models.Common
 import repository.ProfileRepository
 
 class DashboardViewModel(application: Application) : AndroidViewModel(application) {

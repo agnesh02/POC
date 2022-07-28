@@ -2649,6 +2649,7 @@ drawable googleg_standard_color_18
 drawable haze
 drawable hot
 drawable humidity
+drawable ic_baseline_bluetooth_connected_24
 drawable ic_baseline_bluetooth_disabled_24
 drawable ic_baseline_bluetooth_searching_24
 drawable ic_baseline_edit_24
@@ -2721,6 +2722,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable person_outline_focused
+drawable pocicon
 drawable rain
 drawable scattered_clouds
 drawable shower_rain
@@ -3060,6 +3062,7 @@ id imageView
 id imageView2
 id imageView3
 id imageView4
+id imageView5
 id immediateStop
 id included
 id info
@@ -3207,7 +3210,9 @@ id pin
 id position
 id postLayout
 id profile_profile_pic
+id progressBarDeviceFrag
 id progressBarProfilePic
+id progressBarReg
 id progressBarWebView
 id progressBar_login
 id progressBar_profile
@@ -3335,6 +3340,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id textView6
 id textWatcher
 id text_input_end_icon

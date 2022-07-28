@@ -10,7 +10,6 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import ble.BleViewModel
 import com.example.poc.databinding.FragmentBleBinding
 import pub.devrel.easypermissions.AppSettingsDialog
 import pub.devrel.easypermissions.EasyPermissions
@@ -26,7 +25,6 @@ class BleFragment : Fragment(), EasyPermissions.PermissionCallbacks {
         viewModel = ViewModelProvider(this)[BleViewModel::class.java]
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
-
 
         binding.btnScan.setOnClickListener {
             viewModel.checkScanStatus()

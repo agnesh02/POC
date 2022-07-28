@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
@@ -34,6 +35,9 @@ public abstract class FragmentRegistrationBinding extends ViewDataBinding {
   public final TextInputEditText etUsername;
 
   @NonNull
+  public final ProgressBar progressBarReg;
+
+  @NonNull
   public final TextInputLayout textInputLayout;
 
   @NonNull
@@ -51,7 +55,7 @@ public abstract class FragmentRegistrationBinding extends ViewDataBinding {
   protected FragmentRegistrationBinding(Object _bindingComponent, View _root, int _localFieldCount,
       Button btnRegistrationRegister, TextInputEditText etConfirmPassword,
       TextInputEditText etEmailId, TextInputEditText etPassword, TextInputEditText etUsername,
-      TextInputLayout textInputLayout, TextInputLayout textInputLayout5,
+      ProgressBar progressBarReg, TextInputLayout textInputLayout, TextInputLayout textInputLayout5,
       TextInputLayout textInputLayout6, TextInputLayout textInputLayout7) {
     super(_bindingComponent, _root, _localFieldCount);
     this.btnRegistrationRegister = btnRegistrationRegister;
@@ -59,6 +63,7 @@ public abstract class FragmentRegistrationBinding extends ViewDataBinding {
     this.etEmailId = etEmailId;
     this.etPassword = etPassword;
     this.etUsername = etUsername;
+    this.progressBarReg = progressBarReg;
     this.textInputLayout = textInputLayout;
     this.textInputLayout5 = textInputLayout5;
     this.textInputLayout6 = textInputLayout6;

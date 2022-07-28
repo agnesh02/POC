@@ -2,8 +2,6 @@ package authentication
 
 import repository.AuthenticationRepository
 import android.app.Application
-import android.opengl.Visibility
-import android.view.View
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
@@ -26,7 +24,7 @@ class AuthenticationViewModel(application: Application) : AndroidViewModel(appli
     var dbData: MutableLiveData<Boolean> = MutableLiveData()
 
     private var authenticationRepository: AuthenticationRepository = AuthenticationRepository()
-    private var msg: String = ""
+    private var msgReceived: String = ""
     var loginStatus: MutableLiveData<Boolean> = MutableLiveData()
     var pBarVisibility: MutableLiveData<Boolean> = MutableLiveData(false)
 
@@ -41,9 +39,10 @@ class AuthenticationViewModel(application: Application) : AndroidViewModel(appli
 
     private fun startObservation() {
         authenticationRepository.liveRepoMessage.observeForever {
-            if (it != msg)
+            if (it != msgReceived) //to avoid repeated messages which might result in unmatched response
                 toast(getApplication(), it)
-            msg = it
+            msgReceived = it
+            pBarVisibility.postValue(false)
         }
 
         authenticationRepository.loginStatus.observeForever {
@@ -52,6 +51,12 @@ class AuthenticationViewModel(application: Application) : AndroidViewModel(appli
     }
 
     fun onRegister() {
+        pBarVisibility.postValue(true)
+
+        etUsername = etUsername.trim()
+        etEmail = etEmail.trim()
+        etPass = etPass.trim()
+
         if (!validateUsername(etUsername)) {
             errorCode.value = 1
             return
@@ -97,8 +102,8 @@ class AuthenticationViewModel(application: Application) : AndroidViewModel(appli
 
     }
 
-
     fun onResetPass() {
+        etEmail = etEmail.trim()
         if (!validateEmail(etEmail)) {
             errorCode.value = 2
             return

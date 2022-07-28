@@ -27,6 +27,7 @@ drawable fog
 drawable haze
 drawable hot
 drawable humidity
+drawable ic_baseline_bluetooth_connected_24
 drawable ic_baseline_bluetooth_disabled_24
 drawable ic_baseline_bluetooth_searching_24
 drawable ic_baseline_edit_24
@@ -49,6 +50,7 @@ drawable live
 drawable lock_focused
 drawable mist
 drawable person_outline_focused
+drawable pocicon
 drawable rain
 drawable scattered_clouds
 drawable shower_rain
@@ -114,6 +116,7 @@ id imageView
 id imageView2
 id imageView3
 id imageView4
+id imageView5
 id live_stream_recording
 id mobile_navigation
 id nav_ble
@@ -128,7 +131,9 @@ id nav_view
 id nav_weather
 id picture
 id profile_profile_pic
+id progressBarDeviceFrag
 id progressBarProfilePic
+id progressBarReg
 id progressBarWebView
 id progressBar_login
 id progressBar_profile
@@ -147,6 +152,7 @@ id textInputLayout4
 id textInputLayout5
 id textInputLayout6
 id textInputLayout7
+id textView
 id textView6
 id toolbar
 id tv_feels_like

@@ -2,6 +2,11 @@ package repository
 
 import android.app.Application
 import androidx.lifecycle.MutableLiveData
+import com.orhanobut.logger.Logger
+import kotlinx.coroutines.DelicateCoroutinesApi
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
 import models.*
 import models.Common.toast
 import models.weather.*
@@ -18,7 +23,8 @@ class WeatherRepository {
     var forecastList: ArrayList<WeatherResponse> = ArrayList()
     val liveForecastList: MutableLiveData<ArrayList<WeatherResponse>> = MutableLiveData()
 
-    fun getWeatherData(city: String, application: Application) {
+    @OptIn(DelicateCoroutinesApi::class)
+    suspend fun getWeatherData(city: String, application: Application) {
 
         val retrofitBuilder = Retrofit.Builder()
             .baseUrl(BASE_URL)
@@ -29,6 +35,18 @@ class WeatherRepository {
         val retrofitDataForCurrent = retrofitBuilder.sendRequestForCurrent(city, APP_ID)
         val retrofitDataForForecast = retrofitBuilder.sendRequestForForecast(city, APP_ID)
 
+        GlobalScope.launch {
+            val request1 = async { fetchCurrentData(retrofitDataForCurrent, application, city) }
+            val request2 = async { fetchForecastData(retrofitDataForForecast, application) }
+            request1.await()
+            request2.await()
+            Logger.d("2 requests made successfully")
+        }
+
+    }
+
+    private fun fetchCurrentData(retrofitDataForCurrent: Call<WeatherData>, application: Application, city: String)
+    {
         retrofitDataForCurrent.enqueue(object : Callback<WeatherData> {
             override fun onResponse(call: Call<WeatherData>, response: Response<WeatherData>) {
 
@@ -73,7 +91,10 @@ class WeatherRepository {
                 toast(application.applicationContext, t.message.toString())
             }
         })
+    }
 
+    private fun fetchForecastData(retrofitDataForForecast: Call<ForecastData>, application: Application)
+    {
         forecastList.clear()
         retrofitDataForForecast.enqueue(object : Callback<ForecastData> {
             override fun onResponse(call: Call<ForecastData>, response: Response<ForecastData>) {
@@ -131,7 +152,6 @@ class WeatherRepository {
                 toast(application.applicationContext, t.message.toString())
             }
         })
-
     }
 
     companion object {

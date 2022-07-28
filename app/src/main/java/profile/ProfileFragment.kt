@@ -11,7 +11,6 @@ import com.bumptech.glide.Glide
 import com.example.poc.R
 import com.example.poc.databinding.FragmentProfileBinding
 
-
 class ProfileFragment : Fragment() {
 
     lateinit var binding: FragmentProfileBinding
@@ -28,10 +27,6 @@ class ProfileFragment : Fragment() {
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
 
-//        val appCompatActivity: AppCompatActivity = (activity as AppCompatActivity)
-//        appCompatActivity.supportActionBar?.setDisplayHomeAsUpEnabled(true)
-//        appCompatActivity.supportActionBar?.title = "Profile"
-
         viewModel.getProfileData()
 
         viewModel.uri.observe(viewLifecycleOwner) {
@@ -41,6 +36,7 @@ class ProfileFragment : Fragment() {
                 .fitCenter()
                 .placeholder(R.drawable.ic_baseline_person_pin_24)
                 .into(binding.profileProfilePic)
+
         }
 
         binding.tvGoToEditProfile.setOnClickListener {
@@ -58,7 +54,6 @@ class ProfileFragment : Fragment() {
         viewModel.msg.observe(viewLifecycleOwner) {
             if (it.equals("ok"))
                 binding.progressBarProfile.visibility = View.INVISIBLE
-
         }
 
         return binding.root

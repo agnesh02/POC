@@ -4,10 +4,14 @@ import android.app.Application
 import android.widget.ArrayAdapter
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.viewModelScope
 import com.example.poc.R
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
 import models.Common.toast
 import models.WeatherResponse
 import repository.WeatherRepository
+import java.util.logging.Logger
 
 class WeatherViewModel(application: Application) : AndroidViewModel(application) {
 
@@ -17,7 +21,6 @@ class WeatherViewModel(application: Application) : AndroidViewModel(application)
     private var weatherRepository: WeatherRepository = WeatherRepository()
     var liveWeatherData: MutableLiveData<WeatherResponse> = MutableLiveData()
     var weatherAdapter: MutableLiveData<WeatherAdapter> = MutableLiveData()
-
     var pBarVisibility: MutableLiveData<Boolean> = MutableLiveData(false)
 
     private fun validate(s: String): Boolean {
@@ -27,7 +30,6 @@ class WeatherViewModel(application: Application) : AndroidViewModel(application)
         return true
     }
 
-
     fun fetchWeatherData() {
 
         if (!validate(cityName)) {
@@ -35,7 +37,9 @@ class WeatherViewModel(application: Application) : AndroidViewModel(application)
             return
         }
 
-        weatherRepository.getWeatherData(cityName.trim(), getApplication())
+        viewModelScope.launch {
+            weatherRepository.getWeatherData(cityName.trim(), getApplication())
+        }
 
         weatherRepository.liveData.observeForever {
             liveWeatherData.postValue(it)

@@ -6,8 +6,19 @@ import android.net.NetworkCapabilities
 import android.widget.ImageView
 import android.widget.Toast
 import com.example.poc.R
+import com.orhanobut.logger.AndroidLogAdapter
+import com.orhanobut.logger.Logger
 
 object Common {
+
+    fun setUpLogger()
+    {
+        Logger.addLogAdapter(AndroidLogAdapter())
+    }
+    fun clearUpLogger()
+    {
+        Logger.clearLogAdapters()
+    }
 
     fun isOnline(context: Context): Boolean {
         val connectivityManager = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager

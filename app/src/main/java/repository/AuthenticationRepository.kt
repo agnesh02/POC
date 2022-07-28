@@ -5,6 +5,7 @@ import models.UserData
 import android.app.Application
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.MutableLiveData
 import androidx.room.Room
@@ -32,13 +33,9 @@ class AuthenticationRepository {
     init {
         GlobalScope.launch(Dispatchers.Default) {
             auth = FirebaseAuth.getInstance()
-            while (firebaseUser==null)
-            {
-                firebaseUser = auth.currentUser
-            }
+            //firebaseUser = auth.currentUser
         }
     }
-
 
     fun registerUser(username: String, email: String, password: String) {
         auth.createUserWithEmailAndPassword(email, password)
@@ -46,12 +43,12 @@ class AuthenticationRepository {
                 if (it.isSuccessful) {
                     setProfile(email,username)
                 } else {
-                    liveRepoMessage.value = it.exception?.message
+                    liveRepoMessage.postValue(it.exception?.message)
                     return@addOnCompleteListener
                 }
             }
             .addOnFailureListener {
-                liveRepoMessage.value = it.message
+                liveRepoMessage.postValue(it.message)
                 return@addOnFailureListener
             }
     }
@@ -63,23 +60,41 @@ class AuthenticationRepository {
             .set(userData)
             .addOnCompleteListener {
                 if (it.isSuccessful) {
-                    liveRepoMessage.value = "User has been registered successfully"
+                    liveRepoMessage.postValue("User has been registered successfully")
                 } else {
-                    liveRepoMessage.value = it.exception?.message
+                    liveRepoMessage.postValue(it.exception?.message)
                     return@addOnCompleteListener
                 }
             }
             .addOnFailureListener {
-                liveRepoMessage.value = it.message
+                liveRepoMessage.postValue(it.message)
                 return@addOnFailureListener
             }
     }
 
+    private fun isVerified(): Boolean
+    {
+        firebaseUser = auth.currentUser
+        if(!firebaseUser!!.isEmailVerified)
+        {
+            firebaseUser!!.sendEmailVerification()
+            return false
+        }
+        else
+            return true
+    }
+
     fun loginUser(application: Application, email: String, password: String, save: Boolean) {
+
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener {
                 if (it.isSuccessful) {
 
+                    if(!isVerified())
+                    {
+                        Toast.makeText(application,"Please check your email for a verification link. After verification try logging in again",Toast.LENGTH_LONG).show()
+                        return@addOnCompleteListener
+                    }
                     if(save)
                     {
                         GlobalScope.launch(Dispatchers.Default) {
@@ -95,13 +110,13 @@ class AuthenticationRepository {
                     loginStatus.value = true
 
                 } else {
-                    liveRepoMessage.value = it.exception?.message
+                    liveRepoMessage.postValue(it.exception?.message)
                     loginStatus.value = false
                     return@addOnCompleteListener
                 }
             }
             .addOnFailureListener {
-                liveRepoMessage.value = it.message
+                liveRepoMessage.postValue(it.message)
                 loginStatus.value = false
                 return@addOnFailureListener
             }
@@ -111,15 +126,14 @@ class AuthenticationRepository {
         auth.sendPasswordResetEmail(email)
             .addOnCompleteListener {
                 if (it.isSuccessful) {
-                    liveRepoMessage.value =
-                        "Password reset link has been sent to the provided email address"
+                    liveRepoMessage.postValue("Password reset link has been sent to the provided email address")
                 } else {
-                    liveRepoMessage.value = it.exception?.message
+                    liveRepoMessage.postValue(it.exception?.message)
                     return@addOnCompleteListener
                 }
             }
             .addOnFailureListener {
-                liveRepoMessage.value = it.message
+                liveRepoMessage.postValue(it.message)
                 return@addOnFailureListener
             }
     }
