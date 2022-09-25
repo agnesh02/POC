@@ -211,6 +211,7 @@ string c
 string choose_image
 string cities
 string confirm_password
+string connected_to
 string dashboard
 string default_web_client_id
 string device_address

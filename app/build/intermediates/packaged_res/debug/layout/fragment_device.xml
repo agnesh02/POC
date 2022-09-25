@@ -93,7 +93,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="28dp"
             android:fontFamily="@font/poppins"
-            android:text="CONNECTED TO:"
+            android:text="@string/connected_to"
             android:textColor="#2F9E30"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -107,10 +107,11 @@
             android:layout_marginTop="8dp"
             android:backgroundTint="#FF0505"
             android:src="@drawable/ic_baseline_bluetooth_connected_24"
-            android:tint="#1A7DF6"
+            app:tint="#1A7DF6"
             app:layout_constraintEnd_toEndOf="@+id/textView"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            android:contentDescription="TODO" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

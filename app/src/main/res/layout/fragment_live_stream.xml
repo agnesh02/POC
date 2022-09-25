@@ -36,7 +36,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/enter_the_ip"
-                    android:inputType="text"
+                    android:inputType="text|numberDecimal"
                     android:text="@={viewModel.ip}" />
             </com.google.android.material.textfield.TextInputLayout>
 

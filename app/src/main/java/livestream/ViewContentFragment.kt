@@ -12,8 +12,10 @@ import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import com.example.poc.R
 import com.example.poc.databinding.FragmentViewContentBinding
+import kotlinx.coroutines.launch
 import models.Common.toast
 import pub.devrel.easypermissions.AppSettingsDialog
 import pub.devrel.easypermissions.EasyPermissions
@@ -101,13 +103,17 @@ class ViewContentFragment : Fragment(), EasyPermissions.PermissionCallbacks {
                         {
                             if(menuItem.title == "Start Recording")
                             {
-                                viewModel.startRecording(url)
+                                lifecycleScope.launch {
+                                    viewModel.startRecording(url)
+                                }
                                 toast(context!!,"Recording started")
                                 recordingState = true
                             }
                             else
                             {
-                                viewModel.stopRecording()
+                                lifecycleScope.launch {
+                                    viewModel.stopRecording()
+                                }
                                 //toast(context!!,"Recording stopped")
                                 recordingState = false
                             }

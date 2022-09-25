@@ -207,6 +207,7 @@
     <string name="choose_image">choose image</string>
     <string name="cities">Cities</string>
     <string name="confirm_password">Confirm password</string>
+    <string name="connected_to">CONNECTED TO:</string>
     <string name="dashboard">Dashboard</string>
     <string name="default_web_client_id" translatable="false">444956905417-92ctpjcjajqabgp570u6gvvod4mivhpj.apps.googleusercontent.com</string>
     <string name="device_address">Device Address :</string>

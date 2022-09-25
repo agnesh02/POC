@@ -3,6 +3,8 @@ package livestream
 import android.app.Application
 import android.os.Environment
 import androidx.lifecycle.*
+import com.firebase.ui.auth.AuthUI.getApplicationContext
+import com.orhanobut.logger.Logger
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.io.BufferedInputStream
@@ -70,7 +72,8 @@ class LiveStreamViewModel(application: Application) : AndroidViewModel(applicati
             val inputStream = urlConnection.getInputStream()
             inStream = BufferedInputStream(inputStream, 1024 * 5)
 
-            val rootPath = Environment.getExternalStorageDirectory().toString()
+            val rootPath = getApplicationContext().getExternalFilesDir("");
+            Logger.d(rootPath)
             val filePath = "POC-Recordings"
             val fileName = Calendar.getInstance().time.toString()
             val folder = File(rootPath,filePath)
@@ -96,7 +99,7 @@ class LiveStreamViewModel(application: Application) : AndroidViewModel(applicati
         outStream?.flush()
         outStream?.close()
         inStream?.close()
-        msg.postValue("Recording stopped")
+        msg.postValue("Recording stopped and saved to /storage/emulated/0/Android/data/com.example.poc/files/POC-Recordings")
     }
 
 
